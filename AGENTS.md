@@ -6,7 +6,7 @@ This document provides guidance for AI agents working with the NioPD system.
 
 NioPD is an AI-powered assistant system for Product Managers. It is designed to automate and assist with the core PM workflow, from defining high-level initiatives to tracking success metrics.
 
-The system is file-based and command-driven. All data is stored in markdown files within the `.niopd/data/` directory, and the AI's behavior is guided by a series of command prompts and agent definitions.
+The system is file-based and command-driven. All data is stored in markdown files within the `.iflow/data/` directory, and the AI's behavior is guided by a series of command prompts and agent definitions.
 
 ## 2. Core Philosophy: Agent-Driven Synthesis
 
@@ -16,10 +16,40 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 
 ## 3. Available Agents
 
+### 🤖 `competitor-analyzer`
+- **Purpose:** To analyze a competitor's website and produce a structured summary of their product, pricing, and positioning.
+- **Input:** A single URL for a competitor's homepage.
+- **Output:** A structured markdown competitor analysis report with core value proposition, features, target audience, and pricing model.
+
+### 🤖 `data-analyst`
+- **Purpose:** To analyze structured data from a file (like CSV) and answer natural language questions about that data.
+- **Input:** A file containing structured data and a natural language query.
+- **Output:** A markdown data analysis report with direct answers and supporting methodology.
+
 ### 🤖 `feedback-synthesizer`
 - **Purpose:** To process raw user feedback and identify key themes, pain points, and feature requests.
 - **Input:** A file containing user feedback.
-- **Output:** A structured markdown summary of the feedback.
+- **Output:** A structured markdown summary of the feedback with themes, pain points, and user quotes.
+
+### 🤖 `interview-summarizer`
+- **Purpose:** To read user interview transcripts and extract critical insights, including user needs, pain points, and direct quotes.
+- **Input:** A text file containing the full transcript of a user interview.
+- **Output:** A markdown interview summary with key takeaways, core themes, and verbatim quotes.
+
+### 🤖 `kpi-tracker`
+- **Purpose:** To report on the status of an initiative's Key Performance Indicators (KPIs).
+- **Input:** A single initiative file.
+- **Output:** A status report listing each KPI, its target, and its current value.
+
+### 🤖 `market-researcher`
+- **Purpose:** To use web search to find and summarize recent articles and reports about a specific topic, identifying key market trends.
+- **Input:** A string representing the research topic.
+- **Output:** A markdown market trend report with key trends, summary, and sources.
+
+### 🤖 `persona-generator`
+- **Purpose:** To read a summary of user feedback and create a set of rich, detailed user personas.
+- **Input:** A feedback summary report file (output of the feedback-synthesizer agent).
+- **Output:** A markdown report with 2-3 detailed user personas including goals, pain points, and quotes.
 
 ### 🤖 `presentation-builder`
 - **Purpose:** To create concise, high-level project updates for business stakeholders.
@@ -28,20 +58,15 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 
 ### 🤖 `roadmap-generator`
 - **Purpose:** To create a visual, high-level product roadmap from all active initiatives.
-- **Input:** All files in the `.niopd/data/initiatives/` directory.
+- **Input:** All files in the `.iflow/data/initiatives/` directory.
 - **Output:** A markdown file containing a Mermaid Gantt chart.
-
-### 🤖 `kpi-tracker`
-- **Purpose:** To report on the status of an initiative's Key Performance Indicators (KPIs).
-- **Input:** A single initiative file.
-- **Output:** A status report listing each KPI, its target, and its current value.
 
 ## 4. The Command Workflow
 
-The entire NioPD system is operated through a series of `/pd:` commands. Each command has a corresponding definition file in `.niopd/commands/`.
+The entire NioPD system is operated through a series of `/pd:` commands. Each command has a corresponding definition file in `.iflow/commands/`.
 
 When a user runs a command (e.g., `/pd:draft-prd`), you must:
-1.  Read the corresponding command file (e.g., `.niopd/commands/draft-prd.md`).
+1.  Read the corresponding command file (e.g., `.iflow/commands/draft-prd.md`).
 2.  Follow the **Preflight Checklist** to validate inputs.
 3.  Follow the **Instructions** step-by-step. This may involve invoking one of the agents listed above.
 4.  Produce the output file in the location specified by the command.
@@ -49,12 +74,12 @@ When a user runs a command (e.g., `/pd:draft-prd`), you must:
 ## 5. Development and Testing Instructions
 
 ### How to Extend NioPD
-- **Adding a new command:** Create a new `.md` file in `.niopd/commands/`.
-- **Adding a new agent:** Create a new agent definition in `.niopd/agents/`. The new agent should have a single, clear purpose.
-- **Adding a new template:** Add a new template file to `.niopd/templates/`.
+- **Adding a new command:** Create a new `.md` file in `.iflow/commands/`.
+- **Adding a new agent:** Create a new agent definition in `.iflow/agents/`. The new agent should have a single, clear purpose.
+- **Adding a new template:** Add a new template file to `.iflow/templates/`.
 
 ### Testing
 - The current implementation of NioPD is file-based and designed for simulation.
-- To test any workflow, you must first create the necessary prerequisite files in the `.niopd/data/` subdirectories (e.g., create an initiative file before you can test drafting a PRD).
+- To test any workflow, you must first create the necessary prerequisite files in the `.iflow/data/` subdirectories (e.g., create an initiative file before you can test drafting a PRD).
 - After running a test, always verify the content of the output file to ensure the agent and command worked as expected.
-- **Crucially, always clean up test artifacts** by deleting the files you created in the `.niopd/data/` directories before submitting your work.
+- **Crucially, always clean up test artifacts** by deleting the files you created in the `.iflow/data/` directories before submitting your work.

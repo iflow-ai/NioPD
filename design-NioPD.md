@@ -18,7 +18,7 @@ The primary user is the **non-technical or semi-technical Product Manager** in a
 
 ## System Architecture
 
-`NioPD` will follow a similar file-based, agent-driven architecture as `ccpm`, but tailored for a Product Manager's workflow. All components will be stored in a `.niopd/` directory to distinguish it from the developer-focused `.claude/` directory.
+`NioPD` will follow a similar file-based, agent-driven architecture as `ccpm`, but tailored for a Product Manager's workflow. All components will be stored in a `.iflow/` directory to distinguish it from the developer-focused `.claude/` directory.
 
 ### 1. `agents/`
 Specialized agents for PM tasks, designed to process large amounts of unstructured data and produce structured outputs.
@@ -66,24 +66,24 @@ The following is a proposed list of commands for the `NioPD` system. They are de
 - **`/pd:new-initiative "Q3 Launch"`**
   - **Action:** Starts a guided workflow to define a new high-level product initiative.
   - **Asks for:** Strategic goals, target metrics (KPIs), budget, and relevant teams.
-  - **Output:** Creates a new file in `.niopd/data/initiatives/q3-launch.md`.
+  - **Output:** Creates a new file in `.iflow/data/initiatives/q3-launch.md`.
 
 ### Feedback and Discovery
 - **`/pd:import-feedback --from=intercom`**
   - **Action:** Connects to a specified source (via API or file upload) to import raw user feedback.
   - **Agent:** May use a helper script to handle the connection.
-  - **Output:** Saves the raw data in `.niopd/data/feedback-sources/`.
+  - **Output:** Saves the raw data in `.iflow/data/feedback-sources/`.
 
 - **`/pd:summarize-feedback --for="Q3 Launch"`**
   - **Action:** Uses the `feedback-synthesizer` agent to analyze all feedback related to a specific initiative.
   - **Agent:** `feedback-synthesizer`.
-  - **Output:** A summary of key themes, user quotes, and feature requests, saved as a report in `.niopd/data/reports/`.
+  - **Output:** A summary of key themes, user quotes, and feature requests, saved as a report in `.iflow/data/reports/`.
 
 ### Product Definition
 - **`/pd:draft-prd --for="Q3 Launch"`**
   - **Action:** Generates a complete PRD draft using a template.
   - **Uses:** The initiative definition and the synthesized feedback report.
-  - **Output:** A new file in `.niopd/data/prds/`.
+  - **Output:** A new file in `.iflow/data/prds/`.
 
 - **`/pd:edit-prd <prd-name>`**
   - **Action:** Opens the specified PRD for manual editing and refinement.
@@ -93,13 +93,13 @@ The following is a proposed list of commands for the `NioPD` system. They are de
   - **Action:** Uses the `roadmap-generator` agent to create or update a visual roadmap.
   - **Agent:** `roadmap-generator`.
   - **Uses:** The status and timelines of all active initiatives.
-  - **Output:** A file in `.niopd/data/roadmaps/roadmap.md`.
+  - **Output:** A file in `.iflow/data/roadmaps/roadmap.md`.
 
 - **`/pd:generate-update --for=stakeholders`**
   - **Action:** Uses the `presentation-builder` agent to create a progress update.
   - **Agent:** `presentation-builder`.
   - **Asks for:** Audience (e.g., stakeholders, engineering team) to tailor the content.
-  - **Output:** A markdown presentation file in `.niopd/data/reports/`.
+  - **Output:** A markdown presentation file in `.iflow/data/reports/`.
 
 ### Tracking and Analysis
 - **`/pd:track-kpis --for="Q3 Launch"`**

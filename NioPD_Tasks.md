@@ -78,7 +78,7 @@ This document tracks the implementation status of the NioPD system.
 
 ## Phase 12: Directory Path Correction (✓ Completed)
 
-- [x] **Update Directory References:** Change all `.niopd/` directory references to `.iflow/` in system files
+- [x] **Update Directory References:** Change all `.iflow/` directory references to `.iflow/` in system files
   - [x] Update .iflow/agents/roadmap-generator.md with correct paths
   - [x] Update all .iflow/commands/*.md files with correct paths  
   - [x] Update .iflow/scripts/new-initiative.sh with correct paths

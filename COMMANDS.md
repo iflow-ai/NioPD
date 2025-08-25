@@ -82,22 +82,24 @@ Commands to help with research, discovery, and understanding the market and user
 
 Commands to assist with the details of planning and defining features.
 
-### `/pd:draw-diagram`
+*Note: The following advanced planning commands are planned for future implementation and are not yet available.*
+
+### `/pd:draw-diagram` *(Coming Soon)*
 - **Purpose**: Creates a PlantUML or Mermaid diagram from a text description.
 - **Usage**: `/pd:draw-diagram --type=<type> --desc="..."`
 - **Output**: A markdown file containing the diagram code.
 
-### `/pd:assess-feasibility`
+### `/pd:assess-feasibility` *(Coming Soon)*
 - **Purpose**: Flags technically complex or risky requirements in a PRD.
 - **Usage**: `/pd:assess-feasibility --for=<prd_name>`
 - **Output**: An assessment report.
 
-### `/pd:write-stories`
+### `/pd:write-stories` *(Coming Soon)*
 - **Purpose**: Writes detailed user stories and acceptance criteria for a PRD.
 - **Usage**: `/pd:write-stories --for=<prd_name>`
 - **Output**: An updated PRD or a separate user story document.
 
-### `/pd:identify-risks`
+### `/pd:identify-risks` *(Coming Soon)*
 - **Purpose**: Identifies potential market, technical, or dependency risks for an initiative.
 - **Usage**: `/pd:identify-risks --for=<initiative_name>`
 - **Output**: A risk assessment report.
@@ -118,22 +120,24 @@ Commands to help with the go-to-market and launch process.
 - **Usage**: `/pd:track-kpis --for=<initiative_name>`
 - **Output**: A KPI status report.
 
-### `/pd:draft-release-notes`
+*Note: The following advanced launch commands are planned for future implementation and are not yet available.*
+
+### `/pd:draft-release-notes` *(Coming Soon)*
 - **Purpose**: Generates draft release notes for a feature based on its PRD.
 - **Usage**: `/pd:draft-release-notes --for=<prd_name>`
 - **Output**: A draft of release notes.
 
-### `/pd:generate-faq`
+### `/pd:generate-faq` *(Coming Soon)*
 - **Purpose**: Creates a list of FAQs for a new feature.
 - **Usage**: `/pd:generate-faq --for=<prd_name>`
 - **Output**: A FAQ document.
 
-### `/pd:simplify-update`
+### `/pd:simplify-update` *(Coming Soon)*
 - **Purpose**: Tailors a stakeholder update for a specific audience.
 - **Usage**: `/pd:simplify-update --for=<initiative_name> --audience=...`
 - **Output**: A rewritten, audience-specific update.
 
-### `/pd:brainstorm-names`
+### `/pd:brainstorm-names` *(Coming Soon)*
 - **Purpose**: Brainstorms creative names for a new feature.
 - **Usage**: `/pd:brainstorm-names --desc="..."`
 - **Output**: A list of potential names.
