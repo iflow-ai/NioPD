@@ -1,6 +1,6 @@
-# NioPD: The AI-Powered Product Management Assistant
+# NioPD: Product Management Toolkit for Claude Code
 
-NioPD is a collection of **Claude Code workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on strategy and users.
+NioPD is a collection of **Claude Code Workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on strategy and users.
 
 ---
 
