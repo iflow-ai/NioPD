@@ -1,9 +1,9 @@
-# Command: /niopd:analyze-competitor
+# Command: /pd:analyze-competitor
 
 This command generates a competitive analysis report for a given URL using the `competitor-analyzer` agent.
 
 ## Usage
-`/niopd:analyze-competitor --url=<competitor_url>`
+`/pd:analyze-competitor --url=<competitor_url>`
 
 ## Preflight Checklist
 
@@ -20,16 +20,16 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 
 ### Step 2: Invoke the Competitor Analyzer Agent
 -   You must now act as the `competitor-analyzer` agent.
--   Read your instructions from `.niopd/agents/competitor-analyzer.md`.
+-   Read your instructions from `.iflow/agents/competitor-analyzer.md`.
 -   Use the provided `<competitor_url>` as your input.
 -   Perform the analysis as described in the agent definition, including using the `view_text_website` tool.
 -   Generate the final analysis report.
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `competitor-analysis-<domain_name>.md`.
--   Save the generated report to `.niopd/data/reports/`.
+-   Save the generated report to `.iflow/data/reports/`.
 -   Use the `Write` tool for this operation.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The competitive analysis is complete."
--   Provide the path to the file: "You can view the report here: `.niopd/data/reports/competitor-analysis-<domain_name>.md`"
+-   Provide the path to the file: "You can view the report here: `.iflow/data/reports/competitor-analysis-<domain_name>.md`"

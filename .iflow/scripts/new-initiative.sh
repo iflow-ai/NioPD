@@ -12,7 +12,7 @@ fi
 
 FILE_SLUG=$1
 FILE_CONTENT=$2
-FILE_PATH=".niopd/data/initiatives/${FILE_SLUG}.md"
+FILE_PATH=".iflow/data/initiatives/${FILE_SLUG}.md"
 
 # --- File Creation ---
 echo "Creating initiative file at: ${FILE_PATH}"

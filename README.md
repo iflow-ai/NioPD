@@ -55,11 +55,11 @@ NioPD is a file-based system that runs within a local clone of its repository.
     ```
 
 2.  **Explore the system**:
-    The core of the NioPD system is contained within the `NioPD/.iflow` directory. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
+    The core of the NioPD system is contained within the `NioPD/.iflow` directory. You can interact with the system by issuing `/pd:` commands to a compatible AI agent (like me).
 
 3.  **Start your first initiative**:
     ```
-    /niopd:new-initiative "My First Feature"
+    /pd:new-initiative "My First Feature"
     ```
 
 ## System Architecture
@@ -72,7 +72,7 @@ NioPD/
 ├── AGENTS.md          # Guide for how NioPD's AI agents work
 └── .iflow/            # Core system implementation
     ├── agents/        # Definitions for specialized PM agents
-    ├── commands/      # Definitions for all /niopd: commands
+    ├── commands/      # Definitions for all /pd: commands
     ├── data/          # Your product data lives here
     └── templates/     # Reusable templates for PRDs, etc.
 ```
@@ -80,52 +80,52 @@ NioPD/
 ## Command Reference
 
 ### Core Workflow
-- `/niopd:new-initiative "<name>"`: Start a new high-level product initiative.
-- `/niopd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
-- `/niopd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
-- `/niopd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
-- `/niopd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
-- `/niopd:update-roadmap`: Generate or update the product roadmap.
+- `/pd:new-initiative "<name>"`: Start a new high-level product initiative.
+- `/pd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
+- `/pd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
+- `/pd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
+- `/pd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
+- `/pd:update-roadmap`: Generate or update the product roadmap.
 
 ### Advanced: Strategy & Discovery
-- `/niopd:analyze-competitor --url=<url>`: Analyzes a competitor's website.
-- `/niopd:summarize-interview --file=<path>`: Summarizes a user interview transcript.
-- `/niopd:analyze-data --file=<path> --query="..."`: Answers a natural language question about a data file.
-- `/niopd:generate-personas --from=<summary>`: Creates user personas from a feedback summary.
-- `/niopd:research-trends --topic="..."`: Researches and summarizes market trends on a topic.
+- `/pd:analyze-competitor --url=<url>`: Analyzes a competitor's website.
+- `/pd:summarize-interview --file=<path>`: Summarizes a user interview transcript.
+- `/pd:analyze-data --file=<path> --query="..."`: Answers a natural language question about a data file.
+- `/pd:generate-personas --from=<summary>`: Creates user personas from a feedback summary.
+- `/pd:research-trends --topic="..."`: Researches and summarizes market trends on a topic.
 
 ### Advanced: Planning & Definition
-- `/niopd:draw-diagram --type=<type> --desc="..."`: Creates a PlantUML or Mermaid diagram from a description.
-- `/niopd:assess-feasibility --for=<prd>`: Flags technically complex requirements in a PRD.
-- `/niopd:write-stories --for=<prd>`: Writes detailed user stories and acceptance criteria for a PRD.
-- `/niopd:identify-risks --for=<prd>`: Identifies potential risks for an initiative.
+- `/pd:draw-diagram --type=<type> --desc="..."`: Creates a PlantUML or Mermaid diagram from a description.
+- `/pd:assess-feasibility --for=<prd>`: Flags technically complex requirements in a PRD.
+- `/pd:write-stories --for=<prd>`: Writes detailed user stories and acceptance criteria for a PRD.
+- `/pd:identify-risks --for=<prd>`: Identifies potential risks for an initiative.
 
 ### Advanced: Execution & Launch
-- `/niopd:generate-update --for=<initiative>`: Create a concise stakeholder update report.
-- `/niopd:track-kpis --for=<initiative>`: Get a status report on an initiative's KPIs.
-- `/niopd:draft-release-notes --for=<prd>`: Generates draft release notes for a feature.
-- `/niopd:generate-faq --for=<prd>`: Creates a list of FAQs for a new feature.
-- `/niopd:simplify-update --for=<initiative> --audience=...`: Tailors a stakeholder update for a specific audience.
-- `/niopd:brainstorm-names --desc="..."`: Brainstorms names for a new feature.
+- `/pd:generate-update --for=<initiative>`: Create a concise stakeholder update report.
+- `/pd:track-kpis --for=<initiative>`: Get a status report on an initiative's KPIs.
+- `/pd:draft-release-notes --for=<prd>`: Generates draft release notes for a feature.
+- `/pd:generate-faq --for=<prd>`: Creates a list of FAQs for a new feature.
+- `/pd:simplify-update --for=<initiative> --audience=...`: Tailors a stakeholder update for a specific audience.
+- `/pd:brainstorm-names --desc="..."`: Brainstorms names for a new feature.
 
 ## Example Flow
 
 Here's how you might use NioPD to research and plan a new feature:
 
 1.  **Research the market:**
-    `/niopd:research-trends --topic="AI-powered data analysis tools"`
+    `/pd:research-trends --topic="AI-powered data analysis tools"`
 
 2.  **Analyze a competitor:**
-    `/niopd:analyze-competitor --url="https://www.competitor.com"`
+    `/pd:analyze-competitor --url="https://www.competitor.com"`
 
 3.  **Define the initiative:**
-    `/niopd:new-initiative "Intelligent Analysis Feature"`
+    `/pd:new-initiative "Intelligent Analysis Feature"`
 
 4.  **Draft the PRD automatically:**
-    `/niopd:draft-prd --for="Intelligent Analysis Feature"`
+    `/pd:draft-prd --for="Intelligent Analysis Feature"`
 
 5.  **Create a flowchart for the user experience:**
-    `/niopd:draw-diagram --type="flowchart" --desc="User uploads data, selects analysis type, then views results"`
+    `/pd:draw-diagram --type="flowchart" --desc="User uploads data, selects analysis type, then views results"`
 
 ---
 This README provides a comprehensive overview for any Product Manager looking to use the NioPD system.

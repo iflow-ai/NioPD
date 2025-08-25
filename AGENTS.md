@@ -38,9 +38,9 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 
 ## 4. The Command Workflow
 
-The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `.niopd/commands/`.
+The entire NioPD system is operated through a series of `/pd:` commands. Each command has a corresponding definition file in `.niopd/commands/`.
 
-When a user runs a command (e.g., `/niopd:draft-prd`), you must:
+When a user runs a command (e.g., `/pd:draft-prd`), you must:
 1.  Read the corresponding command file (e.g., `.niopd/commands/draft-prd.md`).
 2.  Follow the **Preflight Checklist** to validate inputs.
 3.  Follow the **Instructions** step-by-step. This may involve invoking one of the agents listed above.

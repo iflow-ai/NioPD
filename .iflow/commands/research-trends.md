@@ -1,9 +1,9 @@
-# Command: /niopd:research-trends
+# Command: /pd:research-trends
 
 This command researches market trends for a given topic using the `market-researcher` agent.
 
 ## Usage
-`/niopd:research-trends --topic="<Your research topic>"`
+`/pd:research-trends --topic="<Your research topic>"`
 
 ## Preflight Checklist
 
@@ -19,16 +19,16 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 
 ### Step 2: Invoke the Market Researcher Agent
 -   You must now act as the `market-researcher` agent.
--   Read your instructions from `.niopd/agents/market-researcher.md`.
+-   Read your instructions from `.iflow/agents/market-researcher.md`.
 -   Use the provided topic as your input.
 -   Perform the research as described in the agent definition, including using `google_search` and `view_text_website`.
 -   Generate the final trend report.
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `trend-report-<topic_slug>.md`.
--   Save the generated report to `.niopd/data/reports/`.
+-   Save the generated report to `.iflow/data/reports/`.
 -   Use the `Write` tool for this operation.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The market trend report is ready."
--   Provide the path to the file: "You can view it here: `.niopd/data/reports/trend-report-<topic_slug>.md`"
+-   Provide the path to the file: "You can view it here: `.iflow/data/reports/trend-report-<topic_slug>.md`"
