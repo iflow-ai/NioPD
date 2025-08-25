@@ -129,3 +129,9 @@ Here's how you might use NioPD to research and plan a new feature:
 
 ---
 This README provides a comprehensive overview for any Product Manager looking to use the NioPD system.
+
+## Acknowledgments
+
+NioPD was inspired by the innovative work done in the [Claude Code PM](https://github.com/automazeio/ccpm) project. We extend our gratitude to the creators and contributors of that project for their pioneering approach to AI-powered product management workflows.
+
+While NioPD has evolved in its own direction with unique features and capabilities, the foundational concepts and vision from Claude Code PM have been instrumental in shaping this system.
