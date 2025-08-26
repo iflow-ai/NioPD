@@ -6,7 +6,7 @@ This document provides guidance for AI agents working with the NioPD system.
 
 NioPD is an AI-powered assistant system for Product Managers. It is designed to automate and assist with the core PM workflow, from defining high-level initiatives to tracking success metrics.
 
-The system is file-based and command-driven. All data is stored in markdown files within the `.iflow/data/` directory, and the AI's behavior is guided by a series of command prompts and agent definitions.
+The system is file-based and command-driven. All data is stored in markdown files within the `niopd-workspace/` directory, and the AI's behavior is guided by a series of command prompts and agent definitions.
 
 ## 2. Core Philosophy: Agent-Driven Synthesis
 
@@ -58,7 +58,7 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 
 ### 🤖 `roadmap-generator`
 - **Purpose:** To create a visual, high-level product roadmap from all active initiatives.
-- **Input:** All files in the `.iflow/data/initiatives/` directory.
+- **Input:** All files in the `niopd-workspace/initiatives/` directory.
 - **Output:** A markdown file containing a Mermaid Gantt chart.
 
 ## 4. The Command Workflow
@@ -80,6 +80,6 @@ When a user runs a command (e.g., `/niopd:draft-prd`), you must:
 
 ### Testing
 - The current implementation of NioPD is file-based and designed for simulation.
-- To test any workflow, you must first create the necessary prerequisite files in the `.iflow/data/` subdirectories (e.g., create an initiative file before you can test drafting a PRD).
+- To test any workflow, you must first create the necessary prerequisite files in the `niopd-workspace/` subdirectories (e.g., create an initiative file before you can test drafting a PRD).
 - After running a test, always verify the content of the output file to ensure the agent and command worked as expected.
-- **Crucially, always clean up test artifacts** by deleting the files you created in the `.iflow/data/` directories before submitting your work.
+- **Crucially, always clean up test artifacts** by deleting the files you created in the `niopd-workspace/` directories before submitting your work.

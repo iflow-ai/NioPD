@@ -24,7 +24,7 @@ Saves competitor analysis reports.
 ```
 
 **Purpose:**
-- Saves competitor analysis reports to the `.iflow/data/reports/` directory
+- Saves competitor analysis reports to the `niopd-workspace/reports/` directory
 
 ### [analyze-data.sh](NioPD/analyze-data.sh)
 Saves data analysis reports.
@@ -35,7 +35,7 @@ Saves data analysis reports.
 ```
 
 **Purpose:**
-- Saves data analysis reports to the `.iflow/data/reports/` directory
+- Saves data analysis reports to the `niopd-workspace/reports/` directory
 
 ### [draft-prd.sh](NioPD/draft-prd.sh)
 Saves PRD drafts.
@@ -46,7 +46,7 @@ Saves PRD drafts.
 ```
 
 **Purpose:**
-- Saves PRD drafts to the `.iflow/data/prds/` directory
+- Saves PRD drafts to the `niopd-workspace/prds/` directory
 
 ### [generate-personas.sh](NioPD/generate-personas.sh)
 Saves user personas documents.
@@ -57,7 +57,7 @@ Saves user personas documents.
 ```
 
 **Purpose:**
-- Saves user personas documents to the `.iflow/data/reports/` directory
+- Saves user personas documents to the `niopd-workspace/reports/` directory
 
 ### [generate-update.sh](NioPD/generate-update.sh)
 Saves stakeholder update reports.
@@ -68,7 +68,7 @@ Saves stakeholder update reports.
 ```
 
 **Purpose:**
-- Saves stakeholder update reports to the `.iflow/data/reports/` directory
+- Saves stakeholder update reports to the `niopd-workspace/reports/` directory
 
 ### [import-feedback.sh](NioPD/import-feedback.sh)
 Imports feedback files.
@@ -79,7 +79,7 @@ Imports feedback files.
 ```
 
 **Purpose:**
-- Copies feedback files to the `.iflow/data/feedback-sources/` directory
+- Copies feedback files to the `niopd-workspace/feedback-sources/` directory
 
 ### [new-initiative.sh](NioPD/new-initiative.sh)
 Creates new initiative files.
@@ -90,7 +90,7 @@ Creates new initiative files.
 ```
 
 **Purpose:**
-- Creates initiative files in the `.iflow/data/initiatives/` directory
+- Creates initiative files in the `niopd-workspace/initiatives/` directory
 
 ### [research-trends.sh](NioPD/research-trends.sh)
 Saves market trend reports.
@@ -101,7 +101,7 @@ Saves market trend reports.
 ```
 
 **Purpose:**
-- Saves market trend reports to the `.iflow/data/reports/` directory
+- Saves market trend reports to the `niopd-workspace/reports/` directory
 
 ### [save-file.sh](NioPD/save-file.sh)
 Generic script to save any content to a specified file path.
@@ -123,7 +123,7 @@ Saves feedback summary reports.
 ```
 
 **Purpose:**
-- Saves feedback summary reports to the `.iflow/data/reports/` directory
+- Saves feedback summary reports to the `niopd-workspace/reports/` directory
 
 ### [summarize-interview.sh](NioPD/summarize-interview.sh)
 Saves interview summary reports.
@@ -134,7 +134,7 @@ Saves interview summary reports.
 ```
 
 **Purpose:**
-- Saves interview summary reports to the `.iflow/data/reports/` directory
+- Saves interview summary reports to the `niopd-workspace/reports/` directory
 
 ### [track-kpis.sh](NioPD/track-kpis.sh)
 Saves KPI status reports.
@@ -145,7 +145,7 @@ Saves KPI status reports.
 ```
 
 **Purpose:**
-- Saves KPI status reports to the `.iflow/data/reports/` directory
+- Saves KPI status reports to the `niopd-workspace/reports/` directory
 
 ### [update-roadmap.sh](NioPD/update-roadmap.sh)
 Saves product roadmaps.
@@ -156,7 +156,7 @@ Saves product roadmaps.
 ```
 
 **Purpose:**
-- Saves product roadmaps to the `.iflow/data/roadmaps/` directory
+- Saves product roadmaps to the `niopd-workspace/roadmaps/` directory
 
 ## Creating New Scripts
 

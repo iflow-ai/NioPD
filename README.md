@@ -51,7 +51,17 @@ graph TD
     ```bash
     cd path/to/your/project/
     git clone https://github.com/8421bit/NioPD.git
+    cd NioPD
+
+    # core 
     cp -r NioPD/.iflow ./
+
+    # env
+    source ~/.bashrc
+
+    # start cli
+    iflow
+    claude
     ```
 
 2.  **Initialize the NioPD system**:

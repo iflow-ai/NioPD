@@ -32,7 +32,7 @@ All NioPD operations are file-based and follow a strict directory structure:
 - Agents: `.iflow/agents/`
 - Scripts: `.iflow/scripts/NioPD/`
 - Templates: `.iflow/templates/`
-- Data: `.iflow/data/` (with subdirectories for initiatives, PRDs, reports, and roadmaps)
+- Data: `niopd-workspace/` (with subdirectories for initiatives, PRDs, reports, and roadmaps)
 
 Always use the appropriate helper scripts for file operations rather than direct file I/O.
 
