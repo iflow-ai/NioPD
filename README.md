@@ -29,7 +29,7 @@ NioPD is designed to automate this "work about work" so you can focus on what ma
 
 NioPD guides you through a structured, repeatable process to take ideas from concept to a well-defined and launched feature.
 
-```mermaid
+```
 graph TD
     A[1. Discovery & Research] --> B[2. Planning & Definition]
     B --> C[3. Reporting & Launch Prep]
@@ -46,16 +46,21 @@ graph TD
 
 ## Get Started Now
 
-NioPD is a file-based system that runs within a local clone of its repository.
-
-1.  **Clone the repository**:
+1.  **Clone this repository into your project**:
+    First, navigate to your project directory, then clone the NioPD repository and copy its `.iflow` directory to your project root:
     ```bash
+    cd path/to/your/project/
     git clone https://github.com/8421bit/NioPD.git
-    cd NioPD
+    cp -r NioPD/.iflow ./
     ```
 
-2.  **Explore the system**:
-    The core of the NioPD system is contained within the `NioPD/.iflow` directory. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
+2.  **Initialize the NioPD system**:
+    The core of the NioPD system is contained within the `.iflow` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
+    
+    To initialize the NioPD system and generate the necessary directories, run:
+    ```
+    /niopd:init
+    ```
 
 3.  **Start your first initiative**:
     ```
@@ -86,6 +91,20 @@ NioPD/
 ```
 
 ### Helper Scripts
+
+#### `init.sh`
+A bash script located at `.iflow/scripts/NioPD/init.sh` that initializes the NioPD system by creating the necessary directory structure. This script is used internally by the `/niopd:init` command.
+
+**Usage:**
+```bash
+./init.sh
+```
+
+**Purpose:**
+- Creates the required data directories in `.iflow/data/`
+- Sets up the directory structure for initiatives, PRDs, reports, roadmaps, and feedback sources
+- Provides visual feedback during initialization
+- Verifies that all directories were created successfully
 
 #### `new-initiative.sh`
 A bash script located at `.iflow/scripts/NioPD/new-initiative.sh` that provides a command-line interface for creating new initiative files. This script is used internally by the `/niopd:new-initiative` command.
@@ -309,6 +328,23 @@ To add a new command to NioPD:
 This modular approach ensures that each component has a single responsibility and can be easily maintained, tested, and extended.
 
 **Note:** When adding new commands, follow the pattern where each command has a corresponding `.md` file in the commands directory, and if system-level operations are needed, create a corresponding `.sh` script in the scripts directory.
+
+### Adding New Commands
+
+When extending NioPD with new commands, follow these guidelines:
+
+1. **Command Structure:** Each command follows the 5-part pattern described above
+2. **Naming Convention:** Use descriptive names with hyphens to separate words (e.g., `new-initiative`)
+3. **Documentation:** Every command must be documented in both the command file and COMMANDS.md
+4. **Error Handling:** Implement proper error handling in both the command prompt and helper scripts
+5. **User Experience:** Design commands to be intuitive and provide clear feedback to users
+
+**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
+
+**Example of add a new command:**
+```
+Add New Commands: `/niopd:draft-prd "Feature Name"`, This command automatically generates a Product Requirements Document (PRD) for the specified feature based on historical data and existing initiatives.
+```
 
 ## Command Reference
 

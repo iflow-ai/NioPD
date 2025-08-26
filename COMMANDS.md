@@ -4,10 +4,20 @@ This document is a complete reference for all commands available in the NioPD sy
 
 ## Table of Contents
 
+- [System Initialization](#system-initialization)
 - [Core Workflow Commands](#core-workflow-commands)
 - [Advanced Discovery Commands](#advanced-discovery-commands)
 - [Advanced Planning Commands](#advanced-planning-commands)
 - [Advanced Launch Commands](#advanced-launch-commands)
+
+---
+
+## System Initialization
+
+### `/niopd:init`
+- **Purpose**: Initialize the NioPD system by creating the necessary directory structure.
+- **Usage**: `/niopd:init`
+- **Output**: Creates the required data directories in `.iflow/data/`.
 
 ---
 
