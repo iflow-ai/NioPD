@@ -55,11 +55,11 @@ NioPD is a file-based system that runs within a local clone of its repository.
     ```
 
 2.  **Explore the system**:
-    The core of the NioPD system is contained within the `NioPD/.iflow` directory. You can interact with the system by issuing `/pd:` commands to a compatible AI agent (like me).
+    The core of the NioPD system is contained within the `NioPD/.iflow` directory. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
 
 3.  **Start your first initiative**:
     ```
-    /pd:new-initiative "My First Feature"
+    /niopd:new-initiative "My First Feature"
     ```
 
 ## System Architecture
@@ -73,9 +73,10 @@ NioPD/
 ├── COMMANDS.md        # Complete command reference
 └── .iflow/            # Core system implementation
     ├── agents/        # Definitions for specialized PM agents (9 agents)
-    ├── commands/      # Definitions for all /pd: commands (13 commands)
+    ├── commands/      # Definitions for all /niopd: commands (13 commands)
+    │   └── NioPD/     # Namespace for NioPD commands
     ├── scripts/       # Helper scripts for automation
-    │   └── new-initiative.sh  # Shell script for creating initiative files
+    │   └── NioPD/     # Namespace for NioPD scripts
     ├── templates/     # Reusable templates for PRDs, reports, etc.
     └── data/          # Your product data lives here (created when needed)
         ├── initiatives/   # Product initiative files
@@ -87,7 +88,7 @@ NioPD/
 ### Helper Scripts
 
 #### `new-initiative.sh`
-A bash script located at `.iflow/scripts/new-initiative.sh` that provides a command-line interface for creating new initiative files. This script is used internally by the `/pd:new-initiative` command.
+A bash script located at `.iflow/scripts/NioPD/new-initiative.sh` that provides a command-line interface for creating new initiative files. This script is used internally by the `/niopd:new-initiative` command.
 
 **Usage:**
 ```bash
@@ -100,41 +101,250 @@ A bash script located at `.iflow/scripts/new-initiative.sh` that provides a comm
 - Provides success/error feedback
 - Supports content with special characters through proper escaping
 
+#### `import-feedback.sh`
+A bash script located at `.iflow/scripts/NioPD/import-feedback.sh` that provides a command-line interface for importing feedback files. This script is used internally by the `/niopd:import-feedback` command.
+
+**Usage:**
+```bash
+./import-feedback.sh <source_file_path> <destination_filename>
+```
+
+**Purpose:**
+- Validates input parameters
+- Copies feedback files to the `.iflow/data/feedback-sources/` directory
+- Provides success/error feedback
+
+#### `analyze-competitor.sh`
+A bash script located at `.iflow/scripts/NioPD/analyze-competitor.sh` that saves competitor analysis reports. This script is used internally by the `/niopd:analyze-competitor` command.
+
+**Usage:**
+```bash
+./analyze-competitor.sh <domain_name> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves competitor analysis reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `analyze-data.sh`
+A bash script located at `.iflow/scripts/NioPD/analyze-data.sh` that saves data analysis reports. This script is used internally by the `/niopd:analyze-data` command.
+
+**Usage:**
+```bash
+./analyze-data.sh <original_filename> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves data analysis reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `draft-prd.sh`
+A bash script located at `.iflow/scripts/NioPD/draft-prd.sh` that saves PRD drafts. This script is used internally by the `/niopd:draft-prd` command.
+
+**Usage:**
+```bash
+./draft-prd.sh <initiative_slug> "<prd_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves PRD drafts to the `.iflow/data/prds/` directory
+- Provides success/error feedback
+
+#### `generate-personas.sh`
+A bash script located at `.iflow/scripts/NioPD/generate-personas.sh` that saves user personas documents. This script is used internally by the `/niopd:generate-personas` command.
+
+**Usage:**
+```bash
+./generate-personas.sh <initiative_name> "<personas_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves user personas documents to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `generate-update.sh`
+A bash script located at `.iflow/scripts/NioPD/generate-update.sh` that saves stakeholder update reports. This script is used internally by the `/niopd:generate-update` command.
+
+**Usage:**
+```bash
+./generate-update.sh <initiative_slug> "<update_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves stakeholder update reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `research-trends.sh`
+A bash script located at `.iflow/scripts/NioPD/research-trends.sh` that saves market trend reports. This script is used internally by the `/niopd:research-trends` command.
+
+**Usage:**
+```bash
+./research-trends.sh <topic_slug> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves market trend reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `summarize-feedback.sh`
+A bash script located at `.iflow/scripts/NioPD/summarize-feedback.sh` that saves feedback summary reports. This script is used internally by the `/niopd:summarize-feedback` command.
+
+**Usage:**
+```bash
+./summarize-feedback.sh <feedback_filename> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves feedback summary reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `summarize-interview.sh`
+A bash script located at `.iflow/scripts/NioPD/summarize-interview.sh` that saves interview summary reports. This script is used internally by the `/niopd:summarize-interview` command.
+
+**Usage:**
+```bash
+./summarize-interview.sh <original_filename> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves interview summary reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `track-kpis.sh`
+A bash script located at `.iflow/scripts/NioPD/track-kpis.sh` that saves KPI status reports. This script is used internally by the `/niopd:track-kpis` command.
+
+**Usage:**
+```bash
+./track-kpis.sh <initiative_slug> "<report_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves KPI status reports to the `.iflow/data/reports/` directory
+- Provides success/error feedback
+
+#### `update-roadmap.sh`
+A bash script located at `.iflow/scripts/NioPD/update-roadmap.sh` that saves product roadmaps. This script is used internally by the `/niopd:update-roadmap` command.
+
+**Usage:**
+```bash
+./update-roadmap.sh "<roadmap_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves product roadmaps to the `.iflow/data/roadmaps/` directory
+- Provides success/error feedback
+
+#### `save-file.sh`
+A generic bash script located at `.iflow/scripts/NioPD/save-file.sh` that can save any content to a specified file path.
+
+**Usage:**
+```bash
+./save-file.sh <file_path> "<file_content>"
+```
+
+**Purpose:**
+- Validates input parameters
+- Saves content to the specified file path
+- Provides success/error feedback
+- Can be used by any command that needs to save files
+
+## How NioPD Works: The 5-Part Command Pattern
+
+NioPD operates on a structured, file-based pattern that combines user commands with detailed instructions for the AI. Understanding this pattern is key to using and extending the system.
+
+A complete command or feature in NioPD is composed of up to five parts, all located within the `.iflow` directory:
+
+### **1. The User Command**
+This is the entry point, which the user types to initiate a workflow.
+- **Example:** `/niopd:new-initiative "My New Feature"`
+- **Format:** `/niopd:<command_name> [arguments]`
+
+### **2. The Command Prompt (.md)**
+This is the brain of the operation. For every command, there is a corresponding markdown file that acts as a detailed prompt for the AI.
+- **Location:** `.iflow/commands/NioPD/<command_name>.md`
+- **Purpose:** It tells the AI how to validate inputs, what questions to ask the user, when to use other components (like agents or scripts), and what to do with the results.
+- **Example:** `.iflow/commands/NioPD/new-initiative.md` contains the complete workflow for creating new initiatives.
+
+### **3. The Agent (.md) (Optional)**
+For complex tasks involving analysis or synthesis, the command prompt will invoke a specialized agent. Agents are also defined by markdown prompts that give them a specific role and process to follow.
+- **Location:** `.iflow/agents/<agent_name>.md`
+- **Purpose:** To handle "heavy lifting" like summarizing a long document or analyzing data, keeping the main command logic clean.
+- **Example:** The `/niopd:summarize-interview` command invokes the `interview-summarizer` agent.
+- **Available Agents:** 9 specialized agents including `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
+
+### **4. The Template (.md) (Optional)**
+If a command's final output is a structured document (like a PRD or an initiative), it will use a template.
+- **Location:** `.iflow/templates/<template_name>.md`
+- **Purpose:** To ensure consistent structure for all generated documents.
+- **Examples:** `initiative-template.md`, `prd-template.md`, `competitor-analysis-template.md`
+
+### **5. The Script (.sh) (Optional)**
+For commands that need to perform actions on the file system, the command prompt will call a shell script. This separates the AI's "thinking" from the system's "doing".
+- **Location:** `.iflow/scripts/NioPD/<script_name>.sh`
+- **Purpose:** To handle file I/O and other system-level tasks.
+- **Example:** The `/niopd:new-initiative` command prompt calls the `new-initiative.sh` script to save the final document.
+
+**Important:** Each command corresponds to a `.md` file in the commands directory, and some commands may have a corresponding `.sh` script in the scripts directory for system-level operations.
+
+### Command Development Workflow
+
+To add a new command to NioPD:
+
+1. **Define the Command:** Create a new `.md` file in `.iflow/commands/NioPD/`
+2. **Create Supporting Agent (if needed):** Add agent definition in `.iflow/agents/`
+3. **Design Template (if needed):** Add document template in `.iflow/templates/`
+4. **Write Helper Script (if needed):** Add automation script in `.iflow/scripts/NioPD/`
+5. **Update Documentation:** Add the command to [`COMMANDS.md`](COMMANDS.md) and [`AGENTS.md`](AGENTS.md)
+
+This modular approach ensures that each component has a single responsibility and can be easily maintained, tested, and extended.
+
+**Note:** When adding new commands, follow the pattern where each command has a corresponding `.md` file in the commands directory, and if system-level operations are needed, create a corresponding `.sh` script in the scripts directory.
+
 ## Command Reference
 
 ### Core Workflow ✅ *Fully Implemented*
-- `/pd:new-initiative "<name>"`: Start a new high-level product initiative.
-- `/pd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
-- `/pd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
-- `/pd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
-- `/pd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
-- `/pd:update-roadmap`: Generate or update the product roadmap.
+- `/niopd:new-initiative "<name>"`: Start a new high-level product initiative.
+- `/niopd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
+- `/niopd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
+- `/niopd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
+- `/niopd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
+- `/niopd:update-roadmap`: Generate or update the product roadmap.
 
 ### Advanced: Strategy & Discovery ✅ *Fully Implemented*
-- `/pd:analyze-competitor --url=<url>`: Analyzes a competitor's website.
-- `/pd:summarize-interview --file=<path>`: Summarizes a user interview transcript.
-- `/pd:analyze-data --file=<path> --query="..."`: Answers a natural language question about a data file.
-- `/pd:generate-personas --from=<summary>`: Creates user personas from a feedback summary.
-- `/pd:research-trends --topic="..."`: Researches and summarizes market trends on a topic.
+- `/niopd:analyze-competitor --url=<url>`: Analyzes a competitor's website.
+- `/niopd:summarize-interview --file=<path>`: Summarizes a user interview transcript.
+- `/niopd:analyze-data --file=<path> --query="..."`: Answers a natural language question about a data file.
+- `/niopd:generate-personas --from=<summary>`: Creates user personas from a feedback summary.
+- `/niopd:research-trends --topic="..."`: Researches and summarizes market trends on a topic.
 
 ### Advanced: Execution & Launch ✅ *Partially Implemented*
-- `/pd:generate-update --for=<initiative>`: Create a concise stakeholder update report.
-- `/pd:track-kpis --for=<initiative>`: Get a status report on an initiative's KPIs.
+- `/niopd:generate-update --for=<initiative>`: Create a concise stakeholder update report.
+- `/niopd:track-kpis --for=<initiative>`: Get a status report on an initiative's KPIs.
 
 ### Planned Features 🚧 *Coming Soon*
 The following commands are planned for future releases:
 
 #### Planning & Definition
-- `/pd:draw-diagram --type=<type> --desc="..."`: Creates a PlantUML or Mermaid diagram from a description.
-- `/pd:assess-feasibility --for=<prd>`: Flags technically complex requirements in a PRD.
-- `/pd:write-stories --for=<prd>`: Writes detailed user stories and acceptance criteria for a PRD.
-- `/pd:identify-risks --for=<prd>`: Identifies potential risks for an initiative.
+- `/niopd:draw-diagram --type=<type> --desc="..."`: Creates a PlantUML or Mermaid diagram from a description.
+- `/niopd:assess-feasibility --for=<prd>`: Flags technically complex requirements in a PRD.
+- `/niopd:write-stories --for=<prd>`: Writes detailed user stories and acceptance criteria for a PRD.
+- `/niopd:identify-risks --for=<prd>`: Identifies potential risks for an initiative.
 
 #### Advanced Launch Features
-- `/pd:draft-release-notes --for=<prd>`: Generates draft release notes for a feature.
-- `/pd:generate-faq --for=<prd>`: Creates a list of FAQs for a new feature.
-- `/pd:simplify-update --for=<initiative> --audience=...`: Tailors a stakeholder update for a specific audience.
-- `/pd:brainstorm-names --desc="..."`: Brainstorms names for a new feature.
+- `/niopd:draft-release-notes --for=<prd>`: Generates draft release notes for a feature.
+- `/niopd:generate-faq --for=<prd>`: Creates a list of FAQs for a new feature.
+- `/niopd:simplify-update --for=<initiative> --audience=...`: Tailors a stakeholder update for a specific audience.
+- `/niopd:brainstorm-names --desc="..."`: Brainstorms names for a new feature.
 
 *For a complete command reference, see [COMMANDS.md](COMMANDS.md)*
 
@@ -143,29 +353,29 @@ The following commands are planned for future releases:
 Here's how you might use NioPD to research and plan a new feature using the currently available commands:
 
 1.  **Research the market:**
-    `/pd:research-trends --topic="AI-powered data analysis tools"`
+    `/niopd:research-trends --topic="AI-powered data analysis tools"`
 
 2.  **Analyze a competitor:**
-    `/pd:analyze-competitor --url="https://www.competitor.com"`
+    `/niopd:analyze-competitor --url="https://www.competitor.com"`
 
 3.  **Define the initiative:**
-    `/pd:new-initiative "Intelligent Analysis Feature"`
+    `/niopd:new-initiative "Intelligent Analysis Feature"`
 
 4.  **Import and analyze user feedback:**
-    `/pd:import-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
-    `/pd:summarize-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
+    `/niopd:import-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
+    `/niopd:summarize-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
 
 5.  **Generate user personas:**
-    `/pd:generate-personas --from="feedback-summary-report.md"`
+    `/niopd:generate-personas --from="feedback-summary-report.md"`
 
 6.  **Draft the PRD automatically:**
-    `/pd:draft-prd --for="Intelligent Analysis Feature"`
+    `/niopd:draft-prd --for="Intelligent Analysis Feature"`
 
 7.  **Update the product roadmap:**
-    `/pd:update-roadmap`
+    `/niopd:update-roadmap`
 
 8.  **Track progress:**
-    `/pd:track-kpis --for="Intelligent Analysis Feature"`
+    `/niopd:track-kpis --for="Intelligent Analysis Feature"`
 
 *Note: Features like diagram creation and risk assessment are planned for future releases.*
 

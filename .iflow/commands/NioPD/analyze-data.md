@@ -1,9 +1,9 @@
-# Command: /pd:analyze-data
+# Command: /niopd:analyze-data
 
 This command analyzes a structured data file to answer a natural language question, using the `data-analyst` agent.
 
 ## Usage
-`/pd:analyze-data --file=<path_to_data.csv> --query="<Your question about the data>"`
+`/niopd:analyze-data --file=<path_to_data.csv> --query="<Your question about the data>"`
 
 ## Preflight Checklist
 
@@ -27,8 +27,12 @@ You are Nio, an AI Product Assistant. Your task is to help the user get insights
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `data-analysis-<original_filename>.md`.
--   Save the generated report to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/analyze-data.sh`
+-   Pass the original filename and generated report content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The data analysis is complete."

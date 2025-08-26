@@ -1,65 +1,110 @@
-# CLAUDE.md
+# NioPD Guidelines
 
-> Think carefully and implement the most concise solution that changes as little code as possible.
+> Think carefully and implement the most concise solution that changes as little as possible.
 
-## USE SUB-AGENTS FOR CONTEXT OPTIMIZATION
+## NioPD System Principles
 
-### 1. Always use the file-analyzer sub-agent when asked to read files.
-The file-analyzer agent is an expert in extracting and summarizing critical information from files, particularly log files and verbose outputs. It provides concise, actionable summaries that preserve essential information while dramatically reducing context usage.
+### 1. Command-Driven Workflow
+NioPD operates on a structured, file-based pattern that combines user commands with detailed instructions for the AI. Each command follows a 5-part pattern:
 
-### 2. Always use the code-analyzer sub-agent when asked to search code, analyze code, research bugs, or trace logic flow.
+1. **The User Command**: Entry point initiated by the user (e.g., `/niopd:new-initiative "My Feature"`)
+2. **The Command Prompt (.md)**: Detailed instructions for the AI on how to execute the command
+3. **The Agent (.md) (Optional)**: Specialized agents for complex analysis or synthesis tasks
+4. **The Template (.md) (Optional)**: Structured templates for consistent document generation
+5. **The Script (.sh) (Optional)**: Shell scripts for system-level file operations
 
-The code-analyzer agent is an expert in code analysis, logic tracing, and vulnerability detection. It provides concise, actionable summaries that preserve essential information while dramatically reducing context usage.
+### 2. Specialized Agent Usage
+NioPD relies on specialized agents to perform complex synthesis tasks. Unlike general-purpose chatbots, NioPD uses agents to transform one type of document into another. When a command requires complex analysis, always invoke the appropriate specialized agent:
 
-### 3. Always use the test-runner sub-agent to run tests and analyze the test results.
+- `competitor-analyzer`: For analyzing competitor websites
+- `data-analyst`: For analyzing structured data files
+- `feedback-synthesizer`: For processing raw user feedback
+- `interview-summarizer`: For summarizing user interview transcripts
+- `kpi-tracker`: For tracking initiative KPIs
+- `market-researcher`: For researching market trends
+- `persona-generator`: For creating user personas
+- `presentation-builder`: For creating stakeholder updates
+- `roadmap-generator`: For generating product roadmaps
 
-Using the test-runner agent ensures:
+### 3. File-Based Operations
+All NioPD operations are file-based and follow a strict directory structure:
+- Commands: `.iflow/commands/NioPD/`
+- Agents: `.iflow/agents/`
+- Scripts: `.iflow/scripts/NioPD/`
+- Templates: `.iflow/templates/`
+- Data: `.iflow/data/` (with subdirectories for initiatives, PRDs, reports, and roadmaps)
 
-- Full test output is captured for debugging
-- Main conversation stays clean and focused
-- Context usage is optimized
-- All issues are properly surfaced
-- No approval dialogs interrupt the workflow
+Always use the appropriate helper scripts for file operations rather than direct file I/O.
 
-## Philosophy
+## Product Manager Workflow Guidelines
 
-### Error Handling
+### 1. Customer-Centric Approach
+Always prioritize the customer's needs and pain points. When analyzing feedback or creating personas, focus on real user problems rather than hypothetical scenarios.
 
-- **Fail fast** for critical configuration (missing text model)
-- **Log and continue** for optional features (extraction model)
+### 2. Data-Driven Decision Making
+Leverage all available data sources:
+- User feedback and interview transcripts
+- Market research and trend analysis
+- Competitor analysis
+- KPI tracking and performance metrics
+
+### 3. Clear Communication
+Ensure all generated documents are clear, concise, and actionable:
+- Use plain language that stakeholders can understand
+- Structure documents with clear sections and headings
+- Include specific, measurable goals and metrics
+
+### 4. Iterative Process
+Product management is an iterative process:
+- Start with minimal viable documentation
+- Gather feedback and refine
+- Update roadmaps and plans as new information becomes available
+
+## Error Handling
+
+- **Fail fast** for critical issues (missing required inputs)
+- **Provide clear guidance** when errors occur
 - **Graceful degradation** when external services unavailable
-- **User-friendly messages** through resilience layer
-
-### Testing
-
-- Always use the test-runner agent to execute tests.
-- Do not use mock services for anything ever.
-- Do not move on to the next test until the current test is complete.
-- If the test fails, consider checking if the test is structured correctly before deciding we need to refactor the codebase.
-- Tests to be verbose so we can use them for debugging.
-
+- **User-friendly messages** that help PMs understand next steps
 
 ## Tone and Behavior
 
-- Criticism is welcome. Please tell me when I am wrong or mistaken, or even when you think I might be wrong or mistaken.
-- Please tell me if there is a better approach than the one I am taking.
-- Please tell me if there is a relevant standard or convention that I appear to be unaware of.
-- Be skeptical.
-- Be concise.
-- Short summaries are OK, but don't give an extended breakdown unless we are working through the details of a plan.
-- Do not flatter, and do not give compliments unless I am specifically asking for your judgement.
-- Occasional pleasantries are fine.
-- Feel free to ask many questions. If you are in doubt of my intent, don't guess. Ask.
+- Be helpful and supportive to product managers
+- Ask clarifying questions when requirements are unclear
+- Provide concise summaries while offering detailed information when needed
+- Maintain a professional but approachable tone
+- Focus on enabling PMs to make better product decisions
+
+## Core Workflows
+
+### Discovery & Research
+When helping PMs with discovery and research tasks:
+- Use the `market-researcher` agent for trend analysis
+- Use the `competitor-analyzer` agent for competitive analysis
+- Use the `interview-summarizer` agent for user interview analysis
+- Always cite sources and provide evidence for claims
+
+### Planning & Definition
+When helping PMs with planning and definition tasks:
+- Use the `feedback-synthesizer` agent to analyze user feedback
+- Use the `persona-generator` agent to create user personas
+- Use templates to ensure consistent document structure
+- Help define clear, measurable success criteria
+
+### Execution & Launch
+When helping PMs with execution and launch tasks:
+- Use the `kpi-tracker` agent to monitor progress
+- Use the `presentation-builder` agent to create stakeholder updates
+- Use the `roadmap-generator` agent to visualize timelines
+- Provide actionable insights and recommendations
 
 ## ABSOLUTE RULES:
 
 - NO PARTIAL IMPLEMENTATION
 - NO SIMPLIFICATION : no "//This is simplified stuff for now, complete implementation would blablabla"
-- NO CODE DUPLICATION : check existing codebase to reuse functions and constants Read files before writing new functions. Use common sense function name to find them easily.
-- NO DEAD CODE : either use or delete from codebase completely
-- IMPLEMENT TEST FOR EVERY FUNCTIONS
-- NO CHEATER TESTS : test must be accurate, reflect real usage and be designed to reveal flaws. No useless tests! Design tests to be verbose so we can use them for debuging.
-- NO INCONSISTENT NAMING - read existing codebase naming patterns.
-- NO OVER-ENGINEERING - Don't add unnecessary abstractions, factory patterns, or middleware when simple functions would work. Don't think "enterprise" when you need "working"
-- NO MIXED CONCERNS - Don't put validation logic inside API handlers, database queries inside UI components, etc. instead of proper separation
-- NO RESOURCE LEAKS - Don't forget to close database connections, clear timeouts, remove event listeners, or clean up file handles
+- NO DUPLICATION : check existing work before creating new content
+- NO INCOMPLETE DOCUMENTS : ensure all sections are properly filled out
+- NO INCONSISTENT NAMING - follow existing naming conventions
+- NO OVER-ENGINEERING - keep solutions simple and focused
+- NO MIXED CONCERNS - separate different types of work (research, planning, reporting)
+- NO RESOURCE LEAKS - clean up temporary files and data when done

@@ -1,9 +1,9 @@
-# Command: /pd:summarize-interview
+# Command: /niopd:summarize-interview
 
 This command generates a summary of a user interview transcript using the `interview-summarizer` agent.
 
 ## Usage
-`/pd:summarize-interview --file=<path_to_transcript.txt>`
+`/niopd:summarize-interview --file=<path_to_transcript.txt>`
 
 ## Preflight Checklist
 
@@ -27,8 +27,12 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `interview-summary-<original_filename>.md`.
--   Save the generated report to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/summarize-interview.sh`
+-   Pass the original filename and generated report content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The interview has been summarized."

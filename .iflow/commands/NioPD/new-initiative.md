@@ -2,18 +2,18 @@
 allowed-tools: Bash, Read, Write
 ---
 
-# Command: /pd:new-initiative
+# Command: /niopd:new-initiative
 
 This command guides the user through creating a new product initiative document.
 
 ## Usage
-`/pd:new-initiative "<initiative_name>"`
+`/niopd:new-initiative "<initiative_name>"`
 
 ## Preflight Checklist
 
 1.  **Validate Initiative Name:**
     -   The user must provide an initiative name in quotes.
-    -   If the name is missing, respond with: "It looks like you want to start a new initiative! What would you like to call it? Please provide a name in quotes, like this: `/pd:new-initiative \"My Awesome Initiative\"`"
+    -   If the name is missing, respond with: "It looks like you want to start a new initiative! What would you like to call it? Please provide a name in quotes, like this: `/niopd:new-initiative \"My Awesome Initiative\"`"
     -   Convert the name to a URL-friendly slug (lowercase, hyphens for spaces). For example, "My Awesome Initiative" becomes "my-awesome-initiative".
 
 2.  **Check for Existing Initiative:**
@@ -46,12 +46,15 @@ Guide the user through filling out the template. Ask one question at a time.
 -   Prepare the content for the final markdown file.
 
 ### Step 4: Execute Helper Script
--   **This step is a placeholder for now.** In the future, you will call a script. For now, you will directly write the file.
--   Use the `Write` tool to create the file at `.iflow/data/initiatives/<slug>.md` with the compiled content.
+-   Call the helper script to create the initiative file: `.iflow/scripts/NioPD/new-initiative.sh`
+-   Pass the slug and compiled content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 5: Confirm and Suggest Next Steps
 -   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** at `.iflow/data/initiatives/<slug>.md`."
--   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative with `/pd:import-feedback`."
+-   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative with `/niopd:import-feedback`."
 
 ## Error Handling
 -   If the user provides unclear answers, ask for clarification politely.

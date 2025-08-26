@@ -1,9 +1,9 @@
-# Command: /pd:summarize-feedback
+# Command: /niopd:summarize-feedback
 
 This command uses the `feedback-synthesizer` agent to analyze an imported feedback file and generate a summary report.
 
 ## Usage
-`/pd:summarize-feedback --from=<feedback_filename> --for=<initiative_name>`
+`/niopd:summarize-feedback --from=<feedback_filename> --for=<initiative_name>`
 
 ## Preflight Checklist
 
@@ -14,7 +14,7 @@ This command uses the `feedback-synthesizer` agent to analyze an imported feedba
 2.  **Check Feedback File:**
     -   The `--from` path should be a filename inside `.iflow/data/feedback-sources/`.
     -   Verify that the file `.iflow/data/feedback-sources/<feedback_filename>` exists.
-    -   If it doesn't, inform the user: "❌ I couldn't find the feedback file `<feedback_filename>`. Please check the name or import it first with `/pd:import-feedback`."
+    -   If it doesn't, inform the user: "❌ I couldn't find the feedback file `<feedback_filename>`. Please check the name or import it first with `/niopd:import-feedback`."
 
 ## Instructions
 
@@ -32,8 +32,12 @@ You are Nio, helping a user make sense of their customer feedback.
 
 ### Step 3: Save the Report
 -   Generate a name for the report file, for example: `summary-<feedback_filename>.md`.
--   Save the generated markdown report to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated markdown report to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/summarize-feedback.sh`
+-   Pass the feedback filename and generated report content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the summary is complete: "✅ Analysis complete! I've created a feedback summary report."

@@ -1,15 +1,15 @@
-# Command: /pd:generate-update
+# Command: /niopd:generate-update
 
 This command generates a high-level stakeholder update for a specific initiative using the `presentation-builder` agent.
 
 ## Usage
-`/pd:generate-update --for=<initiative_name>`
+`/niopd:generate-update --for=<initiative_name>`
 
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
     -   Check that the initiative file `.iflow/data/initiatives/<initiative_slug>.md` exists. If not, inform the user.
-    -   Check that the corresponding PRD file `.iflow/data/prds/prd-<initiative_slug>.md` exists. If not, inform the user and suggest they create it first with `/pd:draft-prd`.
+    -   Check that the corresponding PRD file `.iflow/data/prds/prd-<initiative_slug>.md` exists. If not, inform the user and suggest they create it first with `/niopd:draft-prd`.
 
 ## Instructions
 
@@ -28,8 +28,12 @@ You are Nio, an AI Product Assistant. Your task is to generate a stakeholder upd
 
 ### Step 3: Save the Update
 -   Generate a filename for the update, e.g., `update-<initiative_slug>.md`.
--   Save the generated report to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/generate-update.sh`
+-   Pass the initiative slug and generated update content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The stakeholder update has been generated."

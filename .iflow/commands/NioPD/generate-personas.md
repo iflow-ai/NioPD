@@ -1,9 +1,9 @@
-# Command: /pd:generate-personas
+# Command: /niopd:generate-personas
 
 This command generates a set of user personas based on a feedback summary report, using the `persona-generator` agent.
 
 ## Usage
-`/pd:generate-personas --from=<feedback_summary.md>`
+`/niopd:generate-personas --from=<feedback_summary.md>`
 
 ## Preflight Checklist
 
@@ -27,8 +27,12 @@ You are Nio, an AI Product Assistant. Your task is to help the user understand t
 
 ### Step 3: Save the Document
 -   Generate a filename for the document, e.g., `personas-<initiative_name>.md`. You can infer the initiative name from the input filename.
--   Save the generated document to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated document to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/generate-personas.sh`
+-   Pass the initiative name and generated personas content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The user personas have been generated."

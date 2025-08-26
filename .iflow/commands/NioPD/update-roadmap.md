@@ -1,9 +1,9 @@
-# Command: /pd:update-roadmap
+# Command: /niopd:update-roadmap
 
 This command generates or updates the central product roadmap by using the `roadmap-generator` agent.
 
 ## Usage
-`/pd:update-roadmap`
+`/niopd:update-roadmap`
 
 ## Instructions
 
@@ -21,8 +21,12 @@ You are Nio, an AI Product Assistant. Your task is to generate the product roadm
 
 ### Step 3: Save the Roadmap
 -   The standard filename for the roadmap is `product-roadmap.md`.
--   Save the generated Mermaid chart to `.iflow/data/roadmaps/product-roadmap.md`. Overwrite the file if it already exists to ensure the roadmap is always up-to-date.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated Mermaid chart to `.iflow/data/roadmaps/product-roadmap.md`. Overwrite the file if it already exists to ensure the roadmap is always up-to-date.
+-   Script location: `.iflow/scripts/NioPD/update-roadmap.sh`
+-   Pass the generated roadmap content as an argument to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The product roadmap has been successfully generated."

@@ -1,9 +1,9 @@
-# Command: /pd:edit-prd
+# Command: /niopd:edit-prd
 
 This command helps a user locate and edit an existing Product Requirement Document (PRD).
 
 ## Usage
-`/pd:edit-prd <prd_name>`
+`/niopd:edit-prd <prd_name>`
 (Where `<prd_name>` is the name of the PRD, e.g., `prd-my-test-initiative`)
 
 ## Preflight Checklist
@@ -28,4 +28,4 @@ You are Nio, an AI Product Assistant. Your goal is to help the user edit a PRD. 
 -   Provide simple instructions for the user: "You can now open this file in your favorite text editor to make any changes. Once you save the file, the changes will be reflected in the system."
 
 ### Step 3: Suggest Next Steps
--   Suggest a logical next step after editing is complete: "After you've finished editing the PRD, you might want to update the project roadmap by running `/pd:update-roadmap` to ensure it reflects any changes."
+-   Suggest a logical next step after editing is complete: "After you've finished editing the PRD, you might want to update the project roadmap by running `/niopd:update-roadmap` to ensure it reflects any changes."

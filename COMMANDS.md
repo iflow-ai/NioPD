@@ -15,34 +15,34 @@ This document is a complete reference for all commands available in the NioPD sy
 
 These are the fundamental commands for moving from an idea to a plan.
 
-### `/pd:new-initiative`
+### `/niopd:new-initiative`
 - **Purpose**: Start a new high-level product initiative.
-- **Usage**: `/pd:new-initiative "<initiative_name>"`
+- **Usage**: `/niopd:new-initiative "<initiative_name>"`
 - **Output**: A new initiative file in `.iflow/data/initiatives/`.
 
-### `/pd:import-feedback`
+### `/niopd:import-feedback`
 - **Purpose**: Import a file of user feedback.
-- **Usage**: `/pd:import-feedback --from=<path> --for=<initiative>`
+- **Usage**: `/niopd:import-feedback --from=<path> --for=<initiative>`
 - **Output**: A copy of the feedback file in `.iflow/data/feedback-sources/`.
 
-### `/pd:summarize-feedback`
+### `/niopd:summarize-feedback`
 - **Purpose**: Analyze a feedback file and create a summary report.
-- **Usage**: `/pd:summarize-feedback --from=<file> --for=<initiative>`
+- **Usage**: `/niopd:summarize-feedback --from=<file> --for=<initiative>`
 - **Output**: A summary report in `.iflow/data/reports/`.
 
-### `/pd:draft-prd`
+### `/niopd:draft-prd`
 - **Purpose**: Automatically generate a PRD draft from an initiative and feedback.
-- **Usage**: `/pd:draft-prd --for=<initiative>`
+- **Usage**: `/niopd:draft-prd --for=<initiative>`
 - **Output**: A new PRD file in `.iflow/data/prds/`.
 
-### `/pd:edit-prd`
+### `/niopd:edit-prd`
 - **Purpose**: Get instructions to manually edit a PRD.
-- **Usage**: `/pd:edit-prd <prd_name>`
+- **Usage**: `/niopd:edit-prd <prd_name>`
 - **Output**: A message with the file path and instructions.
 
-### `/pd:update-roadmap`
+### `/niopd:update-roadmap`
 - **Purpose**: Generate or update the product roadmap from all initiatives.
-- **Usage**: `/pd:update-roadmap`
+- **Usage**: `/niopd:update-roadmap`
 - **Output**: A roadmap file in `.iflow/data/roadmaps/`.
 
 ---
@@ -51,29 +51,29 @@ These are the fundamental commands for moving from an idea to a plan.
 
 Commands to help with research, discovery, and understanding the market and users.
 
-### `/pd:analyze-competitor`
+### `/niopd:analyze-competitor`
 - **Purpose**: Analyzes a competitor's website for key features and positioning.
-- **Usage**: `/pd:analyze-competitor --url=<url>`
+- **Usage**: `/niopd:analyze-competitor --url=<url>`
 - **Output**: A competitor analysis report.
 
-### `/pd:summarize-interview`
+### `/niopd:summarize-interview`
 - **Purpose**: Summarizes a user interview transcript, extracting key themes and quotes.
-- **Usage**: `/pd:summarize-interview --file=<path>`
+- **Usage**: `/niopd:summarize-interview --file=<path>`
 - **Output**: An interview summary report.
 
-### `/pd:analyze-data`
+### `/niopd:analyze-data`
 - **Purpose**: Answers a natural language question about a structured data file (e.g., CSV).
-- **Usage**: `/pd:analyze-data --file=<path> --query="..."`
+- **Usage**: `/niopd:analyze-data --file=<path> --query="..."`
 - **Output**: A data analysis report with the answer and methodology.
 
-### `/pd:generate-personas`
+### `/niopd:generate-personas`
 - **Purpose**: Creates user personas from a feedback summary.
-- **Usage**: `/pd:generate-personas --from=<summary_file>`
+- **Usage**: `/niopd:generate-personas --from=<summary_file>`
 - **Output**: A document containing 2-3 user personas.
 
-### `/pd:research-trends`
+### `/niopd:research-trends`
 - **Purpose**: Researches and summarizes market trends on a given topic using web search.
-- **Usage**: `/pd:research-trends --topic="..."`
+- **Usage**: `/niopd:research-trends --topic="..."`
 - **Output**: A market trend report with key findings and sources.
 
 ---
@@ -84,24 +84,24 @@ Commands to assist with the details of planning and defining features.
 
 *Note: The following advanced planning commands are planned for future implementation and are not yet available.*
 
-### `/pd:draw-diagram` *(Coming Soon)*
+### `/niopd:draw-diagram` *(Coming Soon)*
 - **Purpose**: Creates a PlantUML or Mermaid diagram from a text description.
-- **Usage**: `/pd:draw-diagram --type=<type> --desc="..."`
+- **Usage**: `/niopd:draw-diagram --type=<type> --desc="..."`
 - **Output**: A markdown file containing the diagram code.
 
-### `/pd:assess-feasibility` *(Coming Soon)*
+### `/niopd:assess-feasibility` *(Coming Soon)*
 - **Purpose**: Flags technically complex or risky requirements in a PRD.
-- **Usage**: `/pd:assess-feasibility --for=<prd_name>`
+- **Usage**: `/niopd:assess-feasibility --for=<prd_name>`
 - **Output**: An assessment report.
 
-### `/pd:write-stories` *(Coming Soon)*
+### `/niopd:write-stories` *(Coming Soon)*
 - **Purpose**: Writes detailed user stories and acceptance criteria for a PRD.
-- **Usage**: `/pd:write-stories --for=<prd_name>`
+- **Usage**: `/niopd:write-stories --for=<prd_name>`
 - **Output**: An updated PRD or a separate user story document.
 
-### `/pd:identify-risks` *(Coming Soon)*
+### `/niopd:identify-risks` *(Coming Soon)*
 - **Purpose**: Identifies potential market, technical, or dependency risks for an initiative.
-- **Usage**: `/pd:identify-risks --for=<initiative_name>`
+- **Usage**: `/niopd:identify-risks --for=<initiative_name>`
 - **Output**: A risk assessment report.
 
 ---
@@ -110,34 +110,34 @@ Commands to assist with the details of planning and defining features.
 
 Commands to help with the go-to-market and launch process.
 
-### `/pd:generate-update`
+### `/niopd:generate-update`
 - **Purpose**: Create a concise stakeholder update report for an initiative.
-- **Usage**: `/pd:generate-update --for=<initiative_name>`
+- **Usage**: `/niopd:generate-update --for=<initiative_name>`
 - **Output**: A stakeholder update report.
 
-### `/pd:track-kpis`
+### `/niopd:track-kpis`
 - **Purpose**: Get a status report on an initiative's KPIs.
-- **Usage**: `/pd:track-kpis --for=<initiative_name>`
+- **Usage**: `/niopd:track-kpis --for=<initiative_name>`
 - **Output**: A KPI status report.
 
 *Note: The following advanced launch commands are planned for future implementation and are not yet available.*
 
-### `/pd:draft-release-notes` *(Coming Soon)*
+### `/niopd:draft-release-notes` *(Coming Soon)*
 - **Purpose**: Generates draft release notes for a feature based on its PRD.
-- **Usage**: `/pd:draft-release-notes --for=<prd_name>`
+- **Usage**: `/niopd:draft-release-notes --for=<prd_name>`
 - **Output**: A draft of release notes.
 
-### `/pd:generate-faq` *(Coming Soon)*
+### `/niopd:generate-faq` *(Coming Soon)*
 - **Purpose**: Creates a list of FAQs for a new feature.
-- **Usage**: `/pd:generate-faq --for=<prd_name>`
+- **Usage**: `/niopd:generate-faq --for=<prd_name>`
 - **Output**: A FAQ document.
 
-### `/pd:simplify-update` *(Coming Soon)*
+### `/niopd:simplify-update` *(Coming Soon)*
 - **Purpose**: Tailors a stakeholder update for a specific audience.
-- **Usage**: `/pd:simplify-update --for=<initiative_name> --audience=...`
+- **Usage**: `/niopd:simplify-update --for=<initiative_name> --audience=...`
 - **Output**: A rewritten, audience-specific update.
 
-### `/pd:brainstorm-names` *(Coming Soon)*
+### `/niopd:brainstorm-names` *(Coming Soon)*
 - **Purpose**: Brainstorms creative names for a new feature.
-- **Usage**: `/pd:brainstorm-names --desc="..."`
+- **Usage**: `/niopd:brainstorm-names --desc="..."`
 - **Output**: A list of potential names.

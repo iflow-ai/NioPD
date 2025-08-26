@@ -14,20 +14,20 @@ This document tracks the implementation status of the NioPD system.
 ## Phase 2: User Feedback Features (✅ Completed)
 
 - [x] **Design `feedback-synthesizer` Agent:** Define the prompt and behavior for the agent that will analyze feedback.
-- [x] **Implement `/pd:import-feedback` Command:** Create the command prompt and helper script for importing feedback data.
-- [x] **Implement `/pd:summarize-feedback` Command:** Create the command prompt that uses the new agent to generate a summary.
+- [x] **Implement `/niopd:import-feedback` Command:** Create the command prompt and helper script for importing feedback data.
+- [x] **Implement `/niopd:summarize-feedback` Command:** Create the command prompt that uses the new agent to generate a summary.
 - [x] **End-to-End Test:** Test the full feedback workflow.
 
 ## Phase 3: Product Definition & Roadmapping (✅ Completed)
 
-- [x] Implement `/pd:draft-prd` Command
-- [x] Implement `/pd:edit-prd` Command
-- [x] Implement `/pd:update-roadmap` Command
+- [x] Implement `/niopd:draft-prd` Command
+- [x] Implement `/niopd:edit-prd` Command
+- [x] Implement `/niopd:update-roadmap` Command
 
 ## Phase 4: Reporting & Tracking (✅ Completed)
 
-- [x] Implement `/pd:generate-update` Command
-- [x] Implement `/pd:track-kpis` Command
+- [x] Implement `/niopd:generate-update` Command
+- [x] Implement `/niopd:track-kpis` Command
 
 ## Phase 5: Core Documentation (✅ Completed)
 
@@ -68,7 +68,7 @@ This document tracks the implementation status of the NioPD system.
 
 ## Phase 11: Command Prefix Simplification (✓ Completed)
 
-- [x] **Update Command Prefix:** Change all `/niopd:` commands to `/pd:` for simplified input across all documentation files
+- [x] **Update Command Prefix:** Change all `/pd:` commands to `/niopd:` for standardized input across all documentation files
   - [x] Update README.md with new command prefix
   - [x] Update AGENTS.md with new command prefix  
   - [x] Update COMMANDS.md with new command prefix

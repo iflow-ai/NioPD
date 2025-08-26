@@ -2,22 +2,46 @@
 
 This directory contains all the document templates used by the NioPD system to generate structured reports and documents.
 
+## Template Structure
+
+Each template follows a consistent structure:
+
+```
+---
+name: template-name
+description: Brief description of the template
+---
+
+# {{document_title}}
+
+## Overview
+Brief overview of the document's purpose and contents.
+
+## [Section Name]
+{{section_content}}
+
+## [Another Section]
+{{another_section_content}}
+
+...
+```
+
 ## Available Templates
 
 ### Core Product Management Templates
 
-#### 1. Initiative Template (`initiative-template.md`)
+#### 1. Initiative Template ([initiative-template.md](initiative-template.md))
 **Purpose:** Creates structured product initiative documents
-**Used by:** `/pd:new-initiative` command
+**Used by:** `/niopd:new-initiative` command
 **Key Features:**
 - Strategic goals and problem statements
 - Scope definition and KPI tracking
 - Timeline and milestone management
 - Risk and dependency tracking
 
-#### 2. PRD Template (`prd-template.md`)
+#### 2. PRD Template ([prd-template.md](prd-template.md))
 **Purpose:** Generates comprehensive Product Requirements Documents
-**Used by:** `/pd:draft-prd` command
+**Used by:** `/niopd:draft-prd` command
 **Key Features:**
 - User personas and stories
 - Functional and non-functional requirements
@@ -26,7 +50,7 @@ This directory contains all the document templates used by the NioPD system to g
 
 ### Analysis & Research Templates
 
-#### 3. Competitor Analysis Template (`competitor-analysis-template.md`)
+#### 3. Competitor Analysis Template ([competitor-analysis-template.md](competitor-analysis-template.md))
 **Purpose:** Structured competitive analysis reports
 **Used by:** `competitor-analyzer` agent
 **Key Features:**
@@ -35,7 +59,7 @@ This directory contains all the document templates used by the NioPD system to g
 - Competitive strengths and weaknesses
 - Strategic recommendations
 
-#### 4. Market Research Template (`market-research-template.md`)
+#### 4. Market Research Template ([market-research-template.md](market-research-template.md))
 **Purpose:** Comprehensive market trend analysis
 **Used by:** `market-researcher` agent
 **Key Features:**
@@ -44,7 +68,7 @@ This directory contains all the document templates used by the NioPD system to g
 - Technology and innovation trends
 - Strategic implications and recommendations
 
-#### 5. Feedback Summary Template (`feedback-summary-template.md`)
+#### 5. Feedback Summary Template ([feedback-summary-template.md](feedback-summary-template.md))
 **Purpose:** User feedback synthesis and analysis
 **Used by:** `feedback-synthesizer` agent
 **Key Features:**
@@ -53,7 +77,7 @@ This directory contains all the document templates used by the NioPD system to g
 - Actionable insights and recommendations
 - Supporting quotes and data quality assessment
 
-#### 6. Data Analysis Template (`data-analysis-template.md`)
+#### 6. Data Analysis Template ([data-analysis-template.md](data-analysis-template.md))
 **Purpose:** Structured data analysis reports
 **Used by:** `data-analyst` agent
 **Key Features:**
@@ -64,7 +88,7 @@ This directory contains all the document templates used by the NioPD system to g
 
 ### User Research Templates
 
-#### 7. Interview Summary Template (`interview-summary-template.md`)
+#### 7. Interview Summary Template ([interview-summary-template.md](interview-summary-template.md))
 **Purpose:** User interview analysis and insights
 **Used by:** `interview-summarizer` agent
 **Key Features:**
@@ -73,7 +97,7 @@ This directory contains all the document templates used by the NioPD system to g
 - Feature reactions and behavioral observations
 - Actionable recommendations for product development
 
-#### 8. User Persona Template (`persona-template.md`)
+#### 8. User Persona Template ([persona-template.md](persona-template.md))
 **Purpose:** Detailed user persona documentation
 **Used by:** `persona-generator` agent
 **Key Features:**
@@ -84,7 +108,7 @@ This directory contains all the document templates used by the NioPD system to g
 
 ### Project Management Templates
 
-#### 9. Project Update Template (`project-update-template.md`)
+#### 9. Project Update Template ([project-update-template.md](project-update-template.md))
 **Purpose:** Stakeholder project status reports
 **Used by:** `presentation-builder` agent
 **Key Features:**
@@ -93,7 +117,7 @@ This directory contains all the document templates used by the NioPD system to g
 - Timeline and milestone management
 - Stakeholder communication planning
 
-#### 10. KPI Report Template (`kpi-report-template.md`)
+#### 10. KPI Report Template ([kpi-report-template.md](kpi-report-template.md))
 **Purpose:** Key Performance Indicator tracking reports
 **Used by:** `kpi-tracker` agent
 **Key Features:**

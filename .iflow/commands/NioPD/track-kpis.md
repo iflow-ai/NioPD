@@ -1,9 +1,9 @@
-# Command: /pd:track-kpis
+# Command: /niopd:track-kpis
 
 This command generates a KPI status report for a specific initiative by using the `kpi-tracker` agent.
 
 ## Usage
-`/pd:track-kpis --for=<initiative_name>`
+`/niopd:track-kpis --for=<initiative_name>`
 
 ## Preflight Checklist
 
@@ -26,8 +26,12 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `kpi-status-<initiative_slug>.md`.
--   Save the generated report to `.iflow/data/reports/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Script location: `.iflow/scripts/NioPD/track-kpis.sh`
+-   Pass the initiative slug and generated report content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The KPI status report is ready."

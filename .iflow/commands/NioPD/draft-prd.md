@@ -1,9 +1,9 @@
-# Command: /pd:draft-prd
+# Command: /niopd:draft-prd
 
 This command drafts a new Product Requirement Document (PRD) based on an existing initiative and its associated feedback summary.
 
 ## Usage
-`/pd:draft-prd --for=<initiative_name>`
+`/niopd:draft-prd --for=<initiative_name>`
 
 ## Preflight Checklist
 
@@ -33,10 +33,14 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 
 ### Step 3: Save the PRD Draft
 -   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
--   Save the completed draft to `.iflow/data/prds/`.
--   Use the `Write` tool for this operation.
+-   Call the helper script to save the completed draft to `.iflow/data/prds/`.
+-   Script location: `.iflow/scripts/NioPD/draft-prd.sh`
+-   Pass the initiative slug and completed PRD content as arguments to the script.
+-   Handle the script's response:
+    -   If successful, proceed to the next step.
+    -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Suggest Next Steps
 -   Confirm the creation: "✅ I've created a draft PRD for **<initiative_name>**."
 -   Provide the path: "You can review and edit it at: `.iflow/data/prds/prd-<initiative_slug>.md`"
--   Suggest the next step: "You can use the `/pd:edit-prd` command to make any necessary changes."
+-   Suggest the next step: "You can use the `/niopd:edit-prd` command to make any necessary changes."
