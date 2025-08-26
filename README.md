@@ -98,11 +98,7 @@ NioPD/
     ├── prds/         # Product Requirements Documents
     ├── reports/      # Analysis and summary reports
     ├── roadmaps/     # Product roadmaps
-    └── feedback-sources/ # Raw feedback files
-        ├── initiatives/   # Product initiative files
-        ├── prds/         # Product Requirements Documents
-        ├── reports/      # Analysis and summary reports
-        └── roadmaps/     # Product roadmaps
+    └── feedbacks/ # Raw feedback files
 ```
 
 ### Helper Scripts
@@ -292,6 +288,18 @@ A generic bash script located at `.iflow/scripts/NioPD/save-file.sh` that can sa
 - Provides success/error feedback
 - Can be used by any command that needs to save files
 
+#### `help.sh`
+A bash script located at `.iflow/scripts/NioPD/help.sh` that displays help information about the NioPD system. This script is used internally by the `/niopd:help` command.
+
+**Usage:**
+```bash
+./help.sh
+```
+
+**Purpose:**
+- Displays help information about the NioPD system and its commands
+- Provides a quick reference for users to understand available commands
+
 ## How NioPD Works: The 5-Part Command Pattern
 
 NioPD operates on a structured, file-based pattern that combines user commands with detailed instructions for the AI. Understanding this pattern is key to using and extending the system.
@@ -361,7 +369,7 @@ When creating new commands that generate files, follow these directory structure
 - **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
 - **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
 - **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
-- **Feedback Sources:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedback-sources/user-feedback.txt`)
+- **Feedbacks:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedbacks/user-feedback.txt`)
 
 All file creation operations should be handled by corresponding shell scripts located in `.iflow/scripts/NioPD/`. Each script should:
 1. Validate input parameters
@@ -377,6 +385,10 @@ All file creation operations should be handled by corresponding shell scripts lo
 Add New Commands: `/niopd:draft-prd "Feature Name"`, This command automatically generates a Product Requirements Document (PRD) for the specified feature based on historical data and existing initiatives.
 ```
 
+```
+Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set.
+```
+
 ## Command Reference
 
 ### Core Workflow ✅ *Fully Implemented*
@@ -386,6 +398,7 @@ Add New Commands: `/niopd:draft-prd "Feature Name"`, This command automatically 
 - `/niopd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
 - `/niopd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
 - `/niopd:update-roadmap`: Generate or update the product roadmap.
+- `/niopd:help`: Display help information about the NioPD system and its commands.
 
 ### Advanced: Strategy & Discovery ✅ *Fully Implemented*
 - `/niopd:analyze-competitor --url=<url>`: Analyzes a competitor's website.

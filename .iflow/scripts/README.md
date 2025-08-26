@@ -158,6 +158,17 @@ Saves product roadmaps.
 **Purpose:**
 - Saves product roadmaps to the `niopd-workspace/roadmaps/` directory
 
+### [help.sh](NioPD/help.sh)
+Displays help information about the NioPD system.
+
+**Usage:**
+```bash
+./help.sh
+```
+
+**Purpose:**
+- Displays help information about the NioPD system and its commands
+
 ## Creating New Scripts
 
 To create a new script:

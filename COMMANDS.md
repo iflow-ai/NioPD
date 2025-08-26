@@ -19,6 +19,11 @@ This document is a complete reference for all commands available in the NioPD sy
 - **Usage**: `/niopd:init`
 - **Output**: Creates the required data directories in `niopd-workspace/`.
 
+### `/niopd:help`
+- **Purpose**: Display help information about the NioPD system and its commands.
+- **Usage**: `/niopd:help`
+- **Output**: Displays a help message with command usage information.
+
 ---
 
 ## Core Workflow Commands

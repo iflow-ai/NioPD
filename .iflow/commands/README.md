@@ -43,6 +43,7 @@ All NioPD commands are located in the [NioPD](NioPD/) subdirectory:
 - [draft-prd.md](NioPD/draft-prd.md) - Automatically generate a PRD draft from an initiative and feedback
 - [edit-prd.md](NioPD/edit-prd.md) - Get instructions to manually edit a PRD
 - [update-roadmap.md](NioPD/update-roadmap.md) - Generate or update the product roadmap from all initiatives
+- [help.md](NioPD/help.md) - Display help information about the NioPD system
 
 ### Advanced Discovery Commands
 - [analyze-competitor.md](NioPD/analyze-competitor.md) - Analyzes a competitor's website for key features and positioning
