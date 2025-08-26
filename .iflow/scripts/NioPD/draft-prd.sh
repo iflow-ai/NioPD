@@ -12,7 +12,7 @@ fi
 
 INITIATIVE_SLUG=$1
 PRD_CONTENT=$2
-FILE_PATH=".iflow/data/prds/prd-${INITIATIVE_SLUG}.md"
+FILE_PATH="niopd-workspace/prds/prd-${INITIATIVE_SLUG}.md"
 
 # --- File Creation ---
 echo "Saving PRD draft to: ${FILE_PATH}"

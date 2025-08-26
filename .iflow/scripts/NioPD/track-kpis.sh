@@ -12,7 +12,7 @@ fi
 
 INITIATIVE_SLUG=$1
 REPORT_CONTENT=$2
-FILE_PATH=".iflow/data/reports/kpi-status-${INITIATIVE_SLUG}.md"
+FILE_PATH="niopd-workspace/reports/kpi-status-${INITIATIVE_SLUG}.md"
 
 # --- File Creation ---
 echo "Saving KPI status report to: ${FILE_PATH}"

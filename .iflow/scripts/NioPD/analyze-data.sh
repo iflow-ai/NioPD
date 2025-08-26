@@ -12,7 +12,7 @@ fi
 
 ORIGINAL_FILENAME=$1
 REPORT_CONTENT=$2
-FILE_PATH=".iflow/data/reports/data-analysis-${ORIGINAL_FILENAME}.md"
+FILE_PATH="niopd-workspace/reports/data-analysis-${ORIGINAL_FILENAME}.md"
 
 # --- File Creation ---
 echo "Saving data analysis report to: ${FILE_PATH}"

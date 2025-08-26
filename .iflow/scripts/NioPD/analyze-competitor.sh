@@ -12,7 +12,7 @@ fi
 
 DOMAIN_NAME=$1
 REPORT_CONTENT=$2
-FILE_PATH=".iflow/data/reports/competitor-analysis-${DOMAIN_NAME}.md"
+FILE_PATH="niopd-workspace/reports/competitor-analysis-${DOMAIN_NAME}.md"
 
 # --- File Creation ---
 echo "Saving competitor analysis report to: ${FILE_PATH}"

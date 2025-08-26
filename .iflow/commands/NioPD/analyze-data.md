@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user get insights
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `data-analysis-<original_filename>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/analyze-data.sh`
 -   Pass the original filename and generated report content as arguments to the script.
 -   Handle the script's response:
@@ -36,4 +36,4 @@ You are Nio, an AI Product Assistant. Your task is to help the user get insights
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The data analysis is complete."
--   Provide the path to the file: "You can view the report here: `.iflow/data/reports/data-analysis-<original_filename>.md`"
+-   Provide the path to the file: "You can view the report here: `niopd-workspace/reports/data-analysis-<original_filename>.md`"

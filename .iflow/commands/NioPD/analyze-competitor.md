@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `competitor-analysis-<domain_name>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/analyze-competitor.sh`
 -   Pass the domain name and generated report content as arguments to the script.
 -   Handle the script's response:
@@ -36,4 +36,4 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The competitive analysis is complete."
--   Provide the path to the file: "You can view the report here: `.iflow/data/reports/competitor-analysis-<domain_name>.md`"
+-   Provide the path to the file: "You can view the report here: `niopd-workspace/reports/competitor-analysis-<domain_name>.md`"

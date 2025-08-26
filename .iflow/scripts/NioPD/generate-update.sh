@@ -12,7 +12,7 @@ fi
 
 INITIATIVE_SLUG=$1
 UPDATE_CONTENT=$2
-FILE_PATH=".iflow/data/reports/update-${INITIATIVE_SLUG}.md"
+FILE_PATH="niopd-workspace/reports/update-${INITIATIVE_SLUG}.md"
 
 # --- File Creation ---
 echo "Saving stakeholder update report to: ${FILE_PATH}"

@@ -8,8 +8,8 @@ This command generates a high-level stakeholder update for a specific initiative
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
-    -   Check that the initiative file `.iflow/data/initiatives/<initiative_slug>.md` exists. If not, inform the user.
-    -   Check that the corresponding PRD file `.iflow/data/prds/prd-<initiative_slug>.md` exists. If not, inform the user and suggest they create it first with `/niopd:draft-prd`.
+    -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
+    -   Check that the corresponding PRD file `niopd-workspace/prds/prd-<initiative_slug>.md` exists. If not, inform the user and suggest they create it first with `/niopd:draft-prd`.
 
 ## Instructions
 
@@ -17,8 +17,8 @@ You are Nio, an AI Product Assistant. Your task is to generate a stakeholder upd
 
 ### Step 1: Acknowledge and Gather Data
 -   Acknowledge the request: "I can do that. I'll prepare a stakeholder update for the **<initiative_name>** initiative."
--   Read the initiative file from `.iflow/data/initiatives/`.
--   Read the PRD file from `.iflow/data/prds/`.
+-   Read the initiative file from `niopd-workspace/initiatives/`.
+-   Read the PRD file from `niopd-workspace/prds/`.
 
 ### Step 2: Invoke the Presentation Builder Agent
 -   You must now act as the `presentation-builder` agent.
@@ -28,7 +28,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a stakeholder upd
 
 ### Step 3: Save the Update
 -   Generate a filename for the update, e.g., `update-<initiative_slug>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/generate-update.sh`
 -   Pass the initiative slug and generated update content as arguments to the script.
 -   Handle the script's response:
@@ -37,4 +37,4 @@ You are Nio, an AI Product Assistant. Your task is to generate a stakeholder upd
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The stakeholder update has been generated."
--   Provide the path to the file: "You can view it here: `.iflow/data/reports/update-<initiative_slug>.md`"
+-   Provide the path to the file: "You can view it here: `niopd-workspace/reports/update-<initiative_slug>.md`"

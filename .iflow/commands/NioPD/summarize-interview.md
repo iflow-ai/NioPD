@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `interview-summary-<original_filename>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/summarize-interview.sh`
 -   Pass the original filename and generated report content as arguments to the script.
 -   Handle the script's response:
@@ -36,5 +36,5 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The interview has been summarized."
--   Provide the path to the file: "You can view the summary here: `.iflow/data/reports/interview-summary-<original_filename>.md`"
+-   Provide the path to the file: "You can view the summary here: `niopd-workspace/reports/interview-summary-<original_filename>.md`"
 -   Suggest a next step: "You can now use the insights from this summary to create or update an initiative."

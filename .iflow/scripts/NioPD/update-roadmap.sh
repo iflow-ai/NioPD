@@ -11,7 +11,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 ROADMAP_CONTENT=$1
-FILE_PATH=".iflow/data/roadmaps/product-roadmap.md"
+FILE_PATH="niopd-workspace/roadmaps/product-roadmap.md"
 
 # --- File Creation ---
 echo "Saving product roadmap to: ${FILE_PATH}"

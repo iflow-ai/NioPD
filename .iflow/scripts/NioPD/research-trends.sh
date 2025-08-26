@@ -12,7 +12,7 @@ fi
 
 TOPIC_SLUG=$1
 REPORT_CONTENT=$2
-FILE_PATH=".iflow/data/reports/trend-report-${TOPIC_SLUG}.md"
+FILE_PATH="niopd-workspace/reports/trend-report-${TOPIC_SLUG}.md"
 
 # --- File Creation ---
 echo "Saving market trend report to: ${FILE_PATH}"

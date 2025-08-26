@@ -17,7 +17,7 @@ This command helps the user import a file containing user feedback into the NioP
     -   If it doesn't, inform the user: "❌ I couldn't find the file at `<source_file_path>`. Please double-check the path."
 
 3.  **Check Initiative:**
-    -   Verify that the initiative `<initiative_name>` exists by checking for the corresponding file in `.iflow/data/initiatives/`.
+    -   Verify that the initiative `<initiative_name>` exists by checking for the corresponding file in `niopd-workspace/initiatives/`.
     -   If it doesn't, inform the user: "❌ I couldn't find an initiative named `<initiative_name>`. Please check the name or create it first with `/niopd:new-initiative`."
 
 ## Instructions
@@ -29,7 +29,7 @@ You are Nio, helping a user import feedback.
 -   Generate a destination filename. A good format is `<initiative_slug>-<original_filename>`. For example, if the initiative is "Q4 Launch" and the file is `survey.csv`, the new name would be `q4-launch-survey.csv`.
 
 ### Step 2: Execute Helper Script
--   Call the helper script to copy the file into the `.iflow/data/feedback-sources/` directory with the new name.
+-   Call the helper script to copy the file into the `niopd-workspace/feedback-sources/` directory with the new name.
 -   Script location: `.iflow/scripts/NioPD/import-feedback.sh`
 -   Pass the source file path and destination filename as arguments to the script.
 -   Handle the script's response:

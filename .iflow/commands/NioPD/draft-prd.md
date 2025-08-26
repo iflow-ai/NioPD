@@ -8,9 +8,9 @@ This command drafts a new Product Requirement Document (PRD) based on an existin
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
-    -   Check that the initiative file `.iflow/data/initiatives/<initiative_slug>.md` exists. If not, inform the user.
-    -   Check if a feedback summary report exists for this initiative. A good heuristic is to look for a file like `.iflow/data/reports/summary-<initiative_slug>-*.md`. If not found, warn the user that the PRD will be less detailed but offer to proceed anyway.
-    -   Check if a PRD for this initiative already exists in `.iflow/data/prds/`. If so, ask the user if they want to overwrite it.
+    -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
+    -   Check if a feedback summary report exists for this initiative. A good heuristic is to look for a file like `niopd-workspace/reports/summary-<initiative_slug>-*.md`. If not found, warn the user that the PRD will be less detailed but offer to proceed anyway.
+    -   Check if a PRD for this initiative already exists in `niopd-workspace/prds/`. If so, ask the user if they want to overwrite it.
 
 ## Instructions
 
@@ -18,8 +18,8 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 
 ### Step 1: Acknowledge and Gather Data
 -   Acknowledge the request: "Okay, I will draft a new PRD for the **<initiative_name>** initiative. I'll gather the initiative goals and the feedback summary to get started."
--   Read the initiative file from `.iflow/data/initiatives/`.
--   Read the latest feedback summary report from `.iflow/data/reports/`.
+-   Read the initiative file from `niopd-workspace/initiatives/`.
+-   Read the latest feedback summary report from `niopd-workspace/reports/`.
 -   Read the PRD template from `.iflow/templates/prd-template.md`.
 
 ### Step 2: Synthesize and Draft
@@ -33,7 +33,7 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 
 ### Step 3: Save the PRD Draft
 -   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
--   Call the helper script to save the completed draft to `.iflow/data/prds/`.
+-   Call the helper script to save the completed draft to `niopd-workspace/prds/`.
 -   Script location: `.iflow/scripts/NioPD/draft-prd.sh`
 -   Pass the initiative slug and completed PRD content as arguments to the script.
 -   Handle the script's response:
@@ -42,5 +42,5 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 
 ### Step 4: Confirm and Suggest Next Steps
 -   Confirm the creation: "✅ I've created a draft PRD for **<initiative_name>**."
--   Provide the path: "You can review and edit it at: `.iflow/data/prds/prd-<initiative_slug>.md`"
+-   Provide the path: "You can review and edit it at: `niopd-workspace/prds/prd-<initiative_slug>.md`"
 -   Suggest the next step: "You can use the `/niopd:edit-prd` command to make any necessary changes."

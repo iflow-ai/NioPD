@@ -17,7 +17,7 @@ This command guides the user through creating a new product initiative document.
     -   Convert the name to a URL-friendly slug (lowercase, hyphens for spaces). For example, "My Awesome Initiative" becomes "my-awesome-initiative".
 
 2.  **Check for Existing Initiative:**
-    -   Check if a file named `.iflow/data/initiatives/<slug>.md` already exists.
+    -   Check if a file named `niopd-workspace/initiatives/<slug>.md` already exists.
     -   If it exists, ask the user: "⚠️ An initiative named '<name>' already exists. Would you like to overwrite it? (yes/no)"
     -   Only proceed with a 'yes' confirmation.
 
@@ -53,7 +53,7 @@ Guide the user through filling out the template. Ask one question at a time.
     -   If there's an error, inform the user and stop the process.
 
 ### Step 5: Confirm and Suggest Next Steps
--   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** at `.iflow/data/initiatives/<slug>.md`."
+-   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** at `niopd-workspace/initiatives/<slug>.md`."
 -   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative with `/niopd:import-feedback`."
 
 ## Error Handling

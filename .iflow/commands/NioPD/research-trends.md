@@ -26,7 +26,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `trend-report-<topic_slug>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/research-trends.sh`
 -   Pass the topic slug and generated report content as arguments to the script.
 -   Handle the script's response:
@@ -35,4 +35,4 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The market trend report is ready."
--   Provide the path to the file: "You can view it here: `.iflow/data/reports/trend-report-<topic_slug>.md`"
+-   Provide the path to the file: "You can view it here: `niopd-workspace/reports/trend-report-<topic_slug>.md`"

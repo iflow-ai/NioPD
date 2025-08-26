@@ -17,7 +17,7 @@ This document is a complete reference for all commands available in the NioPD sy
 ### `/niopd:init`
 - **Purpose**: Initialize the NioPD system by creating the necessary directory structure.
 - **Usage**: `/niopd:init`
-- **Output**: Creates the required data directories in `.iflow/data/`.
+- **Output**: Creates the required data directories in `niopd-workspace/`.
 
 ---
 
@@ -28,22 +28,22 @@ These are the fundamental commands for moving from an idea to a plan.
 ### `/niopd:new-initiative`
 - **Purpose**: Start a new high-level product initiative.
 - **Usage**: `/niopd:new-initiative "<initiative_name>"`
-- **Output**: A new initiative file in `.iflow/data/initiatives/`.
+- **Output**: A new initiative file in `niopd-workspace/initiatives/`.
 
 ### `/niopd:import-feedback`
 - **Purpose**: Import a file of user feedback.
 - **Usage**: `/niopd:import-feedback --from=<path> --for=<initiative>`
-- **Output**: A copy of the feedback file in `.iflow/data/feedback-sources/`.
+- **Output**: A copy of the feedback file in `niopd-workspace/feedback-sources/`.
 
 ### `/niopd:summarize-feedback`
 - **Purpose**: Analyze a feedback file and create a summary report.
 - **Usage**: `/niopd:summarize-feedback --from=<file> --for=<initiative>`
-- **Output**: A summary report in `.iflow/data/reports/`.
+- **Output**: A summary report in `niopd-workspace/reports/`.
 
 ### `/niopd:draft-prd`
 - **Purpose**: Automatically generate a PRD draft from an initiative and feedback.
 - **Usage**: `/niopd:draft-prd --for=<initiative>`
-- **Output**: A new PRD file in `.iflow/data/prds/`.
+- **Output**: A new PRD file in `niopd-workspace/prds/`.
 
 ### `/niopd:edit-prd`
 - **Purpose**: Get instructions to manually edit a PRD.
@@ -53,7 +53,7 @@ These are the fundamental commands for moving from an idea to a plan.
 ### `/niopd:update-roadmap`
 - **Purpose**: Generate or update the product roadmap from all initiatives.
 - **Usage**: `/niopd:update-roadmap`
-- **Output**: A roadmap file in `.iflow/data/roadmaps/`.
+- **Output**: A roadmap file in `niopd-workspace/roadmaps/`.
 
 ---
 

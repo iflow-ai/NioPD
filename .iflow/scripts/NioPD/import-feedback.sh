@@ -12,7 +12,7 @@ fi
 
 SOURCE_FILE_PATH=$1
 DESTINATION_FILENAME=$2
-DESTINATION_PATH=".iflow/data/feedback-sources/${DESTINATION_FILENAME}"
+DESTINATION_PATH="niopd-workspace/feedback-sources/${DESTINATION_FILENAME}"
 
 # --- File Copy ---
 echo "Copying feedback file from: ${SOURCE_FILE_PATH}"

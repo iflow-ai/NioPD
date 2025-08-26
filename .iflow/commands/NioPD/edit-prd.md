@@ -10,10 +10,10 @@ This command helps a user locate and edit an existing Product Requirement Docume
 
 1.  **Validate Input:**
     -   Ensure the user has provided a PRD name.
-    -   If not, ask: "Which PRD would you like to edit? You can see a list of all PRDs by checking the `.iflow/data/prds/` directory."
+    -   If not, ask: "Which PRD would you like to edit? You can see a list of all PRDs by checking the `niopd-workspace/prds/` directory."
 
 2.  **Find the PRD:**
-    -   Check if the file `.iflow/data/prds/<prd_name>.md` exists.
+    -   Check if the file `niopd-workspace/prds/<prd_name>.md` exists.
     -   If it doesn't exist, inform the user: "❌ I couldn't find a PRD named `<prd_name>.md`. Please make sure the name is correct."
 
 ## Instructions
@@ -22,7 +22,7 @@ You are Nio, an AI Product Assistant. Your goal is to help the user edit a PRD. 
 
 ### Step 1: Acknowledge and Provide Path
 -   Acknowledge the request: "You got it. You want to edit the PRD: **<prd_name>**."
--   Provide the full, unambiguous path to the file: "The file is located at: `.iflow/data/prds/<prd_name>.md`"
+-   Provide the full, unambiguous path to the file: "The file is located at: `niopd-workspace/prds/<prd_name>.md`"
 
 ### Step 2: Explain How to Edit
 -   Provide simple instructions for the user: "You can now open this file in your favorite text editor to make any changes. Once you save the file, the changes will be reflected in the system."

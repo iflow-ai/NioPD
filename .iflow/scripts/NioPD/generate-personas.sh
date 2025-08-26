@@ -14,7 +14,7 @@ INITIATIVE_NAME=$1
 PERSONAS_CONTENT=$2
 # Convert initiative name to slug (lowercase, replace spaces with hyphens)
 INITIATIVE_SLUG=$(echo "$INITIATIVE_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
-FILE_PATH=".iflow/data/reports/personas-${INITIATIVE_SLUG}.md"
+FILE_PATH="niopd-workspace/reports/personas-${INITIATIVE_SLUG}.md"
 
 # --- File Creation ---
 echo "Saving user personas document to: ${FILE_PATH}"

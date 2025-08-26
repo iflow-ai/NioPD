@@ -76,14 +76,19 @@ NioPD/
 ├── README.md          # This file
 ├── AGENTS.md          # Guide for how NioPD's AI agents work
 ├── COMMANDS.md        # Complete command reference
-└── .iflow/            # Core system implementation
-    ├── agents/        # Definitions for specialized PM agents (9 agents)
-    ├── commands/      # Definitions for all /niopd: commands (13 commands)
-    │   └── NioPD/     # Namespace for NioPD commands
-    ├── scripts/       # Helper scripts for automation
-    │   └── NioPD/     # Namespace for NioPD scripts
-    ├── templates/     # Reusable templates for PRDs, reports, etc.
-    └── data/          # Your product data lives here (created when needed)
+├── .iflow/            # Core system implementation
+│   ├── agents/        # Definitions for specialized PM agents (9 agents)
+│   ├── commands/      # Definitions for all /niopd: commands (13 commands)
+│   │   └── NioPD/     # Namespace for NioPD commands
+│   ├── scripts/       # Helper scripts for automation
+│   │   └── NioPD/     # Namespace for NioPD scripts
+│   └── templates/     # Reusable templates for PRDs, reports, etc.
+└── niopd-workspace/   # Your product data lives here (created when needed)
+    ├── initiatives/   # Product initiative files
+    ├── prds/         # Product Requirements Documents
+    ├── reports/      # Analysis and summary reports
+    ├── roadmaps/     # Product roadmaps
+    └── feedback-sources/ # Raw feedback files
         ├── initiatives/   # Product initiative files
         ├── prds/         # Product Requirements Documents
         ├── reports/      # Analysis and summary reports
@@ -101,7 +106,7 @@ A bash script located at `.iflow/scripts/NioPD/init.sh` that initializes the Nio
 ```
 
 **Purpose:**
-- Creates the required data directories in `.iflow/data/`
+- Creates the required data directories in `niopd-workspace/`
 - Sets up the directory structure for initiatives, PRDs, reports, roadmaps, and feedback sources
 - Provides visual feedback during initialization
 - Verifies that all directories were created successfully
@@ -116,7 +121,7 @@ A bash script located at `.iflow/scripts/NioPD/new-initiative.sh` that provides 
 
 **Purpose:**
 - Validates input parameters
-- Creates initiative files in the `.iflow/data/initiatives/` directory
+- Creates initiative files in the `niopd-workspace/initiatives/` directory
 - Provides success/error feedback
 - Supports content with special characters through proper escaping
 
@@ -130,7 +135,7 @@ A bash script located at `.iflow/scripts/NioPD/import-feedback.sh` that provides
 
 **Purpose:**
 - Validates input parameters
-- Copies feedback files to the `.iflow/data/feedback-sources/` directory
+- Copies feedback files to the `niopd-workspace/feedback-sources/` directory
 - Provides success/error feedback
 
 #### `analyze-competitor.sh`
@@ -143,7 +148,7 @@ A bash script located at `.iflow/scripts/NioPD/analyze-competitor.sh` that saves
 
 **Purpose:**
 - Validates input parameters
-- Saves competitor analysis reports to the `.iflow/data/reports/` directory
+- Saves competitor analysis reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `analyze-data.sh`
@@ -156,7 +161,7 @@ A bash script located at `.iflow/scripts/NioPD/analyze-data.sh` that saves data 
 
 **Purpose:**
 - Validates input parameters
-- Saves data analysis reports to the `.iflow/data/reports/` directory
+- Saves data analysis reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `draft-prd.sh`
@@ -169,7 +174,7 @@ A bash script located at `.iflow/scripts/NioPD/draft-prd.sh` that saves PRD draf
 
 **Purpose:**
 - Validates input parameters
-- Saves PRD drafts to the `.iflow/data/prds/` directory
+- Saves PRD drafts to the `niopd-workspace/prds/` directory
 - Provides success/error feedback
 
 #### `generate-personas.sh`
@@ -182,7 +187,7 @@ A bash script located at `.iflow/scripts/NioPD/generate-personas.sh` that saves 
 
 **Purpose:**
 - Validates input parameters
-- Saves user personas documents to the `.iflow/data/reports/` directory
+- Saves user personas documents to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `generate-update.sh`
@@ -195,7 +200,7 @@ A bash script located at `.iflow/scripts/NioPD/generate-update.sh` that saves st
 
 **Purpose:**
 - Validates input parameters
-- Saves stakeholder update reports to the `.iflow/data/reports/` directory
+- Saves stakeholder update reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `research-trends.sh`
@@ -208,7 +213,7 @@ A bash script located at `.iflow/scripts/NioPD/research-trends.sh` that saves ma
 
 **Purpose:**
 - Validates input parameters
-- Saves market trend reports to the `.iflow/data/reports/` directory
+- Saves market trend reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `summarize-feedback.sh`
@@ -221,7 +226,7 @@ A bash script located at `.iflow/scripts/NioPD/summarize-feedback.sh` that saves
 
 **Purpose:**
 - Validates input parameters
-- Saves feedback summary reports to the `.iflow/data/reports/` directory
+- Saves feedback summary reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `summarize-interview.sh`
@@ -234,7 +239,7 @@ A bash script located at `.iflow/scripts/NioPD/summarize-interview.sh` that save
 
 **Purpose:**
 - Validates input parameters
-- Saves interview summary reports to the `.iflow/data/reports/` directory
+- Saves interview summary reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `track-kpis.sh`
@@ -247,7 +252,7 @@ A bash script located at `.iflow/scripts/NioPD/track-kpis.sh` that saves KPI sta
 
 **Purpose:**
 - Validates input parameters
-- Saves KPI status reports to the `.iflow/data/reports/` directory
+- Saves KPI status reports to the `niopd-workspace/reports/` directory
 - Provides success/error feedback
 
 #### `update-roadmap.sh`
@@ -260,7 +265,7 @@ A bash script located at `.iflow/scripts/NioPD/update-roadmap.sh` that saves pro
 
 **Purpose:**
 - Validates input parameters
-- Saves product roadmaps to the `.iflow/data/roadmaps/` directory
+- Saves product roadmaps to the `niopd-workspace/roadmaps/` directory
 - Provides success/error feedback
 
 #### `save-file.sh`
@@ -338,6 +343,22 @@ When extending NioPD with new commands, follow these guidelines:
 3. **Documentation:** Every command must be documented in both the command file and COMMANDS.md
 4. **Error Handling:** Implement proper error handling in both the command prompt and helper scripts
 5. **User Experience:** Design commands to be intuitive and provide clear feedback to users
+
+**File Storage Directory Rules:**
+When creating new commands that generate files, follow these directory structure rules:
+
+- **Initiatives:** Store initiative files in `niopd-workspace/initiatives/` (e.g., `niopd-workspace/initiatives/my-feature.md`)
+- **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
+- **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
+- **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
+- **Feedback Sources:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedback-sources/user-feedback.txt`)
+
+All file creation operations should be handled by corresponding shell scripts located in `.iflow/scripts/NioPD/`. Each script should:
+1. Validate input parameters
+2. Construct the appropriate file path based on the content type
+3. Create the file with the provided content
+4. Verify the file was created successfully
+5. Provide clear success/error feedback
 
 **Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 

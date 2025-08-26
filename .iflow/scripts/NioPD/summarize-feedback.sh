@@ -12,7 +12,7 @@ fi
 
 FEEDBACK_FILENAME=$1
 REPORT_CONTENT=$2
-FILE_PATH=".iflow/data/reports/summary-${FEEDBACK_FILENAME}.md"
+FILE_PATH="niopd-workspace/reports/summary-${FEEDBACK_FILENAME}.md"
 
 # --- File Creation ---
 echo "Saving feedback summary report to: ${FILE_PATH}"

@@ -8,7 +8,7 @@ This command generates a KPI status report for a specific initiative by using th
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
-    -   Check that the initiative file `.iflow/data/initiatives/<initiative_slug>.md` exists. If not, inform the user.
+    -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
 
 ## Instructions
 
@@ -16,7 +16,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 1: Acknowledge and Gather Data
 -   Acknowledge the request: "You got it. I'll check the latest KPI status for the **<initiative_name>** initiative."
--   Read the initiative file from `.iflow/data/initiatives/`.
+-   Read the initiative file from `niopd-workspace/initiatives/`.
 
 ### Step 2: Invoke the KPI Tracker Agent
 -   You must now act as the `kpi-tracker` agent.
@@ -26,7 +26,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `kpi-status-<initiative_slug>.md`.
--   Call the helper script to save the generated report to `.iflow/data/reports/`.
+-   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `.iflow/scripts/NioPD/track-kpis.sh`
 -   Pass the initiative slug and generated report content as arguments to the script.
 -   Handle the script's response:
@@ -35,4 +35,4 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The KPI status report is ready."
--   Provide the path to the file: "You can view it here: `.iflow/data/reports/kpi-status-<initiative_slug>.md`"
+-   Provide the path to the file: "You can view it here: `niopd-workspace/reports/kpi-status-<initiative_slug>.md`"

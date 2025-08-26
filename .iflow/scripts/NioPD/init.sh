@@ -42,11 +42,11 @@ echo ""
 echo "📁 Creating directory structure..."
 
 # Create data directories
-mkdir -p .iflow/data/initiatives
-mkdir -p .iflow/data/prds
-mkdir -p .iflow/data/reports
-mkdir -p .iflow/data/roadmaps
-mkdir -p .iflow/data/feedback-sources
+mkdir -p niopd-workspace/initiatives
+mkdir -p niopd-workspace/prds
+mkdir -p niopd-workspace/reports
+mkdir -p niopd-workspace/roadmaps
+mkdir -p niopd-workspace/feedback-sources
 
 echo "  ✅ Data directories created"
 
@@ -55,7 +55,7 @@ echo ""
 echo "🔍 Verifying directory structure..."
 
 # Check if all directories were created successfully
-DIRECTORIES=".iflow/data/initiatives .iflow/data/prds .iflow/data/reports .iflow/data/roadmaps .iflow/data/feedback-sources"
+DIRECTORIES="niopd-workspace/initiatives niopd-workspace/prds niopd-workspace/reports niopd-workspace/roadmaps niopd-workspace/feedback-sources"
 
 for dir in $DIRECTORIES; do
     if [ ! -d "$dir" ]; then
@@ -72,11 +72,11 @@ echo "✅ Initialization Complete!"
 echo "=========================="
 echo ""
 echo "📊 Created directories:"
-echo "  - .iflow/data/initiatives/   - For product initiative files"
-echo "  - .iflow/data/prds/         - For Product Requirements Documents"
-echo "  - .iflow/data/reports/      - For analysis and summary reports"
-echo "  - .iflow/data/roadmaps/     - For product roadmaps"
-echo "  - .iflow/data/feedback-sources/ - For raw feedback files"
+echo "  - niopd-workspace/initiatives/   - For product initiative files"
+echo "  - niopd-workspace/prds/         - For Product Requirements Documents"
+echo "  - niopd-workspace/reports/      - For analysis and summary reports"
+echo "  - niopd-workspace/roadmaps/     - For product roadmaps"
+echo "  - niopd-workspace/feedback-sources/ - For raw feedback files"
 echo ""
 echo "🎯 Next Steps:"
 echo "  1. Create your first initiative: /niopd:new-initiative \"My First Feature\""
