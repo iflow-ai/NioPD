@@ -53,21 +53,18 @@ graph TD
     git clone https://github.com/8421bit/NioPD.git
     cd NioPD
 
-    # core 
+    # copy `.claude` directory to your project root
     cp -r .claude ./
 
     # env
     source ~/.bashrc
 
     # start cli
-    iflow
     claude
     ```
 
 2.  **Initialize the NioPD system**:
-    The core of the NioPD system is contained within the `.claude` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
-    
-    To initialize the NioPD system and generate the necessary directories, run:
+    The core of the NioPD system is contained within the `.claude` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me). To initialize the NioPD system and generate the necessary directories, run:
     ```
     /niopd:init
     ```
