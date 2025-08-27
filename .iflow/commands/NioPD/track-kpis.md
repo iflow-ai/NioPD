@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/track-kpis.sh:*)
+argument-hint: --for=<initiative_name>
+description: Generates a KPI status report for an initiative.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:track-kpis
 
 This command generates a KPI status report for a specific initiative by using the `kpi-tracker` agent.

@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/generate-update.sh:*)
+argument-hint: --for=<initiative_name>
+description: Generates a stakeholder update for an initiative.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:generate-update
 
 This command generates a high-level stakeholder update for a specific initiative using the `presentation-builder` agent.

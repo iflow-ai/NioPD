@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/analyze-data.sh:*)
+argument-hint: --file=<path_to_data.csv> --query="<Your question>"
+description: Analyzes a data file to answer a natural language question.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:analyze-data
 
 This command analyzes a structured data file to answer a natural language question, using the `data-analyst` agent.

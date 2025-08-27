@@ -1,3 +1,10 @@
+---
+allowed-tools: view_text_website, Bash(.iflow/scripts/NioPD/analyze-competitor.sh:*)
+argument-hint: --url=<competitor_url>
+description: Generates a competitive analysis report for a given URL.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:analyze-competitor
 
 This command generates a competitive analysis report for a given URL using the `competitor-analyzer` agent.

@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/import-feedback.sh:*)
+argument-hint: --from=<source_file_path> --for=<initiative_name>
+description: Imports a user feedback file into the NioPD system.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:import-feedback
 
 This command helps the user import a file containing user feedback into the NioPD system.

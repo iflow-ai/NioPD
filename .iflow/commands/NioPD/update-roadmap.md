@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/update-roadmap.sh:*)
+argument-hint:
+description: Generates or updates the product roadmap.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:update-roadmap
 
 This command generates or updates the central product roadmap by using the `roadmap-generator` agent.

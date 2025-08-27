@@ -1,5 +1,8 @@
 ---
-allowed-tools: Bash, Read, Write
+allowed-tools: Bash(.iflow/scripts/NioPD/init.sh:*)
+argument-hint:
+description: Initializes the NioPD system by creating directories.
+model: Qwen3-Coder
 ---
 
 # Command: /niopd:init

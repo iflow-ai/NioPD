@@ -1,3 +1,10 @@
+---
+allowed-tools:
+argument-hint: <prd_name>
+description: Helps a user locate and edit an existing PRD.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:edit-prd
 
 This command helps a user locate and edit an existing Product Requirement Document (PRD).

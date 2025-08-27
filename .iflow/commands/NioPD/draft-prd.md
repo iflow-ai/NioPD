@@ -1,7 +1,7 @@
 ---
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
-argument-hint: add [tagId] | remove [tagId] | list
-description: Drafts a new PRD based on history
+allowed-tools: Bash(.iflow/scripts/NioPD/draft-prd.sh:*)
+argument-hint: --for=<initiative_name>
+description: Drafts a PRD from an initiative and feedback summary.
 model: Qwen3-Coder
 ---
 
