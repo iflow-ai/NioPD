@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/generate-personas.sh:*)
+argument-hint: --from=<feedback_summary.md>
+description: Generates user personas from a feedback summary report.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:generate-personas
 
 This command generates a set of user personas based on a feedback summary report, using the `persona-generator` agent.

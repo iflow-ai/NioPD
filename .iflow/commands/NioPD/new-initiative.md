@@ -1,5 +1,8 @@
 ---
-allowed-tools: Bash, Read, Write
+allowed-tools: Bash(date:*), Bash(.iflow/scripts/NioPD/new-initiative.sh:*)
+argument-hint: "<initiative_name>"
+description: Creates a new product initiative document.
+model: Qwen3-Coder
 ---
 
 # Command: /niopd:new-initiative

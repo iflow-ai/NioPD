@@ -1,3 +1,10 @@
+---
+allowed-tools:
+argument-hint:
+description: Displays help information for the NioPD system.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:help
 
 This command displays help information about the NioPD system, primarily focusing on the command set.

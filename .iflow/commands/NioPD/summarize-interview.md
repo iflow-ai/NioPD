@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/summarize-interview.sh:*)
+argument-hint: --file=<path_to_transcript.txt>
+description: Generates a summary of a user interview transcript.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:summarize-interview
 
 This command generates a summary of a user interview transcript using the `interview-summarizer` agent.

@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(.iflow/scripts/NioPD/summarize-feedback.sh:*)
+argument-hint: --from=<feedback_filename> --for=<initiative_name>
+description: Analyzes a feedback file and generates a summary report.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:summarize-feedback
 
 This command uses the `feedback-synthesizer` agent to analyze an imported feedback file and generate a summary report.

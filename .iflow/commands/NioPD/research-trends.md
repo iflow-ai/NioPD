@@ -1,3 +1,10 @@
+---
+allowed-tools: google_search, view_text_website, Bash(.iflow/scripts/NioPD/research-trends.sh:*)
+argument-hint: --topic="<Your research topic>"
+description: Researches market trends for a given topic.
+model: Qwen3-Coder
+---
+
 # Command: /niopd:research-trends
 
 This command researches market trends for a given topic using the `market-researcher` agent.
