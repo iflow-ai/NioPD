@@ -68,10 +68,10 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 
 ## 4. The Command Workflow
 
-The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `.iflow/commands/NioPD/`.
+The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `.claude/commands/NioPD/`.
 
 When a user runs a command (e.g., `/niopd:draft-prd`), you must:
-1.  Read the corresponding command file (e.g., `.iflow/commands/NioPD/draft-prd.md`).
+1.  Read the corresponding command file (e.g., `.claude/commands/NioPD/draft-prd.md`).
 2.  Follow the **Preflight Checklist** to validate inputs.
 3.  Follow the **Instructions** step-by-step. This may involve invoking one of the agents listed above.
 4.  Produce the output file in the location specified by the command.
@@ -79,9 +79,9 @@ When a user runs a command (e.g., `/niopd:draft-prd`), you must:
 ## 5. Development and Testing Instructions
 
 ### How to Extend NioPD
-- **Adding a new command:** Create a new `.md` file in `.iflow/commands/NioPD/`.
-- **Adding a new agent:** Create a new agent definition in `.iflow/agents/`. The new agent should have a single, clear purpose.
-- **Adding a new template:** Add a new template file to `.iflow/templates/`.
+- **Adding a new command:** Create a new `.md` file in `.claude/commands/NioPD/`.
+- **Adding a new agent:** Create a new agent definition in `.claude/agents/`. The new agent should have a single, clear purpose.
+- **Adding a new template:** Add a new template file to `.claude/templates/`.
 
 ### Testing
 - The current implementation of NioPD is file-based and designed for simulation.

@@ -47,14 +47,14 @@ graph TD
 ## Get Started Now
 
 1.  **Clone this repository into your project**:
-    First, navigate to your project directory, then clone the NioPD repository and copy its `.iflow` directory to your project root:
+    First, navigate to your project directory, then clone the NioPD repository and copy its `.claude` directory to your project root:
     ```bash
     cd path/to/your/project/
     git clone https://github.com/8421bit/NioPD.git
     cd NioPD
 
     # core 
-    cp -r NioPD/.iflow ./
+    cp -r .claude ./
 
     # env
     source ~/.bashrc
@@ -65,7 +65,7 @@ graph TD
     ```
 
 2.  **Initialize the NioPD system**:
-    The core of the NioPD system is contained within the `.iflow` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
+    The core of the NioPD system is contained within the `.claude` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me).
     
     To initialize the NioPD system and generate the necessary directories, run:
     ```
@@ -79,14 +79,14 @@ graph TD
 
 ## System Architecture
 
-NioPD is a self-contained system. The user-facing documentation lives in the `NioPD/` directory, while the core system logic lives inside `NioPD/.iflow/`.
+NioPD is a self-contained system. The user-facing documentation lives in the `NioPD/` directory, while the core system logic lives inside `NioPD/.claude/`.
 
 ```
 NioPD/
 ├── README.md          # This file
 ├── AGENTS.md          # Guide for how NioPD's AI agents work
 ├── COMMANDS.md        # Complete command reference
-├── .iflow/            # Core system implementation
+├── .claude/            # Core system implementation
 │   ├── agents/        # Definitions for specialized PM agents (10 agents)
 │   ├── commands/      # Definitions for all /niopd: commands (16 commands)
 │   │   └── NioPD/     # Namespace for NioPD commands
@@ -98,13 +98,13 @@ NioPD/
     ├── prds/         # Product Requirements Documents
     ├── reports/      # Analysis and summary reports
     ├── roadmaps/     # Product roadmaps
-    └── feedbacks/ # Raw feedback files
+    └── feedback-sources/ # Raw feedback files
 ```
 
 ### Helper Scripts
 
 #### `init.sh`
-A bash script located at `.iflow/scripts/NioPD/init.sh` that initializes the NioPD system by creating the necessary directory structure. This script is used internally by the `/niopd:init` command.
+A bash script located at `.claude/scripts/NioPD/init.sh` that initializes the NioPD system by creating the necessary directory structure. This script is used internally by the `/niopd:init` command.
 
 **Usage:**
 ```bash
@@ -118,7 +118,7 @@ A bash script located at `.iflow/scripts/NioPD/init.sh` that initializes the Nio
 - Verifies that all directories were created successfully
 
 #### `new-initiative.sh`
-A bash script located at `.iflow/scripts/NioPD/new-initiative.sh` that provides a command-line interface for creating new initiative files. This script is used internally by the `/niopd:new-initiative` command.
+A bash script located at `.claude/scripts/NioPD/new-initiative.sh` that provides a command-line interface for creating new initiative files. This script is used internally by the `/niopd:new-initiative` command.
 
 **Usage:**
 ```bash
@@ -132,7 +132,7 @@ A bash script located at `.iflow/scripts/NioPD/new-initiative.sh` that provides 
 - Supports content with special characters through proper escaping
 
 #### `import-feedback.sh`
-A bash script located at `.iflow/scripts/NioPD/import-feedback.sh` that provides a command-line interface for importing feedback files. This script is used internally by the `/niopd:import-feedback` command.
+A bash script located at `.claude/scripts/NioPD/import-feedback.sh` that provides a command-line interface for importing feedback files. This script is used internally by the `/niopd:import-feedback` command.
 
 **Usage:**
 ```bash
@@ -145,7 +145,7 @@ A bash script located at `.iflow/scripts/NioPD/import-feedback.sh` that provides
 - Provides success/error feedback
 
 #### `analyze-competitor.sh`
-A bash script located at `.iflow/scripts/NioPD/analyze-competitor.sh` that saves competitor analysis reports. This script is used internally by the `/niopd:analyze-competitor` command.
+A bash script located at `.claude/scripts/NioPD/analyze-competitor.sh` that saves competitor analysis reports. This script is used internally by the `/niopd:analyze-competitor` command.
 
 **Usage:**
 ```bash
@@ -158,7 +158,7 @@ A bash script located at `.iflow/scripts/NioPD/analyze-competitor.sh` that saves
 - Provides success/error feedback
 
 #### `analyze-data.sh`
-A bash script located at `.iflow/scripts/NioPD/analyze-data.sh` that saves data analysis reports. This script is used internally by the `/niopd:analyze-data` command.
+A bash script located at `.claude/scripts/NioPD/analyze-data.sh` that saves data analysis reports. This script is used internally by the `/niopd:analyze-data` command.
 
 **Usage:**
 ```bash
@@ -171,7 +171,7 @@ A bash script located at `.iflow/scripts/NioPD/analyze-data.sh` that saves data 
 - Provides success/error feedback
 
 #### `draft-prd.sh`
-A bash script located at `.iflow/scripts/NioPD/draft-prd.sh` that saves PRD drafts. This script is used internally by the `/niopd:draft-prd` command.
+A bash script located at `.claude/scripts/NioPD/draft-prd.sh` that saves PRD drafts. This script is used internally by the `/niopd:draft-prd` command.
 
 **Usage:**
 ```bash
@@ -184,7 +184,7 @@ A bash script located at `.iflow/scripts/NioPD/draft-prd.sh` that saves PRD draf
 - Provides success/error feedback
 
 #### `generate-personas.sh`
-A bash script located at `.iflow/scripts/NioPD/generate-personas.sh` that saves user personas documents. This script is used internally by the `/niopd:generate-personas` command.
+A bash script located at `.claude/scripts/NioPD/generate-personas.sh` that saves user personas documents. This script is used internally by the `/niopd:generate-personas` command.
 
 **Usage:**
 ```bash
@@ -197,7 +197,7 @@ A bash script located at `.iflow/scripts/NioPD/generate-personas.sh` that saves 
 - Provides success/error feedback
 
 #### `generate-update.sh`
-A bash script located at `.iflow/scripts/NioPD/generate-update.sh` that saves stakeholder update reports. This script is used internally by the `/niopd:generate-update` command.
+A bash script located at `.claude/scripts/NioPD/generate-update.sh` that saves stakeholder update reports. This script is used internally by the `/niopd:generate-update` command.
 
 **Usage:**
 ```bash
@@ -210,7 +210,7 @@ A bash script located at `.iflow/scripts/NioPD/generate-update.sh` that saves st
 - Provides success/error feedback
 
 #### `research-trends.sh`
-A bash script located at `.iflow/scripts/NioPD/research-trends.sh` that saves market trend reports. This script is used internally by the `/niopd:research-trends` command.
+A bash script located at `.claude/scripts/NioPD/research-trends.sh` that saves market trend reports. This script is used internally by the `/niopd:research-trends` command.
 
 **Usage:**
 ```bash
@@ -223,7 +223,7 @@ A bash script located at `.iflow/scripts/NioPD/research-trends.sh` that saves ma
 - Provides success/error feedback
 
 #### `summarize-feedback.sh`
-A bash script located at `.iflow/scripts/NioPD/summarize-feedback.sh` that saves feedback summary reports. This script is used internally by the `/niopd:summarize-feedback` command.
+A bash script located at `.claude/scripts/NioPD/summarize-feedback.sh` that saves feedback summary reports. This script is used internally by the `/niopd:summarize-feedback` command.
 
 **Usage:**
 ```bash
@@ -236,7 +236,7 @@ A bash script located at `.iflow/scripts/NioPD/summarize-feedback.sh` that saves
 - Provides success/error feedback
 
 #### `summarize-interview.sh`
-A bash script located at `.iflow/scripts/NioPD/summarize-interview.sh` that saves interview summary reports. This script is used internally by the `/niopd:summarize-interview` command.
+A bash script located at `.claude/scripts/NioPD/summarize-interview.sh` that saves interview summary reports. This script is used internally by the `/niopd:summarize-interview` command.
 
 **Usage:**
 ```bash
@@ -249,7 +249,7 @@ A bash script located at `.iflow/scripts/NioPD/summarize-interview.sh` that save
 - Provides success/error feedback
 
 #### `track-kpis.sh`
-A bash script located at `.iflow/scripts/NioPD/track-kpis.sh` that saves KPI status reports. This script is used internally by the `/niopd:track-kpis` command.
+A bash script located at `.claude/scripts/NioPD/track-kpis.sh` that saves KPI status reports. This script is used internally by the `/niopd:track-kpis` command.
 
 **Usage:**
 ```bash
@@ -262,7 +262,7 @@ A bash script located at `.iflow/scripts/NioPD/track-kpis.sh` that saves KPI sta
 - Provides success/error feedback
 
 #### `update-roadmap.sh`
-A bash script located at `.iflow/scripts/NioPD/update-roadmap.sh` that saves product roadmaps. This script is used internally by the `/niopd:update-roadmap` command.
+A bash script located at `.claude/scripts/NioPD/update-roadmap.sh` that saves product roadmaps. This script is used internally by the `/niopd:update-roadmap` command.
 
 **Usage:**
 ```bash
@@ -275,7 +275,7 @@ A bash script located at `.iflow/scripts/NioPD/update-roadmap.sh` that saves pro
 - Provides success/error feedback
 
 #### `save-file.sh`
-A generic bash script located at `.iflow/scripts/NioPD/save-file.sh` that can save any content to a specified file path.
+A generic bash script located at `.claude/scripts/NioPD/save-file.sh` that can save any content to a specified file path.
 
 **Usage:**
 ```bash
@@ -289,7 +289,7 @@ A generic bash script located at `.iflow/scripts/NioPD/save-file.sh` that can sa
 - Can be used by any command that needs to save files
 
 #### `help.sh`
-A bash script located at `.iflow/scripts/NioPD/help.sh` that displays help information about the NioPD system. This script is used internally by the `/niopd:help` command.
+A bash script located at `.claude/scripts/NioPD/help.sh` that displays help information about the NioPD system. This script is used internally by the `/niopd:help` command.
 
 **Usage:**
 ```bash
@@ -304,7 +304,7 @@ A bash script located at `.iflow/scripts/NioPD/help.sh` that displays help infor
 
 NioPD operates on a structured, file-based pattern that combines user commands with detailed instructions for the AI. Understanding this pattern is key to using and extending the system.
 
-A complete command or feature in NioPD is composed of up to five parts, all located within the `.iflow` directory:
+A complete command or feature in NioPD is composed of up to five parts, all located within the `.claude` directory:
 
 ### **1. The User Command**
 This is the entry point, which the user types to initiate a workflow.
@@ -313,26 +313,26 @@ This is the entry point, which the user types to initiate a workflow.
 
 ### **2. The Command Prompt (.md)**
 This is the brain of the operation. For every command, there is a corresponding markdown file that acts as a detailed prompt for the AI.
-- **Location:** `.iflow/commands/NioPD/<command_name>.md`
+- **Location:** `.claude/commands/NioPD/<command_name>.md`
 - **Purpose:** It tells the AI how to validate inputs, what questions to ask the user, when to use other components (like agents or scripts), and what to do with the results.
-- **Example:** `.iflow/commands/NioPD/new-initiative.md` contains the complete workflow for creating new initiatives.
+- **Example:** `.claude/commands/NioPD/new-initiative.md` contains the complete workflow for creating new initiatives.
 
 ### **3. The Agent (.md) (Optional)**
 For complex tasks involving analysis or synthesis, the command prompt will invoke a specialized agent. Agents are also defined by markdown prompts that give them a specific role and process to follow.
-- **Location:** `.iflow/agents/<agent_name>.md`
+- **Location:** `.claude/agents/<agent_name>.md`
 - **Purpose:** To handle "heavy lifting" like summarizing a long document or analyzing data, keeping the main command logic clean.
 - **Example:** The `/niopd:hi` command invokes the main `Nio` agent.
 - **Available Agents:** 10 specialized agents including the main `Nio` supervisor, `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
 
 ### **4. The Template (.md) (Optional)**
 If a command's final output is a structured document (like a PRD or an initiative), it will use a template.
-- **Location:** `.iflow/templates/<template_name>.md`
+- **Location:** `.claude/templates/<template_name>.md`
 - **Purpose:** To ensure consistent structure for all generated documents.
 - **Examples:** `initiative-template.md`, `prd-template.md`, `competitor-analysis-template.md`
 
 ### **5. The Script (.sh) (Optional)**
 For commands that need to perform actions on the file system, the command prompt will call a shell script. This separates the AI's "thinking" from the system's "doing".
-- **Location:** `.iflow/scripts/NioPD/<script_name>.sh`
+- **Location:** `.claude/scripts/NioPD/<script_name>.sh`
 - **Purpose:** To handle file I/O and other system-level tasks.
 - **Example:** The `/niopd:new-initiative` command prompt calls the `new-initiative.sh` script to save the final document.
 
@@ -342,10 +342,10 @@ For commands that need to perform actions on the file system, the command prompt
 
 To add a new command to NioPD:
 
-1. **Define the Command:** Create a new `.md` file in `.iflow/commands/NioPD/`
-2. **Create Supporting Agent (if needed):** Add agent definition in `.iflow/agents/`
-3. **Design Template (if needed):** Add document template in `.iflow/templates/`
-4. **Write Helper Script (if needed):** Add automation script in `.iflow/scripts/NioPD/`
+1. **Define the Command:** Create a new `.md` file in `.claude/commands/NioPD/`
+2. **Create Supporting Agent (if needed):** Add agent definition in `.claude/agents/`
+3. **Design Template (if needed):** Add document template in `.claude/templates/`
+4. **Write Helper Script (if needed):** Add automation script in `.claude/scripts/NioPD/`
 5. **Update Documentation:** Add the command to [`COMMANDS.md`](COMMANDS.md) and [`AGENTS.md`](AGENTS.md)
 
 This modular approach ensures that each component has a single responsibility and can be easily maintained, tested, and extended.
@@ -369,9 +369,9 @@ When creating new commands that generate files, follow these directory structure
 - **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
 - **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
 - **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
-- **Feedbacks:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedbacks/user-feedback.txt`)
+- **Feedback Sources:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedback-sources/user-feedback.txt`)
 
-All file creation operations should be handled by corresponding shell scripts located in `.iflow/scripts/NioPD/`. Each script should:
+All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
 1. Validate input parameters
 2. Construct the appropriate file path based on the content type
 3. Create the file with the provided content
