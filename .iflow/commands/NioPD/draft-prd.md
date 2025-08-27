@@ -1,3 +1,10 @@
+---
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
+argument-hint: add [tagId] | remove [tagId] | list
+description: Drafts a new PRD based on history
+model: Qwen3-Coder
+---
+
 # Command: /niopd:draft-prd
 
 This command drafts a new Product Requirement Document (PRD) based on an existing initiative and its associated feedback summary.
