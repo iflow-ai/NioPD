@@ -36,34 +36,34 @@ Guidance on how the agent should handle various error conditions.
 
 ## Available Agents
 
-### 🤖 [niopd-competitor-analyzer.md](niopd-competitor-analyzer.md)
+### 🤖 [competitor-analyzer.md](NioPD/competitor-analyzer.md)
 Analyzes a competitor's website to extract key features and value propositions.
 
-### 🤖 [niopd-data-analyst.md](niopd-data-analyst.md)
+### 🤖 [data-analyst.md](NioPD/data-analyst.md)
 Performs analysis on structured data files (e.g., CSV) based on natural language queries.
 
-### 🤖 [niopd-feedback-synthesizer.md](niopd-feedback-synthesizer.md)
+### 🤖 [feedback-synthesizer.md](NioPD/feedback-synthesizer.md)
 Processes raw user feedback to identify key themes, pain points, and feature requests.
 
-### 🤖 [niopd-interview-summarizer.md](niopd-interview-summarizer.md)
+### 🤖 [interview-summarizer.md](NioPD/interview-summarizer.md)
 Reads user interview transcripts to extract critical insights and quotes.
 
-### 🤖 [niopd-kpi-tracker.md](niopd-kpi-tracker.md)
+### 🤖 [kpi-tracker.md](NioPD/kpi-tracker.md)
 Tracks key performance indicators for initiatives and reports on progress.
 
-### 🤖 [niopd-market-researcher.md](niopd-market-researcher.md)
+### 🤖 [market-researcher.md](NioPD/market-researcher.md)
 Researches and summarizes market trends on a given topic using web search.
 
-### 🤖 [niopd-persona-generator.md](niopd-persona-generator.md)
+### 🤖 [persona-generator.md](NioPD/persona-generator.md)
 Creates detailed user personas from synthesized user feedback.
 
-### 🤖 [niopd-presentation-builder.md](niopd-presentation-builder.md)
+### 🤖 [presentation-builder.md](NioPD/presentation-builder.md)
 Creates concise project updates for business stakeholders.
 
-### 🤖 [niopd-roadmap-generator.md](niopd-roadmap-generator.md)
+### 🤖 [roadmap-generator.md](NioPD/roadmap-generator.md)
 Generates visual product roadmaps from initiative files.
 
-### 🤖 [niopd-Nio.md](niopd-Nio.md)
+### 🤖 [nio.md](NioPD/nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 
 ## Tools Available to Agents
@@ -93,7 +93,7 @@ Permission rules can be configured using /allowed-tools or in permission setting
 
 To create a new agent:
 
-1. Create a new markdown file with the naming convention `niopd-[agent-name].md`
+1. Create a new markdown file with the naming convention `[agent-name].md` and place it in the `NioPD` subdirectory
 2. Follow the structure outlined above
 3. Ensure the agent has a single, clear purpose
 4. Define clear input, process, and output sections

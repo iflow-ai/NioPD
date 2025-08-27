@@ -85,6 +85,7 @@ NioPD/
 ├── COMMANDS.md        # Complete command reference
 ├── .claude/            # Core system implementation
 │   ├── agents/        # Definitions for specialized PM agents (10 agents)
+│   │   └── NioPD/     # Namespace for NioPD agents
 │   ├── commands/      # Definitions for all /niopd: commands (16 commands)
 │   │   └── NioPD/     # Namespace for NioPD commands
 │   ├── scripts/       # Helper scripts for automation

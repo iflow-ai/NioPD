@@ -1,5 +1,5 @@
 ---
-name: niopd-interview-summarizer
+name: interview-summarizer
 description: Specialized AI agent expert in qualitative data analysis. Reads user interview transcripts and extracts critical insights including user needs, pain points, and direct quotes. Groups key moments into themes and provides actionable takeaways for product development.
 tools: [Read, Grep, Search]
 model: inherit

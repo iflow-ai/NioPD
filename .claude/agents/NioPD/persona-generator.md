@@ -1,5 +1,5 @@
 ---
-name: niopd-persona-generator
+name: persona-generator
 description: Specialized AI agent expert in user research and product marketing. Reads feedback summary reports and creates rich, detailed user personas that bring target users to life. Analyzes feedback themes, identifies user archetypes, and creates personas with goals, pain points, and supporting quotes.
 tools: [Read, Search]
 model: inherit

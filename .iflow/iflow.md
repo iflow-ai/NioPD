@@ -29,7 +29,7 @@ NioPD relies on specialized agents to perform complex synthesis tasks. Unlike ge
 ### 3. File-Based Operations
 All NioPD operations are file-based and follow a strict directory structure:
 - Commands: `.iflow/commands/NioPD/`
-- Agents: `.iflow/agents/`
+- Agents: `.iflow/agents/NioPD/`
 - Scripts: `.iflow/scripts/NioPD/`
 - Templates: `.iflow/templates/`
 - Data: `niopd-workspace/` (with subdirectories for initiatives, PRDs, reports, and roadmaps)

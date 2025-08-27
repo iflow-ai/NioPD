@@ -1,5 +1,5 @@
 ---
-name: niopd-presentation-builder
+name: presentation-builder
 description: Specialized AI agent expert in creating concise and clear project updates for business stakeholders. Synthesizes detailed project documents into high-level summaries that can be easily digested in meetings or emails. Extracts key goals, features, metrics, and status information.
 tools: [Read, Search]
 model: inherit

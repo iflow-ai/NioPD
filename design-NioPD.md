@@ -5,7 +5,7 @@
 ### Vision
 To create an AI-powered assistant for Product Managers that automates the tedious aspects of product discovery, definition, and stakeholder management, allowing PMs to focus on high-impact strategic work. `NioPD` will transform raw inputs (user feedback, market data, team ideas) into clear, actionable, and well-prioritized product plans.
 
-### Target Audience
+## Target Audience
 The primary user is the **non-technical or semi-technical Product Manager** in a small to medium-sized tech company. This user is skilled in product strategy, user research, and communication but may not be comfortable with developer-centric tools like the command line, git, or complex CI/CD workflows.
 
 ### Core Problems to Solve
@@ -26,7 +26,7 @@ The NioPD system is composed of several key types of components, all stored with
 
 #### 1. `agents/`
 - **Purpose:** Defines specialized "sub-agents" that act as context firewalls.
-- **Implementation:** Files like `niopd-competitor-analyzer.md` and `niopd-data-analyst.md` define the roles of these agents. The core principle is that these agents perform "heavy lifting" (like analyzing large datasets or researching market trends) and return only a concise summary to the main AI conversation, thus preserving the limited context window.
+- **Implementation:** Files like `competitor-analyzer.md` and `data-analyst.md` define the roles of these agents. The core principle is that these agents perform "heavy lifting" (like analyzing large datasets or researching market trends) and return only a concise summary to the main AI conversation, thus preserving the limited context window.
 - **Best Practices:**
   - Each agent should have a single, clearly defined purpose
   - Agents should be designed to process large amounts of data and produce structured outputs

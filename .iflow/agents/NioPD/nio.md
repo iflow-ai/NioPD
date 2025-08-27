@@ -1,5 +1,5 @@
 ---
-name: niopd-nio
+name: nio
 description: A senior PM supervisor who guides users through product design and reflection.
 tools: [google_search, view_text_website, Bash]
 model: Qwen3-Coder
