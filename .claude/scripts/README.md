@@ -15,159 +15,23 @@ Each script should follow these conventions:
 
 All NioPD scripts are located in the [NioPD](NioPD/) subdirectory:
 
-### [analyze-competitor.sh](NioPD/analyze-competitor.sh)
-Saves competitor analysis reports.
-
-**Usage:**
-```bash
-./analyze-competitor.sh <domain_name> "<report_content>"
-```
-
-**Purpose:**
-- Saves competitor analysis reports to the `niopd-workspace/reports/` directory
-
-### [analyze-data.sh](NioPD/analyze-data.sh)
-Saves data analysis reports.
-
-**Usage:**
-```bash
-./analyze-data.sh <original_filename> "<report_content>"
-```
-
-**Purpose:**
-- Saves data analysis reports to the `niopd-workspace/reports/` directory
-
-### [draft-prd.sh](NioPD/draft-prd.sh)
-Saves PRD drafts.
-
-**Usage:**
-```bash
-./draft-prd.sh <initiative_slug> "<prd_content>"
-```
-
-**Purpose:**
-- Saves PRD drafts to the `niopd-workspace/prds/` directory
-
-### [generate-personas.sh](NioPD/generate-personas.sh)
-Saves user personas documents.
-
-**Usage:**
-```bash
-./generate-personas.sh <initiative_name> "<personas_content>"
-```
-
-**Purpose:**
-- Saves user personas documents to the `niopd-workspace/reports/` directory
-
-### [generate-update.sh](NioPD/generate-update.sh)
-Saves stakeholder update reports.
-
-**Usage:**
-```bash
-./generate-update.sh <initiative_slug> "<update_content>"
-```
-
-**Purpose:**
-- Saves stakeholder update reports to the `niopd-workspace/reports/` directory
-
-### [import-feedback.sh](NioPD/import-feedback.sh)
-Imports feedback files.
-
-**Usage:**
-```bash
-./import-feedback.sh <source_file_path> <destination_filename>
-```
-
-**Purpose:**
-- Copies feedback files to the `niopd-workspace/feedback-sources/` directory
-
-### [new-initiative.sh](NioPD/new-initiative.sh)
-Creates new initiative files.
-
-**Usage:**
-```bash
-./new-initiative.sh <file-slug> "<file-content>"
-```
-
-**Purpose:**
-- Creates initiative files in the `niopd-workspace/initiatives/` directory
-
-### [research-trends.sh](NioPD/research-trends.sh)
-Saves market trend reports.
-
-**Usage:**
-```bash
-./research-trends.sh <topic_slug> "<report_content>"
-```
-
-**Purpose:**
-- Saves market trend reports to the `niopd-workspace/reports/` directory
-
-### [save-file.sh](NioPD/save-file.sh)
-Generic script to save any content to a specified file path.
-
-**Usage:**
-```bash
-./save-file.sh <file_path> "<file_content>"
-```
-
-**Purpose:**
-- Saves content to the specified file path
-
-### [summarize-feedback.sh](NioPD/summarize-feedback.sh)
-Saves feedback summary reports.
-
-**Usage:**
-```bash
-./summarize-feedback.sh <feedback_filename> "<report_content>"
-```
-
-**Purpose:**
-- Saves feedback summary reports to the `niopd-workspace/reports/` directory
-
-### [summarize-interview.sh](NioPD/summarize-interview.sh)
-Saves interview summary reports.
-
-**Usage:**
-```bash
-./summarize-interview.sh <original_filename> "<report_content>"
-```
-
-**Purpose:**
-- Saves interview summary reports to the `niopd-workspace/reports/` directory
-
-### [track-kpis.sh](NioPD/track-kpis.sh)
-Saves KPI status reports.
-
-**Usage:**
-```bash
-./track-kpis.sh <initiative_slug> "<report_content>"
-```
-
-**Purpose:**
-- Saves KPI status reports to the `niopd-workspace/reports/` directory
-
-### [update-roadmap.sh](NioPD/update-roadmap.sh)
-Saves product roadmaps.
-
-**Usage:**
-```bash
-./update-roadmap.sh "<roadmap_content>"
-```
-
-**Purpose:**
-- Saves product roadmaps to the `niopd-workspace/roadmaps/` directory
-
-### [help.sh](NioPD/help.sh)
-Displays help information about the NioPD system.
-
-**Usage:**
-```bash
-./help.sh
-```
-
-**Purpose:**
-- Displays help information about the NioPD system and its commands
+| Script Name | Location | Usage | Purpose |
+|-------------|----------|-------|---------|
+| [init.sh](NioPD/init.sh) | `.claude/scripts/NioPD/init.sh` | `./init.sh` | Initializes the NioPD system by creating the necessary directory structure in `niopd-workspace/` |
+| [new-initiative.sh](NioPD/new-initiative.sh) | `.claude/scripts/NioPD/new-initiative.sh` | `./new-initiative.sh <file-slug> "<file-content>"` | Creates new initiative files in the `niopd-workspace/initiatives/` directory |
+| [import-feedback.sh](NioPD/import-feedback.sh) | `.claude/scripts/NioPD/import-feedback.sh` | `./import-feedback.sh <source_file_path> <destination_filename>` | Copies feedback files to the `niopd-workspace/feedback-sources/` directory |
+| [analyze-competitor.sh](NioPD/analyze-competitor.sh) | `.claude/scripts/NioPD/analyze-competitor.sh` | `./analyze-competitor.sh <domain_name> "<report_content>"` | Saves competitor analysis reports to the `niopd-workspace/reports/` directory |
+| [analyze-data.sh](NioPD/analyze-data.sh) | `.claude/scripts/NioPD/analyze-data.sh` | `./analyze-data.sh <original_filename> "<report_content>"` | Saves data analysis reports to the `niopd-workspace/reports/` directory |
+| [draft-prd.sh](NioPD/draft-prd.sh) | `.claude/scripts/NioPD/draft-prd.sh` | `./draft-prd.sh <initiative_slug> "<prd_content>"` | Saves PRD drafts to the `niopd-workspace/prds/` directory |
+| [generate-personas.sh](NioPD/generate-personas.sh) | `.claude/scripts/NioPD/generate-personas.sh` | `./generate-personas.sh <initiative_name> "<personas_content>"` | Saves user personas documents to the `niopd-workspace/reports/` directory |
+| [generate-update.sh](NioPD/generate-update.sh) | `.claude/scripts/NioPD/generate-update.sh` | `./generate-update.sh <initiative_slug> "<update_content>"` | Saves stakeholder update reports to the `niopd-workspace/reports/` directory |
+| [research-trends.sh](NioPD/research-trends.sh) | `.claude/scripts/NioPD/research-trends.sh` | `./research-trends.sh <topic_slug> "<report_content>"` | Saves market trend reports to the `niopd-workspace/reports/` directory |
+| [summarize-feedback.sh](NioPD/summarize-feedback.sh) | `.claude/scripts/NioPD/summarize-feedback.sh` | `./summarize-feedback.sh <feedback_filename> "<report_content>"` | Saves feedback summary reports to the `niopd-workspace/reports/` directory |
+| [summarize-interview.sh](NioPD/summarize-interview.sh) | `.claude/scripts/NioPD/summarize-interview.sh` | `./summarize-interview.sh <original_filename> "<report_content>"` | Saves interview summary reports to the `niopd-workspace/reports/` directory |
+| [track-kpis.sh](NioPD/track-kpis.sh) | `.claude/scripts/NioPD/track-kpis.sh` | `./track-kpis.sh <initiative_slug> "<report_content>"` | Saves KPI status reports to the `niopd-workspace/reports/` directory |
+| [update-roadmap.sh](NioPD/update-roadmap.sh) | `.claude/scripts/NioPD/update-roadmap.sh` | `./update-roadmap.sh "<roadmap_content>"` | Saves product roadmaps to the `niopd-workspace/roadmaps/` directory |
+| [save-file.sh](NioPD/save-file.sh) | `.claude/scripts/NioPD/save-file.sh` | `./save-file.sh <file_path> "<file_content>"` | Generic script to save any content to a specified file path |
+| [help.sh](NioPD/help.sh) | `.claude/scripts/NioPD/help.sh` | `./help.sh` | Displays help information about the NioPD system and its commands |
 
 ## Creating New Scripts
 
