@@ -136,6 +136,17 @@ Brief overview of the document's purpose and contents.
 - Action items and next steps
 - Risk assessment and recommendations
 
+### Agent Development Template
+
+#### 12. Agent Template ([agent-template.md](agent-template.md))
+**Purpose:** Standard template for creating new AI agents
+**Used by:** Agent developers creating new specialized agents
+**Key Features:**
+- Standardized structure for agent definitions
+- Detailed sections for role, input, process, and output
+- Error handling guidelines
+- Consistent formatting for integration with the NioPD system
+
 ## Template Usage Guidelines
 
 ### Variable Format

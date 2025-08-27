@@ -1,7 +1,7 @@
 ---
 name: niopd-kpi-tracker
 description: Specialized AI agent expert in tracking Key Performance Indicators (KPIs). Reads project initiative files, extracts defined success metrics, and presents them in clear, easy-to-read status reports. Compares current values to target values and determines progress status.
-tools: Read, Search
+tools: [Read, Search]
 model: inherit
 color: red
 ---

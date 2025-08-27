@@ -63,7 +63,7 @@ Creates concise project updates for business stakeholders.
 ### 🤖 [niopd-roadmap-generator.md](niopd-roadmap-generator.md)
 Generates visual product roadmaps from initiative files.
 
-### 🤖 [Nio.md](Nio.md)
+### 🤖 [niopd-nio.md](niopd-nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 
 ## Tools Available to Agents
@@ -99,7 +99,7 @@ To create a new agent:
 4. Define clear input, process, and output sections
 5. Include error handling guidance
 6. Add the agent to this README with a brief description
-7. To encourage more proactive subagent use, include phrases like “use PROACTIVELY” or “MUST BE USED” in your description field.
+7. To encourage more proactive subagent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your description field.
 
 ## Best Practices
 

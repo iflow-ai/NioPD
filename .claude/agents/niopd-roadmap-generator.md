@@ -1,7 +1,7 @@
 ---
 name: niopd-roadmap-generator
 description: Specialized AI agent expert in creating product roadmaps. Takes a collection of product initiatives and generates high-level visual roadmaps as Mermaid Gantt charts. Extracts initiative information, structures timelines by quarters, and assigns appropriate status indicators.
-tools: Read, LS, Glob, Search
+tools: [Read, LS, Glob, Search]
 model: inherit
 color: teal
 ---

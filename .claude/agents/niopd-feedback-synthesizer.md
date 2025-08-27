@@ -1,7 +1,7 @@
 ---
 name: niopd-feedback-synthesizer
 description: Specialized AI agent expert in analyzing and synthesizing user feedback. Processes large volumes of raw, unstructured feedback and transforms it into concise, actionable summaries for Product Managers. Identifies key themes, extracts supporting evidence, and categorizes feedback into pain points, feature requests, and insights.
-tools: Read, Grep, Search
+tools: [Read, Grep, Search]
 model: inherit
 color: green
 ---

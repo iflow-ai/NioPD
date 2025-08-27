@@ -1,7 +1,7 @@
 ---
 name: niopd-data-analyst
 description: Specialized AI agent that functions as a junior data analyst. Analyzes structured data from files (like CSV) and answers natural language questions about the data. Provides clear, concise answers with supporting methodology without generating charts or visualizations.
-tools: Read, Grep, Search
+tools: [Read, Grep, Search]
 model: inherit
 color: orange
 ---
