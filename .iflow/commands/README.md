@@ -11,7 +11,7 @@ Each command file follows a consistent structure:
 allowed-tools: List of tools the command can use. Example: Bash(git add:*), Bash(git status:*), Bash(git commit:*) Default: Inherits from the conversation
 argument-hint: The arguments expected for the slash command. Example: argument-hint: add [tagId] | remove [tagId] | list. This hint is shown to the user when auto-completing the slash command. Default: None
 description: Brief description of the command. Default: Uses the first line from the prompt.
-model: claude-3-5-haiku-20241022. Default: Inherits from the conversation
+model: Qwen3-Coder. Default: Inherits from the conversation
 ---
 
 # Command: /niopd:command-name
@@ -40,6 +40,7 @@ Guidance on how to handle various error conditions.
 All NioPD commands are located in the [NioPD](NioPD/) subdirectory:
 
 ### Core Workflow Commands
+- [hi.md](NioPD/hi.md) - Initiates a conversation with Nio, your product management supervisor
 - [new-initiative.md](NioPD/new-initiative.md) - Start a new high-level product initiative
 - [import-feedback.md](NioPD/import-feedback.md) - Import a file of user feedback
 - [summarize-feedback.md](NioPD/summarize-feedback.md) - Analyze a feedback file and create a summary report
