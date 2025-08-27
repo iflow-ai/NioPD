@@ -63,6 +63,9 @@ Creates concise project updates for business stakeholders.
 ### 🤖 [niopd-roadmap-generator.md](niopd-roadmap-generator.md)
 Generates visual product roadmaps from initiative files.
 
+### 🤖 [Nio.md](Nio.md)
+Acts as a senior product manager supervisor to guide the user through product design.
+
 ## Creating New Agents
 
 To create a new agent:

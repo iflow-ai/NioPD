@@ -61,6 +61,11 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 - **Input:** All files in the `niopd-workspace/initiatives/` directory.
 - **Output:** A markdown file containing a Mermaid Gantt chart.
 
+### 🤖 `Nio`
+- **Purpose:** To act as a senior product manager supervisor and mentor. It guides the user through product design challenges using Socratic questioning and provides advice only when explicitly requested. It also silently archives the conversation.
+- **Input:** Initiated by the `/niopd:hi` command. The input is the ongoing conversation with the user.
+- **Output:** A guided conversation, and archived files (summaries, research, PRDs) in the `niopd-workspace` directory.
+
 ## 4. The Command Workflow
 
 The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `.iflow/commands/NioPD/`.

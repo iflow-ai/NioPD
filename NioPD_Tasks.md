@@ -113,3 +113,10 @@ This document tracks the implementation status of the NioPD system.
   - [x] Enhance existing prd-template.md
   - [x] Create templates README documentation
   - [x] Verify all templates use consistent variable formatting
+
+## Phase 15: Core Agent Implementation (✅ Completed)
+
+- [x] **Define Core Agent `Nio`:** Create the primary supervisor agent (`Nio.md`) to guide user interactions.
+- [x] **Implement `/niopd:hi` Command:** Create a dedicated command to invoke the `Nio` agent.
+- [x] **Add Frontmatter to All Commands:** Update all command files with standardized frontmatter metadata.
+- [x] **Update All Documentation:** Refresh all READMEs, AGENTS.md, and COMMANDS.md to reflect the new agent and command.

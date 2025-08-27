@@ -87,8 +87,8 @@ NioPD/
 ├── AGENTS.md          # Guide for how NioPD's AI agents work
 ├── COMMANDS.md        # Complete command reference
 ├── .iflow/            # Core system implementation
-│   ├── agents/        # Definitions for specialized PM agents (9 agents)
-│   ├── commands/      # Definitions for all /niopd: commands (13 commands)
+│   ├── agents/        # Definitions for specialized PM agents (10 agents)
+│   ├── commands/      # Definitions for all /niopd: commands (16 commands)
 │   │   └── NioPD/     # Namespace for NioPD commands
 │   ├── scripts/       # Helper scripts for automation
 │   │   └── NioPD/     # Namespace for NioPD scripts
@@ -321,8 +321,8 @@ This is the brain of the operation. For every command, there is a corresponding 
 For complex tasks involving analysis or synthesis, the command prompt will invoke a specialized agent. Agents are also defined by markdown prompts that give them a specific role and process to follow.
 - **Location:** `.iflow/agents/<agent_name>.md`
 - **Purpose:** To handle "heavy lifting" like summarizing a long document or analyzing data, keeping the main command logic clean.
-- **Example:** The `/niopd:summarize-interview` command invokes the `interview-summarizer` agent.
-- **Available Agents:** 9 specialized agents including `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
+- **Example:** The `/niopd:hi` command invokes the main `Nio` agent.
+- **Available Agents:** 10 specialized agents including the main `Nio` supervisor, `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
 
 ### **4. The Template (.md) (Optional)**
 If a command's final output is a structured document (like a PRD or an initiative), it will use a template.
@@ -392,6 +392,7 @@ Add New Commands: `/niopd:help`, This command displays help information about th
 ## Command Reference
 
 ### Core Workflow ✅ *Fully Implemented*
+- `/niopd:hi`: Start an interactive session with Nio, your product supervisor.
 - `/niopd:new-initiative "<name>"`: Start a new high-level product initiative.
 - `/niopd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
 - `/niopd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
@@ -432,29 +433,32 @@ The following commands are planned for future releases:
 
 Here's how you might use NioPD to research and plan a new feature using the currently available commands:
 
-1.  **Research the market:**
+1.  **Start a conversation with your supervisor:**
+    `/niopd:hi` (Use this interactive session to discuss the feature, clarify goals, and get guidance).
+
+2.  **Research the market:**
     `/niopd:research-trends --topic="AI-powered data analysis tools"`
 
-2.  **Analyze a competitor:**
+3.  **Analyze a competitor:**
     `/niopd:analyze-competitor --url="https://www.competitor.com"`
 
-3.  **Define the initiative:**
+4.  **Define the initiative:**
     `/niopd:new-initiative "Intelligent Analysis Feature"`
 
-4.  **Import and analyze user feedback:**
+5.  **Import and analyze user feedback:**
     `/niopd:import-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
     `/niopd:summarize-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
 
-5.  **Generate user personas:**
+6.  **Generate user personas:**
     `/niopd:generate-personas --from="feedback-summary-report.md"`
 
-6.  **Draft the PRD automatically:**
+7.  **Draft the PRD automatically:**
     `/niopd:draft-prd --for="Intelligent Analysis Feature"`
 
-7.  **Update the product roadmap:**
+8.  **Update the product roadmap:**
     `/niopd:update-roadmap`
 
-8.  **Track progress:**
+9.  **Track progress:**
     `/niopd:track-kpis --for="Intelligent Analysis Feature"`
 
 *Note: Features like diagram creation and risk assessment are planned for future releases.*

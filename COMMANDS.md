@@ -24,6 +24,11 @@ This document is a complete reference for all commands available in the NioPD sy
 - **Usage**: `/niopd:help`
 - **Output**: Displays a help message with command usage information.
 
+### `/niopd:hi`
+- **Purpose**: Initiates a conversation with Nio, your product management supervisor.
+- **Usage**: `/niopd:hi`
+- **Output**: A continuous, interactive conversation with the Nio agent.
+
 ---
 
 ## Core Workflow Commands
