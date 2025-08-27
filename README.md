@@ -118,7 +118,7 @@ This is the brain of the operation. For every command, there is a corresponding 
 
 ### **3. The Agent (.md) (Optional)**
 For complex tasks involving analysis or synthesis, the command prompt will invoke a specialized agent. Agents are also defined by markdown prompts that give them a specific role and process to follow.
-- **Location:** `.claude/agents/<agent_name>.md`
+- **Location:** `.claude/agents/NioPD/<agent_name>.md`
 - **Purpose:** To handle "heavy lifting" like summarizing a long document or analyzing data, keeping the main command logic clean.
 - **Example:** The `/niopd:hi` command invokes the main `Nio` agent.
 - **Available Agents:** 10 specialized agents including the main `Nio` supervisor, `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
@@ -142,7 +142,7 @@ For commands that need to perform actions on the file system, the command prompt
 To add a new command to NioPD:
 
 1. **Define the Command:** Create a new `.md` file in `.claude/commands/NioPD/`
-2. **Create Supporting Agent (if needed):** Add agent definition in `.claude/agents/`
+2. **Create Supporting Agent (if needed):** Add agent definition in `.claude/agents/NioPD/`
 3. **Design Template (if needed):** Add document template in `.claude/templates/`
 4. **Write Helper Script (if needed):** Add automation script in `.claude/scripts/NioPD/`
 5. **Update Documentation:** Add the command to [`COMMANDS.md`](COMMANDS.md) and [`AGENTS.md`](AGENTS.md)
