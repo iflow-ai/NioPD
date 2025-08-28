@@ -14,7 +14,7 @@ NioPD is a collection of **Claude Code Workflows**, designed specifically to str
 - [The Challenge for PMs](#the-challenge-for-pms)
 - [NioPD Organizational Structure](#niopd-organizational-structure)
 - [The NioPD Workflow](#the-niopd-workflow)
-- [The Niopd Workspace](#the-niopd-workspace)
+- [The NioPD Workspace](#the-niopd-workspace)
 - [What Makes NioPD Different?](#what-makes-niopd-different)
 - [Get Started Now](#get-started-now)
 - [System Architecture](#system-architecture)
