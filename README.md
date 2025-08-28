@@ -96,7 +96,7 @@ NioPD/
     ├── prds/         # Product Requirements Documents
     ├── reports/      # Analysis and summary reports
     ├── roadmaps/     # Product roadmaps
-    └── feedback-sources/ # Raw feedback files
+    └── sources/ # Raw feedback data and other imported files
 ```
 
 ## How NioPD Works: The 5-Part Command Pattern
@@ -168,7 +168,7 @@ When creating new commands that generate files, follow these directory structure
 - **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
 - **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
 - **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
-- **Feedback Sources:** Store raw feedback files in `niopd-workspace/feedback-sources/` (e.g., `niopd-workspace/feedback-sources/user-feedback.txt`)
+- **Sources:** Store raw data files in `niopd-workspace/sources/` (e.g., `niopd-workspace/sources/user-feedback.txt`)
 
 All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
 1. Validate input parameters

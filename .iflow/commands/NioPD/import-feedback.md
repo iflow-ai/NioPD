@@ -36,7 +36,7 @@ You are Nio, helping a user import feedback.
 -   Generate a destination filename. A good format is `<initiative_slug>-<original_filename>`. For example, if the initiative is "Q4 Launch" and the file is `survey.csv`, the new name would be `q4-launch-survey.csv`.
 
 ### Step 2: Execute Helper Script
--   Call the helper script to copy the file into the `niopd-workspace/feedback-sources/` directory with the new name.
+-   Call the helper script to copy the file into the `niopd-workspace/sources/` directory with the new name.
 -   Script location: `.iflow/scripts/NioPD/import-feedback.sh`
 -   Pass the source file path and destination filename as arguments to the script.
 -   Handle the script's response:
