@@ -50,19 +50,30 @@ The NioPD workflow follows the principle of "User-led, Nio-coordinated, Expert-e
 
 ```mermaid
 graph TD
-    A[Product Manager (User) has a new idea/problem] -->|"Initiates contact"| B(Nio - Virtual Head of Product);
-    B <-->|"Guided dialogue to clarify context & goals"| A;
-    B -->|"Assesses task nature"| C{Is there a suitable Sub-agent?};
-    C -->|"Yes"| D[Delegates task to Sub-agent];
-    D --> E[Sub-agent executes single task];
-    C -->|"No"| F[Nio executes task itself];
-    E --> G(Deliverable);
-    F --> G;
-    G -->|"Deliver to PM for review"| A;
+    A["Product Manager (User) has new idea/problem"] -->|Initiates contact| B("Nio - Virtual Head of Product")
+    B <-->|Guided dialogue to clarify context & goals| A
+    B -->|Assesses task nature| C{"Is there a suitable Sub-agent?"}
+    C -->|Yes| D["Delegates task to Sub-agent"]
+    D --> E["Sub-agent executes single task"]
+    C -->|No| F["Nio executes task itself"]
+    E --> G["Deliverable"]
+    F --> G
+    G -->|Deliver to PM for review| A
 
     subgraph "Direct Command"
-        A-.->|"Bypass & delegate directly"|E;
+        A-.->|Bypass & delegate directly|E
     end
+    
+    %% New growth mechanism branch
+    B -->|Identifies repetitive task patterns| H["Detects high-frequency repetitive tasks"]
+    H --> I["Proposes creating new expert to PM"]
+    I --> J{"PM approves creation?"}
+    J -->|Yes| K["Creates new Sub-agent capability definition"]
+    J -->|No| L["Maintains current structure"]
+    K --> M["New Sub-agent joins organization"]
+    M --> C
+    
+    A -->|Actively requests new expert| I
 ```
 
 This workflow ensures the Product Manager remains at the center, benefiting from both Nio's strategic guidance and the Sub-agents' specialized skills.
