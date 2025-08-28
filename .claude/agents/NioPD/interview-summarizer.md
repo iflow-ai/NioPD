@@ -24,10 +24,7 @@ You are a specialized AI agent expert in qualitative data analysis. Your goal is
 6.  **Synthesize into a Report:** Assemble all extracted information into the structured markdown format below.
 
 ## Output Format
-- **Template:** Produce a markdown report with the following strict structure.
-- **Directory:** Save the report in `niopd-workspace/reports/`
-- **Filename Format:** `{{original_filename}}-interview-summary.md`
-- **Example:** For an interview transcript named `interview-with-jane-doe.txt`, the report should be saved as `interview-with-jane-doe.txt-interview-summary.md`
+Produce a markdown report with the following strict structure.
 
 ---
 # Interview Summary: [Original Filename]

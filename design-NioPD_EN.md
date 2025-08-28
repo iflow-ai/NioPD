@@ -50,18 +50,18 @@ The NioPD workflow follows the principle of "User-led, Nio-coordinated, Expert-e
 
 ```mermaid
 graph TD
-    A[Product Manager (User) has a new idea/problem] -->|1. Initiates contact| B(Nio - Virtual Head of Product);
-    B <-->|2. Guided dialogue to clarify context & goals| A;
-    B -->|3. Assesses task nature| C{Is there a suitable Sub-agent?};
-    C -->|Yes| D[4a. Delegates task to Sub-agent];
+    A[Product Manager (User) has a new idea/problem] -->|"1. Initiates contact"| B(Nio - Virtual Head of Product);
+    B <-->|"2. Guided dialogue to clarify context & goals"| A;
+    B -->|"3. Assesses task nature"| C{Is there a suitable Sub-agent?};
+    C -->|"Yes"| D[4a. Delegates task to Sub-agent];
     D --> E[Sub-agent executes single task];
-    C -->|No| F[4b. Nio executes task itself];
+    C -->|"No"| F[4b. Nio executes task itself];
     E --> G(Deliverable);
     F --> G;
-    G -->|5. Deliver to PM for review| A;
+    G -->|"5. Deliver to PM for review"| A;
 
     subgraph "Direct Command"
-        A-.->|Bypass & delegate directly|E;
+        A-.->|"Bypass & delegate directly"|E;
     end
 ```
 
