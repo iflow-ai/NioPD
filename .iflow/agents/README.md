@@ -103,7 +103,7 @@ To create a new agent:
 
 **Example of create a new agent:**
 ```
-Creating New Agents: Feature is [function description]. To create a new agent, please refer to the method and specifications in agents/README.md for easy copying.
+Creating New Agents: Feature is [function description]. To create a new agent, please refer to the method and specifications in agents/README.md
 ```
 
 ## Best Practices

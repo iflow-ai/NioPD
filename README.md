@@ -221,7 +221,11 @@ For commands that need to perform actions on the file system, the command prompt
 
 **Important:** Each command corresponds to a `.md` file in the commands directory, and some commands may have a corresponding `.sh` script in the scripts directory for system-level operations.
 
-### Command Development Workflow
+### Adding New Commands
+
+To add a new command to NioPD, follow these steps and guidelines:
+
+#### Command Development Workflow
 
 To add a new command to NioPD:
 
@@ -235,7 +239,7 @@ This modular approach ensures that each component has a single responsibility an
 
 **Note:** When adding new commands, follow the pattern where each command has a corresponding `.md` file in the commands directory, and if system-level operations are needed, create a corresponding `.sh` script in the scripts directory.
 
-### Adding New Commands
+#### Guidelines for Adding New Commands
 
 When extending NioPD with new commands, follow these guidelines:
 
@@ -263,13 +267,16 @@ All file creation operations should be handled by corresponding shell scripts lo
 
 **Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
-**Example of add a new command:**
+####  Example Of add a new command
+
+You can add a new command with a simple prompt like this:
 ```
-Add New Commands: `/niopd:draft-prd "Feature Name"`, This command automatically generates a Product Requirements Document (PRD) for the specified feature based on historical data and existing initiatives.
+Add New Commands: `/niopd:[command-name]`, This command is designed to [command feature]. To create a new command, please refer to the method and specifications in commands/README.md
 ```
 
+One more example:
 ```
-Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set.
+Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set. To create a new command, please refer to the method and specifications in commands/README.md
 ```
 
 ## Command Reference
