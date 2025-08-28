@@ -221,11 +221,11 @@ For commands that need to perform actions on the file system, the command prompt
 
 **Important:** Each command corresponds to a `.md` file in the commands directory, and some commands may have a corresponding `.sh` script in the scripts directory for system-level operations.
 
-### Adding New Commands
+## Adding New Commands
 
 To add a new command to NioPD, follow these steps and guidelines:
 
-#### Command Development Workflow
+### Command Development Workflow
 
 To add a new command to NioPD:
 
@@ -239,7 +239,7 @@ This modular approach ensures that each component has a single responsibility an
 
 **Note:** When adding new commands, follow the pattern where each command has a corresponding `.md` file in the commands directory, and if system-level operations are needed, create a corresponding `.sh` script in the scripts directory.
 
-#### Guidelines for Adding New Commands
+### Guidelines for Adding New Commands
 
 When extending NioPD with new commands, follow these guidelines:
 
@@ -267,7 +267,7 @@ All file creation operations should be handled by corresponding shell scripts lo
 
 **Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
-####  Example Of add a new command
+###  Example Of add a new command
 
 You can add a new command with a simple prompt like this:
 ```
