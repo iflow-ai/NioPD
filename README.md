@@ -14,6 +14,7 @@ NioPD is a collection of **Claude Code Workflows**, designed specifically to str
 - [The Challenge for PMs](#the-challenge-for-pms)
 - [NioPD Organizational Structure](#niopd-organizational-structure)
 - [The NioPD Workflow](#the-niopd-workflow)
+- [The Niopd Workspace](#the-niopd-workspace)
 - [What Makes NioPD Different?](#what-makes-niopd-different)
 - [Get Started Now](#get-started-now)
 - [System Architecture](#system-architecture)
@@ -157,6 +158,10 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 ## Get Started Now
 
+Want to get started with Nio? Follow these steps:
+
+### Prerequisites: Installed Claude Code
+
 NioPD requires Claude Code to function. If you haven't installed Claude Code yet, please install [Claude Code](https://github.com/anthropics/claude-code) first.
 ```bash
 npm install -g @anthropic-ai/claude-code
@@ -166,6 +171,8 @@ If you're not in the US, you can use [Claude Code Sugar](https://github.com/clau
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
+
+### Installed NioPD and Work with Nio
 
 1.  **Clone this repository into your project**:
     First, navigate to your project directory, then clone the NioPD repository and copy its `.claude` directory to your project root:
