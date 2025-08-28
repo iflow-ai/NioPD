@@ -73,6 +73,11 @@ To create a new command:
 7. Add error handling guidance
 8. Update the main [COMMANDS.md](../../COMMANDS.md) documentation
 
+**Example of create a new command:**
+```
+Add New Commands: `/niopd:draft-prd "Feature Name"`, This command automatically generates a Product Requirements Document (PRD) for the specified feature based on historical data and existing initiatives.
+```
+
 ## Best Practices
 
 1. **Clear Naming**: Use descriptive command names that clearly indicate their function

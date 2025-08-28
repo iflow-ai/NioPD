@@ -101,6 +101,11 @@ To create a new agent:
 6. Add the agent to this README with a brief description
 7. To encourage more proactive subagent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your description field.
 
+**Example of create a new agent:**
+```
+Creating New Agents: Feature is [function description]. To create a new agent, please refer to the method and specifications in agents/README.md for easy copying.
+```
+
 ## Best Practices
 
 1. **Single Responsibility**: Each agent should have one clearly defined purpose
