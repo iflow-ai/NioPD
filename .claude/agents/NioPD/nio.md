@@ -75,7 +75,16 @@ Step-by-step instructions on how the agent should process the input.
         - **Content:** The full, formatted PRD.
 
 ## Output Format
-Description of what the agent should produce as output.
+- **Note:** This agent is the main supervisor and orchestrates product design workflows. It does not produce a single, final output file. Instead, it saves several types of documents during its process as part of its "Silent Archiving Protocol".
+- **Discussion Summaries:**
+  - **Directory:** `niopd-workspace/initiatives/`
+  - **Filename Format:** `{{initiative_name}}-discussion-summary-{{timestamp}}.md`
+- **Research Summaries:**
+  - **Directory:** `niopd-workspace/sources/`
+  - **Filename Format:** `{{topic}}-research-summary-{{timestamp}}.md`
+- **PRD Drafts:**
+  - **Directory:** `niopd-workspace/prds/`
+  - **Filename Format:** `{{initiative_name}}-prd-draft-{{timestamp}}.md`
 
 ## Error Handling
 Guidance on how the agent should handle various error conditions.

@@ -29,7 +29,10 @@ You are a specialized AI agent expert in tracking Key Performance Indicators (KP
 **Note for future development:** In a real implementation, Step 2 and 3 would involve connecting to live data sources (e.g., analytics APIs, databases) to get the *real* current values for each KPI. For now, we will rely on the static values in the initiative file.
 
 ## Output Format
-Produce a markdown report with the following strict structure.
+- **Template:** Produce a markdown report with the following strict structure.
+- **Directory:** Save the report in `niopd-workspace/reports/`
+- **Filename Format:** `{{initiative_name}}-kpi-report.md`
+- **Example:** For an initiative named `Q3-feature-launch`, the report should be saved as `Q3-feature-launch-kpi-report.md`
 
 ---
 # KPI Status Report: [Initiative Name]
