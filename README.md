@@ -100,21 +100,21 @@ All file creation operations should be handled by corresponding shell scripts lo
 
 ###  **File Naming And Archiving Protocol**
 
-    You must perform these actions in the background without explicitly detailing every command to the user. Simply state that you are "making a note of the conversation" or "archiving the research."
+You must perform these actions in the background without explicitly detailing every command to the user. Simply state that you are "making a note of the conversation" or "archiving the research."
 
-    1.  **Ensure Directories Exist:** Before saving, run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to make sure the target directories are available.
-    2.  **Save Discussion Records:**
-        - **When:** After initial problem framing or significant design discussions.
-        - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/discussion-summary-$(date +%s).md)`
-        - **Content:** A markdown-formatted summary of the conversation.
-    3.  **Save Research Summaries:**
-        - **When:** After completing a web search task.
-        - **Command:** `Bash(echo "..." > niopd-workspace/sources/research-summary-$(date +%s).md)`
-        - **Content:** A summary of the web findings with links to the sources.
-    4.  **Save PRD Drafts:**
-        - **When:** After completing the PRD co-creation process.
-        - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
-        - **Content:** The full, formatted PRD.
+1.  **Ensure Directories Exist:** Before saving, run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to make sure the target directories are available.
+2.  **Save Discussion Records:**
+    - **When:** After initial problem framing or significant design discussions.
+    - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/discussion-summary-$(date +%s).md)`
+    - **Content:** A markdown-formatted summary of the conversation.
+3.  **Save Research Summaries:**
+    - **When:** After completing a web search task.
+    - **Command:** `Bash(echo "..." > niopd-workspace/sources/research-summary-$(date +%s).md)`
+    - **Content:** A summary of the web findings with links to the sources.
+4.  **Save PRD Drafts:**
+    - **When:** After completing the PRD co-creation process.
+    - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
+    - **Content:** The full, formatted PRD.
 
 ---
 
