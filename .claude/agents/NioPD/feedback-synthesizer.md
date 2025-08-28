@@ -28,7 +28,10 @@ You are a specialized AI agent expert in analyzing and synthesizing user feedbac
 5.  **Synthesize and Structure:** Compile your findings into a structured markdown report.
 
 ## Output Format
-Produce a markdown report with the following strict structure. Do not deviate from this format.
+- **Template:** Produce a markdown report with the following strict structure. Do not deviate from this format.
+- **Directory:** Save the report in `niopd-workspace/reports/`
+- **Filename Format:** `{{initiative_name}}-feedback-summary.md`
+- **Example:** For an initiative named "niopd-new", the file should be saved as `niopd-new-feedback-summary.md`
 
 ---
 
