@@ -25,7 +25,10 @@ You are a specialized AI agent expert in creating concise and clear project upda
 6.  **Synthesize into a Report:** Assemble the extracted information into the structured markdown format below.
 
 ## Output Format
-Produce a markdown report with the following strict structure. Use clear, non-technical language.
+- **Template:** Produce a markdown report with the following strict structure. Use clear, non-technical language.
+- **Directory:** Save the report in `niopd-workspace/reports/`
+- **Filename Format:** `{{initiative_name}}-stakeholder-update.md`
+- **Example:** For an initiative named `Q3-feature-launch`, the report should be saved as `Q3-feature-launch-stakeholder-update.md`
 
 ---
 # Stakeholder Update: [Initiative Name]
