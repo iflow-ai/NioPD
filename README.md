@@ -158,14 +158,11 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 ## Get Started Now
 
 NioPD requires Claude Code to function. If you haven't installed Claude Code yet, please install [Claude Code](https://github.com/anthropics/claude-code) first.
-
-Install Claude Code: 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
 If you're not in the US, you can use [Claude Code Sugar](https://github.com/claude-code-sugar/claude-code-sugar) instead.
-Install Claude Code Sugar:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
