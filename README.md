@@ -2,11 +2,17 @@
 
 NioPD is a collection of **Claude Code Workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on strategy and users.
 
+The core concept of NioPD is to provide every Product Manager (User) with a dedicated, AI-driven product expert organization. This is not a cold set of tools, but a virtual team with distinct roles, collaborative protocols, and the ability to evolve.
+
+- **Vision**: To liberate Product Managers from tedious, administrative work, allowing them to focus on high-value strategic thinking, user insight, and product innovation. NioPD transforms raw ideas, messy feedback, and complex data into structured, actionable product plans.
+- **Target Audience**: Product Managers at all levels, from seasoned experts to newcomers, can achieve a significant boost in their capabilities through NioPD.
+
 ---
 
 ## Table of Contents
 
 - [The Challenge for PMs](#the-challenge-for-pms)
+- [NioPD Organizational Structure](#niopd-organizational-structure)
 - [The NioPD Workflow](#the-niopd-workflow)
 - [What Makes NioPD Different?](#what-makes-niopd-different)
 - [Get Started Now](#get-started-now)
@@ -19,21 +25,73 @@ NioPD is a collection of **Claude Code Workflows**, designed specifically to str
 ## The Challenge for PMs
 
 Product Managers today are drowning in data and administrative work:
-- **Unstructured Feedback:** Juggling notes from Slack, Intercom, surveys, and user interviews.
-- **Constant Research:** Manually tracking competitors, market trends, and data insights.
-- **Endless Documentation:** Constantly writing and updating PRDs, roadmaps, and stakeholder reports.
+- **Unstructured Ideas**: Having an initial product concept but lacking a systematic framework to deepen and specify it.
+- **Information Overload**: Being inundated with information from user interviews, competitive analysis, and data reports, making manual synthesis time-consuming and prone to missing key insights.
+- **Documentation Burden**: Spending excessive time writing and maintaining PRDs, roadmaps, and status reports.
+- **Lack of High-Quality Sparring**: Missing an experienced, neutral "virtual director" or "expert" for deep discussions and brainstorming at critical design junctures.
 
 NioPD is designed to automate this "work about work" so you can focus on what matters.
+
+## NioPD Organizational Structure
+
+The NioPD organization consists of three core roles who share a workspace, a toolset, and common collaboration protocols.
+
+### Product Manager (The User)
+**Role: The organization's leader and decision-maker.**
+- **Responsibilities**:
+    - **Initiator**: The starting point for all work. Initiates communication with Nio for any new idea or work-related problem.
+    - **Leader**: Holds the final decision-making power, responsible for reviewing, revising, and approving all deliverables.
+    - **Enabler**: Can directly use system tools or assign tasks to Sub-agents when the task is clear, maximizing efficiency.
+
+### Nio (The Core Agent)
+**Role: The Virtual Head of Product, a high-level guide.**
+- **Responsibilities**:
+    - **Potential-Unlocker**: Nio never proactively offers advice or gives direct answers. Its core duty is to help the PM clarify their thinking and unlock their potential through Socratic questioning and guidance.
+    - **Task Definition & Delegation**: After gathering sufficient context from the PM, Nio defines the task clearly and delegates it to the most appropriate Sub-agent.
+    - **Task Execution (Exception)**: Nio only executes a task itself if no suitable Sub-agent exists for the job.
+
+### Sub-agents (Domain Experts)
+**Role: Single-task specialists, "by invitation only."**
+- **Responsibilities**:
+    - **Focused Execution**: Each Sub-agent is an expert in a specific domain (e.g., user feedback analysis, competitive analysis) and is responsible for efficiently completing their single, assigned task to a high standard.
+    - **No Cross-Delegation**: Sub-agents cannot delegate tasks to each other, ensuring clear lines of command and accountability.
 
 ## The NioPD Workflow
 
 NioPD guides you through a structured, repeatable process to take ideas from concept to a well-defined and launched feature.
 
+The NioPD workflow follows the principle of "User-led, Nio-coordinated, Expert-executed."
+
 ```
 graph TD
-    A[1. Discovery & Research] --> B[2. Planning & Definition]
-    B --> C[3. Reporting & Launch Prep]
+graph TD
+    A["Product Manager (User) has new idea/problem"] -->|Initiates contact| B("Nio - Virtual Head of Product")
+    B <-->|Guided dialogue to clarify context & goals| A
+    B -->|Assesses task nature| C{"Is there a suitable Sub-agent?"}
+    C -->|Yes| D["Delegates task to Sub-agent"]
+    D --> E["Sub-agent executes single task"]
+    C -->|No| F["Nio executes task itself"]
+    E --> G["Deliverable"]
+    F --> G
+    G -->|Deliver to PM for review| A
+
+    subgraph "Direct Command"
+        A-.->|Bypass & delegate directly|E
+    end
+    
+    %% New growth mechanism branch
+    B -->|Identifies repetitive task patterns| H["Detects high-frequency repetitive tasks"]
+    H --> I["Proposes creating new expert to PM"]
+    I --> J{"PM approves creation?"}
+    J -->|Yes| K["Creates new Sub-agent capability definition"]
+    J -->|No| L["Maintains current structure"]
+    K --> M["New Sub-agent joins organization"]
+    M --> C
+    
+    A -->|Actively requests new expert| I
 ```
+
+This workflow ensures the Product Manager remains at the center, benefiting from both Nio's strategic guidance and the Sub-agents' specialized skills.
 
 ## What Makes NioPD Different?
 
