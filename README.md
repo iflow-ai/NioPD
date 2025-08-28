@@ -62,7 +62,7 @@ NioPD guides you through a structured, repeatable process to take ideas from con
 
 The NioPD workflow follows the principle of "User-led, Nio-coordinated, Expert-executed."
 
-```
+```mermaid
 graph TD
     A["Product Manager (User) has new idea/problem"] -->|Initiates contact| B("Nio - Virtual Head of Product")
     B <-->|Guided dialogue to clarify context & goals| A
