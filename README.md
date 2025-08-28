@@ -1,8 +1,8 @@
 # NioPD: Product Management Toolkit for Claude Code
 
-NioPD is a collection of **Claude Code Workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on strategy and users.
+NioPD is a collection of **Claude Code Workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on product strategy and users.
 
-The core concept of NioPD is to provide every Product Manager (User) with a dedicated, AI-driven product expert organization. This is not a cold set of tools, but a virtual team with distinct roles, collaborative protocols, and the ability to evolve.
+- **Core oncept**: The core concept of NioPD is to provide every Product Manager (User) with a dedicated, AI-driven product expert organization. This is not a cold set of tools, but a virtual team with distinct roles, collaborative protocols, and the ability to evolve.
 
 - **Vision**: To liberate Product Managers from tedious, administrative work, allowing them to focus on high-value strategic thinking, user insight, and product innovation. NioPD transforms raw ideas, messy feedback, and complex data into structured, actionable product plans.
 - **Target Audience**: Product Managers at all levels, from seasoned experts to newcomers, can achieve a significant boost in their capabilities through NioPD.
@@ -63,7 +63,6 @@ NioPD guides you through a structured, repeatable process to take ideas from con
 The NioPD workflow follows the principle of "User-led, Nio-coordinated, Expert-executed."
 
 ```
-graph TD
 graph TD
     A["Product Manager (User) has new idea/problem"] -->|Initiates contact| B("Nio - Virtual Head of Product")
     B <-->|Guided dialogue to clarify context & goals| A
@@ -130,6 +129,12 @@ This workflow ensures the Product Manager remains at the center, benefiting from
 3.  **Start your first initiative**:
     ```
     /niopd:new-initiative "My First Feature"
+    ```
+
+4.  **Start a conversation with Nio**:
+    Use this interactive session to discuss with Nio about the feature, clarify goals, and get guidance
+    ```
+    /niopd:hi
     ```
 
 ## System Architecture
@@ -290,8 +295,8 @@ The following commands are planned for future releases:
 
 Here's how you might use NioPD to research and plan a new feature using the currently available commands:
 
-1.  **Start a conversation with your supervisor:**
-    `/niopd:hi` (Use this interactive session to discuss the feature, clarify goals, and get guidance).
+1.  **Start a conversation with Nio:**
+    `/niopd:hi` (Use this interactive session to discuss with Nio about the feature, clarify goals, and get guidance).
 
 2.  **Research the market:**
     `/niopd:research-trends --topic="AI-powered data analysis tools"`
