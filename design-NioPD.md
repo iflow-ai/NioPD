@@ -65,13 +65,13 @@ The NioPD system is composed of several key types of components, all stored with
   - Templates should be flexible enough to accommodate different use cases
 
 #### 5. Data Directories (`niopd-workspace/`)
-- **Purpose:** Stores the artifacts generated during the product management workflow.
+- **Purpose:** Stores the artifacts generated during the product management workflow, as well as user-provided project background information and raw data.
 - **Implementation:**
-  - `niopd-workspace/initiatives/`: Contains high-level strategic product initiatives
-  - `niopd-workspace/prds/`: Stores Product Requirement Documents
-  - `niopd-workspace/reports/`: Contains generated reports and analysis
-  - `niopd-workspace/roadmaps/`: Stores roadmap documents
-  - `niopd-workspace/feedback-sources/`: Stores raw feedback data
+  - `niopd-workspace/initiatives/`: Contains high-level strategic product initiatives, brainstorming information, and manually added project background information.
+  - `niopd-workspace/prds/`: Stores Product Requirement Documents.
+  - `niopd-workspace/reports/`: Contains generated reports and analysis, such as feedback analysis.
+  - `niopd-workspace/roadmaps/`: Stores roadmap documents.
+  - `niopd-workspace/sources/`: Stores raw feedback data and other data resource files manually imported by the user for analysis.
 - **Best Practices:**
   - Directory structure should be intuitive and well-documented
   - Files should be organized by type and purpose
@@ -91,7 +91,7 @@ The following is a proposed list of commands for the `NioPD` system. They are de
 - **`/niopd:import-feedback --from=intercom`**
   - **Action:** Connects to a specified source (via API or file upload) to import raw user feedback.
   - **Agent:** May use a helper script to handle the connection.
-  - **Output:** Saves the raw data in `niopd-workspace/feedback-sources/`.
+  - **Output:** Saves the raw data in `niopd-workspace/sources/`.
 
 - **`/niopd:summarize-feedback --for="Q3 Launch"`**
   - **Action:** Uses the `feedback-synthesizer` agent to analyze all feedback related to a specific initiative.

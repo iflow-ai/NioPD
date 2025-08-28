@@ -19,7 +19,7 @@ All NioPD scripts are located in the [NioPD](NioPD/) subdirectory:
 |-------------|----------|-------|---------|
 | [init.sh](NioPD/init.sh) | `.iflow/scripts/NioPD/init.sh` | `./init.sh` | Initializes the NioPD system by creating the necessary directory structure in `niopd-workspace/` |
 | [new-initiative.sh](NioPD/new-initiative.sh) | `.iflow/scripts/NioPD/new-initiative.sh` | `./new-initiative.sh <file-slug> "<file-content>"` | Creates new initiative files in the `niopd-workspace/initiatives/` directory |
-| [import-feedback.sh](NioPD/import-feedback.sh) | `.iflow/scripts/NioPD/import-feedback.sh` | `./import-feedback.sh <source_file_path> <destination_filename>` | Copies feedback files to the `niopd-workspace/feedback-sources/` directory |
+| [import-feedback.sh](NioPD/import-feedback.sh) | `.iflow/scripts/NioPD/import-feedback.sh` | `./import-feedback.sh <source_file_path> <destination_filename>` | Copies files to the `niopd-workspace/sources/` directory |
 | [analyze-competitor.sh](NioPD/analyze-competitor.sh) | `.iflow/scripts/NioPD/analyze-competitor.sh` | `./analyze-competitor.sh <domain_name> "<report_content>"` | Saves competitor analysis reports to the `niopd-workspace/reports/` directory |
 | [analyze-data.sh](NioPD/analyze-data.sh) | `.iflow/scripts/NioPD/analyze-data.sh` | `./analyze-data.sh <original_filename> "<report_content>"` | Saves data analysis reports to the `niopd-workspace/reports/` directory |
 | [draft-prd.sh](NioPD/draft-prd.sh) | `.iflow/scripts/NioPD/draft-prd.sh` | `./draft-prd.sh <initiative_slug> "<prd_content>"` | Saves PRD drafts to the `niopd-workspace/prds/` directory |

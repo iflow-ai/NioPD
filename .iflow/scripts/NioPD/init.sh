@@ -46,7 +46,7 @@ mkdir -p niopd-workspace/initiatives
 mkdir -p niopd-workspace/prds
 mkdir -p niopd-workspace/reports
 mkdir -p niopd-workspace/roadmaps
-mkdir -p niopd-workspace/feedback-sources
+mkdir -p niopd-workspace/sources
 
 echo "  ✅ Data directories created"
 
@@ -55,7 +55,7 @@ echo ""
 echo "🔍 Verifying directory structure..."
 
 # Check if all directories were created successfully
-DIRECTORIES="niopd-workspace/initiatives niopd-workspace/prds niopd-workspace/reports niopd-workspace/roadmaps niopd-workspace/feedback-sources"
+DIRECTORIES="niopd-workspace/initiatives niopd-workspace/prds niopd-workspace/reports niopd-workspace/roadmaps niopd-workspace/sources"
 
 for dir in $DIRECTORIES; do
     if [ ! -d "$dir" ]; then
@@ -76,7 +76,7 @@ echo "  - niopd-workspace/initiatives/   - For product initiative files"
 echo "  - niopd-workspace/prds/         - For Product Requirements Documents"
 echo "  - niopd-workspace/reports/      - For analysis and summary reports"
 echo "  - niopd-workspace/roadmaps/     - For product roadmaps"
-echo "  - niopd-workspace/feedback-sources/ - For raw feedback files"
+echo "  - niopd-workspace/sources/      - For raw feedback data and other imported files"
 echo ""
 echo "🎯 Next Steps:"
 echo "  1. Create your first initiative: /niopd:new-initiative \"My First Feature\""

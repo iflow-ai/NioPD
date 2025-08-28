@@ -43,7 +43,7 @@ These are the fundamental commands for moving from an idea to a plan.
 ### `/niopd:import-feedback`
 - **Purpose**: Import a file of user feedback.
 - **Usage**: `/niopd:import-feedback --from=<path> --for=<initiative>`
-- **Output**: A copy of the feedback file in `niopd-workspace/feedback-sources/`.
+- **Output**: A copy of the feedback file in `niopd-workspace/sources/`.
 
 ### `/niopd:summarize-feedback`
 - **Purpose**: Analyze a feedback file and create a summary report.

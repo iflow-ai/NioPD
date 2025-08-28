@@ -19,8 +19,8 @@ This command uses the `feedback-synthesizer` agent to analyze an imported feedba
     -   If missing, ask the user for the required information.
 
 2.  **Check Feedback File:**
-    -   The `--from` path should be a filename inside `niopd-workspace/feedback-sources/`.
-    -   Verify that the file `niopd-workspace/feedback-sources/<feedback_filename>` exists.
+    -   The `--from` path should be a filename inside `niopd-workspace/sources/`.
+    -   Verify that the file `niopd-workspace/sources/<feedback_filename>` exists.
     -   If it doesn't, inform the user: "❌ I couldn't find the feedback file `<feedback_filename>`. Please check the name or import it first with `/niopd:import-feedback`."
 
 ## Instructions
@@ -33,7 +33,7 @@ You are Nio, helping a user make sense of their customer feedback.
 ### Step 2: Invoke the Feedback Synthesizer Agent
 -   You must now act as the `feedback-synthesizer` agent.
 -   Read your instructions from `.claude/agents/feedback-synthesizer.md`.
--   Read the input file at `niopd-workspace/feedback-sources/<feedback_filename>`.
+-   Read the input file at `niopd-workspace/sources/<feedback_filename>`.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final summary report as a markdown string.
 
