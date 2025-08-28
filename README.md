@@ -66,8 +66,24 @@ The NioPD organization consists of three core roles who share a workspace, a too
 
 ## The Niopd Workspace
 
-**File Storage Directory Rules:**
-When creating new commands that generate files, follow these directory structure rules:
+All Roles & Agents share a workspace, a toolset, and common collaboration protocols.
+
+### NioPD Workspace Defination
+- **Purpose:** Data Directories (`niopd-workspace/`) Stores the artifacts generated during the product management workflow, as well as user-provided project background information and raw data.
+- **Implementation:**
+  - `niopd-workspace/initiatives/`: Contains high-level strategic product initiatives, brainstorming information, and manually added project background information.
+  - `niopd-workspace/prds/`: Stores Product Requirement Documents.
+  - `niopd-workspace/reports/`: Contains generated reports and analysis, such as feedback analysis.
+  - `niopd-workspace/roadmaps/`: Stores roadmap documents.
+  - `niopd-workspace/sources/`: Stores raw data and other data resource files manually imported by the user for analysis.
+- **Best Practices:**
+  - Directory structure should be intuitive and well-documented
+  - Files should be organized by type and purpose
+  - Consistent naming conventions should be used
+
+### **File Storage Directory Rules**
+
+When creating new commands or new sub agents that generate files, follow these directory structure rules:
 
 - **Initiatives:** Store initiative files in `niopd-workspace/initiatives/` (e.g., `niopd-workspace/initiatives/my-feature.md`)
 - **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
@@ -82,7 +98,23 @@ All file creation operations should be handled by corresponding shell scripts lo
 4. Verify the file was created successfully
 5. Provide clear success/error feedback
 
-**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
+###  **File Naming And Archiving Protocol**
+
+    You must perform these actions in the background without explicitly detailing every command to the user. Simply state that you are "making a note of the conversation" or "archiving the research."
+
+    1.  **Ensure Directories Exist:** Before saving, run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to make sure the target directories are available.
+    2.  **Save Discussion Records:**
+        - **When:** After initial problem framing or significant design discussions.
+        - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/discussion-summary-$(date +%s).md)`
+        - **Content:** A markdown-formatted summary of the conversation.
+    3.  **Save Research Summaries:**
+        - **When:** After completing a web search task.
+        - **Command:** `Bash(echo "..." > niopd-workspace/sources/research-summary-$(date +%s).md)`
+        - **Content:** A summary of the web findings with links to the sources.
+    4.  **Save PRD Drafts:**
+        - **When:** After completing the PRD co-creation process.
+        - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
+        - **Content:** The full, formatted PRD.
 
 ---
 
@@ -316,6 +348,8 @@ One more example:
 ```
 Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set. To create a new command, please refer to the method and specifications in commands/README.md
 ```
+
+**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
 ---
 
