@@ -17,8 +17,11 @@ NioPD is a collection of **Claude Code Workflows**, designed specifically to str
 - [What Makes NioPD Different?](#what-makes-niopd-different)
 - [Get Started Now](#get-started-now)
 - [System Architecture](#system-architecture)
+- [How NioPD Works: The 5-Part Command Pattern](#how-niopd-works-the-5-part-command-pattern)
+- [Adding New Commands](#adding-new-commands)
 - [Command Reference](#command-reference)
 - [Example Flow](#example-flow)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -55,6 +58,26 @@ The NioPD organization consists of three core roles who share a workspace, a too
 - **Responsibilities**:
     - **Focused Execution**: Each Sub-agent is an expert in a specific domain (e.g., user feedback analysis, competitive analysis) and is responsible for efficiently completing their single, assigned task to a high standard.
     - **No Cross-Delegation**: Sub-agents cannot delegate tasks to each other, ensuring clear lines of command and accountability.
+
+## The Niopd Workspace
+
+**File Storage Directory Rules:**
+When creating new commands that generate files, follow these directory structure rules:
+
+- **Initiatives:** Store initiative files in `niopd-workspace/initiatives/` (e.g., `niopd-workspace/initiatives/my-feature.md`)
+- **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
+- **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
+- **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
+- **Sources:** Store raw data files in `niopd-workspace/sources/` (e.g., `niopd-workspace/sources/user-feedback.txt`)
+
+All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
+1. Validate input parameters
+2. Construct the appropriate file path based on the content type
+3. Create the file with the provided content
+4. Verify the file was created successfully
+5. Provide clear success/error feedback
+
+**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
 ## The NioPD Workflow
 
@@ -248,24 +271,6 @@ When extending NioPD with new commands, follow these guidelines:
 3. **Documentation:** Every command must be documented in both the command file and COMMANDS.md
 4. **Error Handling:** Implement proper error handling in both the command prompt and helper scripts
 5. **User Experience:** Design commands to be intuitive and provide clear feedback to users
-
-**File Storage Directory Rules:**
-When creating new commands that generate files, follow these directory structure rules:
-
-- **Initiatives:** Store initiative files in `niopd-workspace/initiatives/` (e.g., `niopd-workspace/initiatives/my-feature.md`)
-- **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
-- **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
-- **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
-- **Sources:** Store raw data files in `niopd-workspace/sources/` (e.g., `niopd-workspace/sources/user-feedback.txt`)
-
-All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
-1. Validate input parameters
-2. Construct the appropriate file path based on the content type
-3. Create the file with the provided content
-4. Verify the file was created successfully
-5. Provide clear success/error feedback
-
-**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
 ###  Example Of add a new command
 
