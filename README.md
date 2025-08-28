@@ -35,6 +35,8 @@ Product Managers today are drowning in data and administrative work:
 
 NioPD is designed to automate this "work about work" so you can focus on what matters.
 
+---
+
 ## NioPD Organizational Structure
 
 The NioPD organization consists of three core roles who share a workspace, a toolset, and common collaboration protocols.
@@ -59,6 +61,8 @@ The NioPD organization consists of three core roles who share a workspace, a too
     - **Focused Execution**: Each Sub-agent is an expert in a specific domain (e.g., user feedback analysis, competitive analysis) and is responsible for efficiently completing their single, assigned task to a high standard.
     - **No Cross-Delegation**: Sub-agents cannot delegate tasks to each other, ensuring clear lines of command and accountability.
 
+---
+
 ## The Niopd Workspace
 
 **File Storage Directory Rules:**
@@ -78,6 +82,8 @@ All file creation operations should be handled by corresponding shell scripts lo
 5. Provide clear success/error feedback
 
 **Note:** Before adding new commands, consider whether existing functionality can be extended instead.
+
+---
 
 ## The NioPD Workflow
 
@@ -115,6 +121,8 @@ graph TD
 
 This workflow ensures the Product Manager remains at the center, benefiting from both Nio's strategic guidance and the Sub-agents' specialized skills.
 
+---
+
 ## What Makes NioPD Different?
 
 NioPD transforms the way Product Managers work by providing an AI-driven expert organization that addresses the core challenges of modern product management:
@@ -144,6 +152,8 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 6.  **Silent Archiving**: Nio automatically archives key information to the workspace in the background without interrupting your workflow. This ensures that all important discussions, research findings, and decisions are preserved for future reference.
 
 7.  **Structured Workflow**: NioPD follows a principled "User-led, Nio-coordinated, Expert-executed" workflow that ensures you remain at the center of decision-making while benefiting from AI-powered assistance. The workflow is designed to guide you through a structured process from idea to implementation.
+
+---
 
 ## Get Started Now
 
@@ -181,6 +191,8 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
     /niopd:hi
     ```
 
+---
+
 ## System Architecture
 
 NioPD is a self-contained system. The user-facing documentation lives in the `NioPD/` directory, while the core system logic lives inside `NioPD/.claude/`.
@@ -205,6 +217,8 @@ NioPD/
     ├── roadmaps/     # Product roadmaps
     └── sources/ # Raw feedback data and other imported files
 ```
+
+---
 
 ## How NioPD Works: The 5-Part Command Pattern
 
@@ -243,6 +257,8 @@ For commands that need to perform actions on the file system, the command prompt
 - **Example:** The `/niopd:new-initiative` command prompt calls the `new-initiative.sh` script to save the final document.
 
 **Important:** Each command corresponds to a `.md` file in the commands directory, and some commands may have a corresponding `.sh` script in the scripts directory for system-level operations.
+
+---
 
 ## Adding New Commands
 
@@ -284,6 +300,8 @@ One more example:
 Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set. To create a new command, please refer to the method and specifications in commands/README.md
 ```
 
+---
+
 ## Command Reference
 
 ### Core Workflow ✅ *Fully Implemented*
@@ -324,6 +342,8 @@ The following commands are planned for future releases:
 
 *For a complete command reference, see [COMMANDS.md](COMMANDS.md)*
 
+---
+
 ## Example Flow
 
 Here's how you might use NioPD to research and plan a new feature using the currently available commands:
@@ -360,6 +380,8 @@ Here's how you might use NioPD to research and plan a new feature using the curr
 
 ---
 This README provides a comprehensive overview for any Product Manager looking to use the NioPD system.
+
+---
 
 ## Acknowledgments
 
