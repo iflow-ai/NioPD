@@ -211,7 +211,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude
 
 1.  **Clone this repository into your project**:
     First, navigate to your project directory, then clone the NioPD repository and copy its `.claude` directory to your project root:
-    ```bash
+    ```
     cd path/to/your/project/
     git clone https://github.com/8421bit/NioPD.git
     cd NioPD
