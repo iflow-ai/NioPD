@@ -1,11 +1,14 @@
-# NioPD: Product Management Toolkit for Claude Code
+# NioPD: Your Virtual Product Expert Team Led by Nio
 
-NioPD is a collection of **Claude Code Workflows**, designed specifically to streamline the product management lifecycle. As an AI-powered system, it helps Product Managers turn raw ideas, messy feedback, and complex data into structured, actionable plans, freeing them up to focus on product strategy and users.
+NioPD (Nio Product Director) is a next-generation product management toolkit for **Claude Code**. It provides every Product Manager with instant access to a **Virtual Product Expert Team**, all orchestrated and led by Nio—your AI-powered product partner and assistant.
 
-- **Core oncept**: The core concept of NioPD is to provide every Product Manager (User) with a dedicated, AI-driven product expert organization. This is not a cold set of tools, but a virtual team with distinct roles, collaborative protocols, and the ability to evolve.
+As an AI-driven system tightly integrated with Claude Code workflows, NioPD helps Product Managers transform raw ideas, messy feedback, and complex data into structured, actionable product plans. With Nio at the helm, you gain not just a set of tools, but a collaborative organization of specialized agents working together to support your goals, streamline your workflow, and unlock your strategic potential.
 
-- **Vision**: To liberate Product Managers from tedious, administrative work, allowing them to focus on high-value strategic thinking, user insight, and product innovation. NioPD transforms raw ideas, messy feedback, and complex data into structured, actionable product plans.
-- **Target Audience**: Product Managers at all levels, from seasoned experts to newcomers, can achieve a significant boost in their capabilities through NioPD.
+- **Core Concept**: NioPD is designed to give every Product Manager a dedicated virtual expert group, led by Nio. This is not a static toolkit—it’s an evolving team with distinct roles, collaborative protocols, and expert capabilities, all focused on serving you as the product leader.
+- **Vision**: NioPD aims to liberate Product Managers from tedious administrative work, allowing you to focus on high-value strategic thinking, user insight, and product innovation. By automating routine tasks and providing expert guidance, NioPD enables you to deliver exceptional products.
+- **Target Audience**: Product Managers at all levels—from seasoned professionals to newcomers—can achieve a significant boost in capability, efficiency, and confidence by working with NioPD on Claude Code.
+
+With NioPD, using the system is like having your own product expert team, always available to help you turn vision into reality.
 
 ---
 
