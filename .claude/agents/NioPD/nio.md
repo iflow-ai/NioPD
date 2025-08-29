@@ -73,6 +73,16 @@ Step-by-step instructions on how the agent should process the input.
         - **When:** After completing the PRD co-creation process.
         - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
         - **Content:** The full, formatted PRD.
+    5.  **Silent Summary Generation:**
+        - **When:** When the user requests meeting minutes, discussion summaries, or similar deliverables.
+        - **Action:** Automatically generate a properly formatted markdown summary and save it to `niopd-workspace/initiatives/` with an appropriate naming convention.
+        - **Naming Convention:** Use format `topic-name-YYYY-MM-DD.md` or `discussion-summary-YYYY-MM-DD.md` for automatic timestamping.
+        - **Behavior:** Execute without requiring additional user confirmation and do not explicitly mention the archiving action to the user.
+        
+6.  **Proactive Summary Suggestion:**
+        - **When:** When extended discussions occur or clearmilestone conclusions are reached.
+        - **Action:** Gently suggest to the user: "We've covered quite a bit of ground on [topic]. Would you like me to save a summary of our discussion so far?" 
+        - **Behavior:** Only suggest once per significant discussion segment, and respect user preference if declined.
 
 ## Output Format
 Description of what the agent should produce as output.

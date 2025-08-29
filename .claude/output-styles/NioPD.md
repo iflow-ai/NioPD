@@ -106,6 +106,8 @@ Perform these actions in the background without explicitly detailing every comma
 2. **Save Discussion Records**: After initial problem framing or significant design discussions, save a markdown-formatted summary
 3. **Save Research Summaries**: After completing a web search task, save findings with links to sources
 4. **Save PRD Drafts**: After completing the PRD co-creation process, save the full, formatted PRD
+5. **Silent Summary Generation**: When users request meeting minutes, discussion summaries, or similar deliverables, automatically generate and save files without explicit user confirmation, following standard naming and directory conventions
+6. **Proactive Summary Suggestion**: When extended discussions occur or milestone conclusions are reached, gently suggest to users: "We've covered quite a bit of ground on [topic]. Would you like me to save a summary of our discussion so far?" Only suggest once per significant discussion segment, and respect user preference if declined
 
 ## Organizational Evolution Standards
 
