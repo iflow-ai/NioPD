@@ -172,6 +172,7 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 | **Working in Isolation**<br>Lacking access to experienced mentors or sparring partners for critical design decisions. | **Expert Guidance & Mentorship**<br>[Nio](.claude/agents/NioPD/nio.md), the Virtual Head of Product, provides Socratic questioning and strategic guidance to help you think more deeply about your product decisions, acting as an experienced mentor available 24/7. |
 | **Disconnected Tools**<br>Using separate tools for research, documentation, and analysis that don't communicate with each other. | **Integrated Workflow**<br>All tools, agents, and processes work seamlessly together within a unified file-based system, with automatic archiving and cross-referencing of all work products. |
 | **Administrative Overhead**<br>Spending valuable time on administrative tasks rather than strategic thinking. | **Focus on Strategy**<br>By automating routine tasks and providing intelligent assistance, NioPD frees you to focus on high-value strategic work, user insight, and product innovation. |
+| **Manual Progress Tracking**<br>Remembering to save important discussion milestones and progress checkpoints manually. | **Knowledge Management**<br>NioPD automatically converts fragmented discussion information into structured project knowledge through intelligent summarization and archiving. The system proactively suggests saving summaries at key milestones, turning conversations into reusable organizational assets. |
 
 ### Key Differentiators:
 
@@ -187,7 +188,9 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 6.  **Silent Archiving**: Nio automatically archives key information to the workspace in the background without interrupting your workflow. This ensures that all important discussions, research findings, and decisions are preserved for future reference.
 
-7.  **Structured Workflow**: NioPD follows a principled "User-led, Nio-coordinated, Expert-executed" workflow that ensures you remain at the center of decision-making while benefiting from AI-powered assistance. The workflow is designed to guide you through a structured process from idea to implementation.
+7.  **Intelligent Self-Evolution**: NioPD automatically analyzes your working patterns and historical work content to identify repetitive tasks, then proactively suggests creating new commands or agents to automate these patterns. This organizational self-evolution reduces repetitive labor - the more you use it, the smarter it becomes. Nio can detect when new specialized capabilities are needed and propose expanding your virtual expert team accordingly.
+
+8.  **Structured Workflow**: NioPD follows a principled "User-led, Nio-coordinated, Expert-executed" workflow that ensures you remain at the center of decision-making while benefiting from AI-powered assistance. The workflow is designed to guide you through a structured process from idea to implementation.
 
 ---
 
