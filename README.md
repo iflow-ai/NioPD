@@ -1,8 +1,8 @@
 # NioPD: Your Virtual Product Expert Team Led by Nio
 
-NioPD (Nio Product Director) is a next-generation product management toolkit for **Claude Code**. It provides every Product Manager with instant access to a **Virtual Product Expert Team**, all orchestrated and led by Nio—your AI-powered product partner and assistant.
+NioPD (Nio Product Director) is a next-generation product management toolkit for agents like **iFlow CLI** or **Claude Code**. It provides every Product Manager with instant access to a **Virtual Product Expert Team**, all orchestrated and led by Nio—your AI-powered product partner and assistant.
 
-As an AI-driven system tightly integrated with Claude Code workflows, NioPD helps Product Managers transform raw ideas, messy feedback, and complex data into structured, actionable product plans. With Nio at the helm, you gain not just a set of tools, but a collaborative organization of specialized agents working together to support your goals, streamline your workflow, and unlock your strategic potential.
+As an AI-driven system tightly integrated with workflows, NioPD helps Product Managers transform raw ideas, messy feedback, and complex data into structured, actionable product plans. With Nio at the helm, you gain not just a set of tools, but a collaborative organization of specialized agents working together to support your goals, streamline your workflow, and unlock your strategic potential.
 
 - **Core Concept**: NioPD is designed to give every Product Manager a dedicated virtual expert group, led by Nio. This is not a static toolkit—it’s an evolving team with distinct roles, collaborative protocols, and expert capabilities, all focused on serving you as the product leader.
 - **Vision**: NioPD aims to liberate Product Managers from tedious administrative work, allowing you to focus on high-value strategic thinking, user insight, and product innovation. By automating routine tasks and providing expert guidance, NioPD enables you to deliver exceptional products.
@@ -199,36 +199,7 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 ### Installation Methods
 
-#### Method 1: CLI Installer (Recommended)
 Install NioPD using our dedicated CLI tool:
-```bash
-# Install globally
-npm install -g @iflow-ai/niopd
-
-# Or use npx (no global installation needed)
-npx @iflow-ai/niopd install
-```
-
-#### Method 2: Manual Installation
-If you prefer manual setup or the CLI tool isn't available:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/iflow-ai/NioPD.git
-   cd NioPD
-   ```
-
-2. **Copy to your project**:
-   ```bash
-   # Copy .claude directory to your project root
-   cp -r .claude/ /path/to/your/project/
-   
-   # Or for iFlow CLI support
-   cp -r .iflow/ /path/to/your/project/
-   ```
-
-#### Method 3: Interactive Installation
-Use the interactive installer for guided setup:
 ```bash
 # Interactive mode (recommended for first-time users)
 npx @iflow-ai/niopd install
@@ -257,7 +228,7 @@ bash -c "$(curl -fsSL https://github.com/claude-code-sugar/claude-code-sugar/ref
 
 **Option C: iFlow CLI**
 ```bash
-npm install -g @iflow-ai/iflow
+npm install -g @iflow-ai/iflow-cli
 ```
 
 ### Quick Start After Installation
@@ -285,8 +256,8 @@ claude  # or iflow
 ### Installation Verification
 
 After installation, you should see:
-- `.claude/commands/NioPD/` directory with all commands
-- `.claude/agents/NioPD/` directory with all agents
+- `.iflow/commands/NioPD/` directory with all commands
+- `.iflow/agents/NioPD/` directory with all agents
 - `niopd-workspace/` directory created after `/niopd:init`
 
 ### Troubleshooting Installation
@@ -329,56 +300,6 @@ npx @iflow-ai/niopd install --dry-run
 # Check help
 npx @iflow-ai/niopd --help
 ```
-
-Want to get started with Nio? Follow these steps:
-
-### Prerequisites: Installed Claude Code
-
-NioPD requires Claude Code to function. If you haven't installed Claude Code yet, please install [Claude Code](https://github.com/anthropics/claude-code) first.
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-If you're not in the US, you can use [Claude Code Sugar](https://github.com/claude-code-sugar/claude-code-sugar) instead.
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
-```
-
-### Installed NioPD and Work with Nio
-
-1.  **Clone this repository into your project**:
-    First, navigate to your project directory, then clone the NioPD repository and copy its `.claude` directory to your project root:
-    ```
-    cd path/to/your/project/
-    git clone https://github.com/8421bit/NioPD.git
-    cd NioPD
-
-    # copy `.claude` directory to your project root
-    cp -r .claude ./
-
-    # env
-    source ~/.bashrc
-
-    # start cli
-    claude
-    ```
-
-2.  **Initialize the NioPD system**:
-    The core of the NioPD system is contained within the `.claude` directory in your project root. You can interact with the system by issuing `/niopd:` commands to a compatible AI agent (like me). To initialize the NioPD system and generate the necessary directories, run:
-    ```
-    /niopd:init
-    ```
-
-3.  **Start your first initiative**:
-    ```
-    /niopd:new-initiative "My First Feature"
-    ```
-
-4.  **Start a conversation with Nio**:
-    Use this interactive session to discuss with Nio about the feature, clarify goals, and get guidance
-    ```
-    /niopd:hi
-    ```
 
 ---
 
@@ -485,50 +406,6 @@ For commands that need to perform actions on the file system, the command prompt
 - **Example:** The `/niopd:new-initiative` command prompt calls the `new-initiative.sh` script to save the final document.
 
 **Important:** Each command corresponds to a `.md` file in the commands directory, and some commands may have a corresponding `.sh` script in the scripts directory for system-level operations.
-
----
-
-## Adding New Commands
-
-To add a new command to NioPD, follow these steps and guidelines:
-
-### Command Development Workflow
-
-To add a new command to NioPD:
-
-1. **Define the Command:** Create a new `.md` file in `.claude/commands/NioPD/`
-2. **Create Supporting Agent (if needed):** Add agent definition in `.claude/agents/NioPD/`
-3. **Design Template (if needed):** Add document template in `.claude/templates/`
-4. **Write Helper Script (if needed):** Add automation script in `.claude/scripts/NioPD/`
-5. **Update Documentation:** Add the command to [`COMMANDS.md`](COMMANDS.md) and [`AGENTS.md`](AGENTS.md)
-
-This modular approach ensures that each component has a single responsibility and can be easily maintained, tested, and extended.
-
-**Note:** When adding new commands, follow the pattern where each command has a corresponding `.md` file in the commands directory, and if system-level operations are needed, create a corresponding `.sh` script in the scripts directory.
-
-### Guidelines for Adding New Commands
-
-When extending NioPD with new commands, follow these guidelines:
-
-1. **Command Structure:** Each command follows the 5-part pattern described above
-2. **Naming Convention:** Use descriptive names with hyphens to separate words (e.g., `new-initiative`)
-3. **Documentation:** Every command must be documented in both the command file and COMMANDS.md
-4. **Error Handling:** Implement proper error handling in both the command prompt and helper scripts
-5. **User Experience:** Design commands to be intuitive and provide clear feedback to users
-
-###  Example Of add a new command
-
-You can add a new command with a simple prompt like this:
-```
-Add New Commands: `/niopd:[command-name]`, This command is designed to [command feature]. To create a new command, please refer to the method and specifications in commands/README.md
-```
-
-One more example:
-```
-Add New Commands: `/niopd:help`, This command displays help information about the NioPD system, primarily focusing on the command set. To create a new command, please refer to the method and specifications in commands/README.md
-```
-
-**Note:** Before adding new commands, consider whether existing functionality can be extended instead.
 
 ---
 
