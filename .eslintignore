@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+*.tgz
+*.tar.gz
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Workspace directories
+niopd-workspace/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Environment files
+.env*
+
+# Temporary files
+tmp/
+temp/
+
+# Backup files
+*.backup
+*.bak
