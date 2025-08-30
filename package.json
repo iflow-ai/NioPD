@@ -11,13 +11,27 @@
   },
   "scripts": {
     "start": "node bin/niopd.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:coverage": "jest --coverage --passWithNoTests",
     "lint": "eslint lib/ bin/",
     "lint:fix": "eslint lib/ bin/ --fix",
     "build": "npm run lint && npm test",
     "prepublishOnly": "npm run build"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/niopd-workspace/"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "bin/**/*.js",
+      "!**/node_modules/**"
+    ]
   },
   "keywords": [
     "niopd",
