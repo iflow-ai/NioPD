@@ -1,5 +1,7 @@
 # NioPD: Your Virtual Product Expert Team Led by Nio
 
+🌍 **Languages**: **English** | [中文 (Chinese)](README.zh-CN.md)
+
 NioPD (Nio Product Director) is a next-generation product management toolkit for agents like **iFlow CLI** or **Claude Code**. It provides every Product Manager with instant access to a **Virtual Product Expert Team**, all orchestrated and led by Nio—your AI-powered product partner and assistant.
 
 As an AI-driven system tightly integrated with workflows, NioPD helps Product Managers transform raw ideas, messy feedback, and complex data into structured, actionable product plans. With Nio at the helm, you gain not just a set of tools, but a collaborative organization of specialized agents working together to support your goals, streamline your workflow, and unlock your strategic potential.
