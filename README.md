@@ -197,6 +197,139 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 ## Get Started Now
 
+### Installation Methods
+
+#### Method 1: CLI Installer (Recommended)
+Install NioPD using our dedicated CLI tool:
+```bash
+# Install globally
+npm install -g @iflow-ai/niopd
+
+# Or use npx (no global installation needed)
+npx @iflow-ai/niopd install
+```
+
+#### Method 2: Manual Installation
+If you prefer manual setup or the CLI tool isn't available:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/iflow-ai/NioPD.git
+   cd NioPD
+   ```
+
+2. **Copy to your project**:
+   ```bash
+   # Copy .claude directory to your project root
+   cp -r .claude/ /path/to/your/project/
+   
+   # Or for iFlow CLI support
+   cp -r .iflow/ /path/to/your/project/
+   ```
+
+#### Method 3: Interactive Installation
+Use the interactive installer for guided setup:
+```bash
+# Interactive mode (recommended for first-time users)
+npx @iflow-ai/niopd install
+
+# Silent installation with custom path
+npx @iflow-ai/niopd install --silent --path ./my-project --ides claude,iflow
+
+# Install to specific IDE only
+npx @iflow-ai/niopd install --ides claude
+```
+
+### Prerequisites
+
+#### Required: Claude Code or iFlow CLI
+NioPD requires either Claude Code or iFlow CLI to function.
+
+**Option A: Claude Code**
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+**Option B: Claude Code Sugar (for non-US users)**
+```bash
+bash -c "$(curl -fsSL https://github.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
+```
+
+**Option C: iFlow CLI**
+```bash
+npm install -g @iflow-ai/iflow
+```
+
+### Quick Start After Installation
+
+#### 1. Initialize the System
+```bash
+# Start your IDE
+claude  # or iflow
+
+# Initialize NioPD workspace
+/niopd:init
+```
+
+#### 2. Create Your First Initiative
+```bash
+/niopd:new-initiative "My First Feature"
+```
+
+#### 3. Start Working with Nio
+```bash
+# Interactive session with your virtual product director
+/niopd:hi
+```
+
+### Installation Verification
+
+After installation, you should see:
+- `.claude/commands/NioPD/` directory with all commands
+- `.claude/agents/NioPD/` directory with all agents
+- `niopd-workspace/` directory created after `/niopd:init`
+
+### Troubleshooting Installation
+
+#### Common Issues
+
+**Permission Errors**:
+```bash
+# Use sudo for global installation
+sudo npm install -g @iflow-ai/niopd
+
+# Or use npx without global installation
+npx @iflow-ai/niopd install
+```
+
+**Path Issues**:
+```bash
+# Use absolute paths
+npx @iflow-ai/niopd install --path /Users/yourname/projects/my-project
+
+# Check current directory
+pwd
+```
+
+**Network Issues**:
+```bash
+# Use npm mirror
+npm config set registry https://registry.npmmirror.com
+npx @iflow-ai/niopd install
+```
+
+**Verification Commands**:
+```bash
+# Check CLI version
+niopd --version
+
+# Test dry run
+npx @iflow-ai/niopd install --dry-run
+
+# Check help
+npx @iflow-ai/niopd --help
+```
+
 Want to get started with Nio? Follow these steps:
 
 ### Prerequisites: Installed Claude Code
@@ -251,28 +384,67 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude
 
 ## System Architecture
 
-NioPD is a self-contained system. The user-facing documentation lives in the `NioPD/` directory, while the core system logic lives inside `NioPD/.claude/`.
+NioPD is a self-contained system with a consolidated architecture that eliminates redundancy while maintaining full compatibility with both Claude Code and iFlow CLI.
+
+### Core System Structure
+
+The system uses a single `core/` directory as the source of truth, which is dynamically deployed to the appropriate IDE directory during installation.
 
 ```
 NioPD/
 ├── README.md          # This file
 ├── AGENTS.md          # Guide for how NioPD's AI agents work
 ├── COMMANDS.md        # Complete command reference
-├── .claude/            # Core system implementation
+├── core/              # Consolidated core system (single source of truth)
 │   ├── agents/        # Definitions for specialized PM agents (10 agents)
 │   │   └── NioPD/     # Namespace for NioPD agents
 │   ├── commands/      # Definitions for all /niopd: commands (16 commands)
 │   │   └── NioPD/     # Namespace for NioPD commands
 │   ├── scripts/       # Helper scripts for automation
 │   │   └── NioPD/     # Namespace for NioPD scripts
-│   └── templates/     # Reusable templates for PRDs, reports, etc.
+│   ├── templates/     # Reusable templates for PRDs, reports, etc.
+│   └── claude.md      # Claude Code integration file
+├── lib/               # CLI installation tools
+│   ├── file-manager.js # Dynamic path mapping logic
+│   ├── install.js     # Installation orchestration
+│   └── ...            # Supporting utilities
 └── niopd-workspace/   # Your product data lives here (created when needed)
     ├── initiatives/   # Product initiative files
     ├── prds/         # Product Requirements Documents
     ├── reports/      # Analysis and summary reports
     ├── roadmaps/     # Product roadmaps
-    └── sources/ # Raw feedback data and other imported files
+    └── sources/      # Raw feedback data and other imported files
 ```
+
+### Installation Architecture
+
+The system supports flexible installation through multiple methods:
+
+#### Installation Targets
+- **Claude Code**: Installs to `.claude/` directory
+- **iFlow CLI**: Installs to `.iflow/` directory
+- **Both**: Installs to both directories simultaneously
+
+#### Installation Methods
+1. **CLI Installer** (Recommended): `npx @iflow-ai/niopd install`
+2. **Global Package**: `npm install -g @iflow-ai/niopd`
+3. **Manual**: Copy `core/` contents to target directories
+
+#### Dynamic Path Mapping
+The system intelligently maps from the unified `core/` source to IDE-specific target directories:
+- `core/agents/NioPD/` → `.claude/agents/NioPD/` or `.iflow/agents/NioPD/`
+- `core/commands/NioPD/` → `.claude/commands/NioPD/` or `.iflow/commands/NioPD/`
+- `core/scripts/NioPD/` → `.claude/scripts/NioPD/` or `.iflow/scripts/NioPD/`
+- `core/templates/` → `.claude/templates/` or `.iflow/templates/`
+
+### Benefits of Consolidated Architecture
+
+- **Single Source of Truth**: All content maintained in one location
+- **Reduced Package Size**: Eliminates duplicate files
+- **Easier Maintenance**: Updates only need to be made once
+- **Full Compatibility**: Supports both Claude Code and iFlow CLI
+- **Clean Structure**: Clear separation between source and deployment
+- **Extensible**: Easy to add support for additional IDEs in the future
 
 ---
 
@@ -446,3 +618,4 @@ This README provides a comprehensive overview for any Product Manager looking to
 NioPD was inspired by the innovative work done in the [Claude Code PM](https://github.com/automazeio/ccpm) project. We extend our gratitude to the creators and contributors of that project for their pioneering approach to AI-powered product management workflows.
 
 While NioPD has evolved in its own direction with unique features and capabilities, the foundational concepts and vision from Claude Code PM have been instrumental in shaping this system.
+

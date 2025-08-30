@@ -1,0 +1,62 @@
+{
+  "name": "@iflow-ai/niopd",
+  "version": "1.0.0",
+  "description": "NioPD CLI 安装工具 - AI驱动产品管理工具包",
+  "main": "lib/index.js",
+  "bin": {
+    "niopd": "./bin/niopd.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node bin/niopd.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint lib/ bin/",
+    "lint:fix": "eslint lib/ bin/ --fix",
+    "build": "npm run lint && npm test",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "niopd",
+    "claude-code",
+    "iflow",
+    "product-management",
+    "cli",
+    "installer"
+  ],
+  "author": "NioPD Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iflow-ai/NioPD.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "core/",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "COMMANDS.md"
+  ],
+  "dependencies": {
+    "commander": "^9.5.0",
+    "inquirer": "^8.2.6",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "fs-extra": "^11.1.1",
+    "glob": "^8.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.50.0",
+    "@types/jest": "^29.5.5"
+  }
+}

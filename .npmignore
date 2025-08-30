@@ -1,0 +1,36 @@
+# 忽略不需要发布的文件
+.git/
+.gitignore
+.nyc_output/
+coverage/
+test/
+temp/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 文档文件（可选发布）
+docs/
+*.md
+!README.md
+
+# 开发文件
+.eslintrc*
+.prettierrc*
+jest.config.js
+webpack.config.js
+
+# 测试文件
+test/
+*.test.js
+*.spec.js
+
+# 临时文件
+*.tmp
+*.temp
