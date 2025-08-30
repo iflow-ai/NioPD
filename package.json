@@ -33,6 +33,19 @@
     "type": "git",
     "url": "https://github.com/iflow-ai/NioPD.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "core/",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "COMMANDS.md"
+  ],
   "dependencies": {
     "commander": "^9.5.0",
     "inquirer": "^8.2.6",
