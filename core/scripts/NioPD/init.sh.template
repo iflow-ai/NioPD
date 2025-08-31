@@ -11,8 +11,8 @@ if [ "$#" -ne 0 ]; then
 fi
 
 # --- Check for .claude directory ---
-if [ ! -d ".claude" ]; then
-    echo "❌ Error: .claude directory not found. This script must be run from the root of a project that contains the .claude directory."
+if [ ! -d "{{IDE_DIR}}" ]; then
+    echo "❌ Error: {{IDE_DIR}} directory not found. This script must be run from the root of a project that contains the {{IDE_DIR}} directory."
     exit 1
 fi
 
