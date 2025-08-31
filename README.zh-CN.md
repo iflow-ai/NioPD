@@ -320,11 +320,11 @@ NioPD/
 ├── COMMANDS.md        # 完整命令参考
 ├── core/              # 统一核心系统（单一事实来源）
 │   ├── agents/        # 专业PM代理的定义（10个代理）
-│   │   └── NioPD/     # NioPD代理的命名空间
+│   │   └── niopd/     # NioPD代理的命名空间
 │   ├── commands/      # 所有/niopd:命令的定义（16个命令）
-│   │   └── NioPD/     # NioPD命令的命名空间
+│   │   └── niopd/     # NioPD命令的命名空间
 │   ├── scripts/       # 自动化的辅助脚本
-│   │   └── NioPD/     # NioPD脚本的命名空间
+│   │   └── niopd/     # NioPD脚本的命名空间
 │   ├── templates/     # PRD、报告等的可重用模板
 │   └── claude.md      # Claude Code集成文件
 ├── lib/               # CLI安装工具

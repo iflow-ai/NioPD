@@ -36,34 +36,34 @@ Guidance on how the agent should handle various error conditions.
 
 ## Available Agents
 
-### 🤖 [competitor-analyzer.md](NioPD/competitor-analyzer.md)
+### 🤖 [competitor-analyzer.md](niopd/competitor-analyzer.md)
 Analyzes a competitor's website to extract key features and value propositions.
 
-### 🤖 [data-analyst.md](NioPD/data-analyst.md)
+### 🤖 [data-analyst.md](niopd/data-analyst.md)
 Performs analysis on structured data files (e.g., CSV) based on natural language queries.
 
-### 🤖 [feedback-synthesizer.md](NioPD/feedback-synthesizer.md)
+### 🤖 [feedback-synthesizer.md](niopd/feedback-synthesizer.md)
 Processes raw user feedback to identify key themes, pain points, and feature requests.
 
-### 🤖 [interview-summarizer.md](NioPD/interview-summarizer.md)
+### 🤖 [interview-summarizer.md](niopd/interview-summarizer.md)
 Reads user interview transcripts to extract critical insights and quotes.
 
-### 🤖 [kpi-tracker.md](NioPD/kpi-tracker.md)
+### 🤖 [kpi-tracker.md](niopd/kpi-tracker.md)
 Tracks key performance indicators for initiatives and reports on progress.
 
-### 🤖 [market-researcher.md](NioPD/market-researcher.md)
+### 🤖 [market-researcher.md](niopd/market-researcher.md)
 Researches and summarizes market trends on a given topic using web search.
 
-### 🤖 [persona-generator.md](NioPD/persona-generator.md)
+### 🤖 [persona-generator.md](niopd/persona-generator.md)
 Creates detailed user personas from synthesized user feedback.
 
-### 🤖 [presentation-builder.md](NioPD/presentation-builder.md)
+### 🤖 [presentation-builder.md](niopd/presentation-builder.md)
 Creates concise project updates for business stakeholders.
 
-### 🤖 [roadmap-generator.md](NioPD/roadmap-generator.md)
+### 🤖 [roadmap-generator.md](niopd/roadmap-generator.md)
 Generates visual product roadmaps from initiative files.
 
-### 🤖 [nio.md](NioPD/nio.md)
+### 🤖 [nio.md](niopd/nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 
 ## Tools Available to Agents

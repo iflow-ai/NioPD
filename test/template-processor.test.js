@@ -31,7 +31,7 @@ describe('TemplateProcessor', () => {
   });
 
   test('should process init.sh.template correctly', async () => {
-    const templatePath = path.join(__dirname, '..', 'core', 'scripts', 'NioPD', 'init.sh.template');
+    const templatePath = path.join(__dirname, '..', 'core', 'scripts', 'niopd', 'init.sh.template');
     const content = await fs.readFile(templatePath, 'utf8');
     
     // Test for claude

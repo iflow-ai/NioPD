@@ -6,7 +6,7 @@ model: inherit
 color: blue
 ---
 
-[//]: # (agent-name@2025-08-27; by:8421bit(github/8421bit); repo:github/8421bit/NioPD; license:MIT)
+[//]: # (agent-name@2025-08-27; by:8421bit(github/iflow-ai); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: {{agent-name}}
 
