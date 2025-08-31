@@ -51,7 +51,7 @@ class IflowModeTester {
     const testTemplate = 'Check {{SCRIPTS_DIR}}/test.sh and {{IDE_DIR}}/directory';
     const processed = processor.processTemplate(testTemplate);
     
-    const expectedIflow = 'Check .iflow/scripts/NioPD/test.sh and .iflow/directory';
+    const expectedIflow = 'Check .iflow/scripts/niopd/test.sh and .iflow/directory';
     
     this.log(
       '模板变量iflow模式替换',
@@ -68,8 +68,8 @@ class IflowModeTester {
     const mappings = processor.getPathMappings();
     
     // 测试sourceToTarget映射
-    const sourcePath = 'core/commands/NioPD/init.md';
-    const expectedTarget = '.iflow/commands/NioPD/init.md';
+    const sourcePath = 'core/commands/niopd/init.md';
+    const expectedTarget = '.iflow/commands/niopd/init.md';
     const actualTarget = mappings.sourceToTarget(sourcePath);
     
     this.log(
@@ -80,8 +80,8 @@ class IflowModeTester {
     );
     
     // 测试targetToSource映射
-    const targetPath = '.iflow/commands/NioPD/init.md';
-    const expectedSource = 'core/commands/NioPD/init.md';
+    const targetPath = '.iflow/commands/niopd/init.md';
+    const expectedSource = 'core/commands/niopd/init.md';
     const actualSource = mappings.targetToSource(targetPath);
     
     this.log(
@@ -97,9 +97,9 @@ class IflowModeTester {
     
     const processor = new TemplateProcessor('iflow');
     const expectedPaths = {
-      scripts: '.iflow/scripts/NioPD',
-      commands: '.iflow/commands/NioPD',
-      agents: '.iflow/agents/NioPD',
+      scripts: '.iflow/scripts/niopd',
+      commands: '.iflow/commands/niopd',
+      agents: '.iflow/agents/niopd',
       templates: '.iflow/templates'
     };
     
@@ -124,13 +124,13 @@ class IflowModeTester {
     const testFiles = [
       {
         name: 'init.md',
-        original: 'allowed-tools: Bash(.claude/scripts/NioPD/init.sh:*)',
-        expected: 'allowed-tools: Bash(.iflow/scripts/NioPD/init.sh:*)'
+        original: 'allowed-tools: Bash(.claude/scripts/niopd/init.sh:*)',
+        expected: 'allowed-tools: Bash(.iflow/scripts/niopd/init.sh:*)'
       },
       {
         name: 'analyze-competitor.md',
-        original: 'Read instructions from .claude/agents/NioPD/competitor-analyzer.md',
-        expected: 'Read instructions from .iflow/agents/NioPD/competitor-analyzer.md'
+        original: 'Read instructions from .claude/agents/niopd/competitor-analyzer.md',
+        expected: 'Read instructions from .iflow/agents/niopd/competitor-analyzer.md'
       }
     ];
     

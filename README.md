@@ -96,7 +96,7 @@ When creating new commands or new sub agents that generate files, follow these d
 - **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
 - **Sources:** Store raw data files in `niopd-workspace/sources/` (e.g., `niopd-workspace/sources/user-feedback.txt`)
 
-All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
+All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/niopd/`. Each script should:
 1. Validate input parameters
 2. Construct the appropriate file path based on the content type
 3. Create the file with the provided content
@@ -167,11 +167,11 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 | Traditional PM Approaches | NioPD Advantages |
 |---------------------------|------------------|
-| **Manual Data Synthesis**<br>Spending hours manually analyzing user feedback, interview transcripts, and survey responses to identify key insights. | **AI-Powered Feedback & Data Analysis**<br>Specialized agents like [feedback-synthesizer](.claude/agents/NioPD/feedback-synthesizer.md) and [data-analyst](.claude/agents/NioPD/data-analyst.md) automatically process large volumes of unstructured data, extracting key themes, pain points, and actionable insights in minutes. |
-| **Time-Consuming Market Research**<br>Manually researching competitors, market trends, and industry reports to stay informed. | **Automated Competitor & Trend Analysis**<br>Agents like [competitor-analyzer](.claude/agents/NioPD/competitor-analyzer.md) and [market-researcher](.claude/agents/NioPD/market-researcher.md) automatically gather and synthesize competitive intelligence and market trends, providing up-to-date strategic insights. |
+| **Manual Data Synthesis**<br>Spending hours manually analyzing user feedback, interview transcripts, and survey responses to identify key insights. | **AI-Powered Feedback & Data Analysis**<br>Specialized agents like [feedback-synthesizer](.claude/agents/niopd/feedback-synthesizer.md) and [data-analyst](.claude/agents/niopd/data-analyst.md) automatically process large volumes of unstructured data, extracting key themes, pain points, and actionable insights in minutes. |
+| **Time-Consuming Market Research**<br>Manually researching competitors, market trends, and industry reports to stay informed. | **Automated Competitor & Trend Analysis**<br>Agents like [competitor-analyzer](.claude/agents/niopd/competitor-analyzer.md) and [market-researcher](.claude/agents/niopd/market-researcher.md) automatically gather and synthesize competitive intelligence and market trends, providing up-to-date strategic insights. |
 | **Starting from Scratch**<br>Writing PRDs, roadmaps, and stakeholder reports from a blank page, following inconsistent templates. | **Automated PRD & Report Drafting**<br>Template-driven document generation with AI assistance ensures consistent, high-quality outputs. The `/niopd:draft-prd` command can automatically generate complete PRDs from synthesized research. |
-| **Static Documentation**<br>Maintaining separate, hard-to-update documents that quickly become outdated. | **Dynamic Roadmaps & Reports**<br>The [roadmap-generator](.claude/agents/NioPD/roadmap-generator.md) and other agents create living documents that automatically update as your plans evolve, ensuring stakeholders always have the latest information. |
-| **Working in Isolation**<br>Lacking access to experienced mentors or sparring partners for critical design decisions. | **Expert Guidance & Mentorship**<br>[Nio](.claude/agents/NioPD/nio.md), the Virtual Head of Product, provides Socratic questioning and strategic guidance to help you think more deeply about your product decisions, acting as an experienced mentor available 24/7. |
+| **Static Documentation**<br>Maintaining separate, hard-to-update documents that quickly become outdated. | **Dynamic Roadmaps & Reports**<br>The [roadmap-generator](.claude/agents/niopd/roadmap-generator.md) and other agents create living documents that automatically update as your plans evolve, ensuring stakeholders always have the latest information. |
+| **Working in Isolation**<br>Lacking access to experienced mentors or sparring partners for critical design decisions. | **Expert Guidance & Mentorship**<br>[Nio](.claude/agents/niopd/nio.md), the Virtual Head of Product, provides Socratic questioning and strategic guidance to help you think more deeply about your product decisions, acting as an experienced mentor available 24/7. |
 | **Disconnected Tools**<br>Using separate tools for research, documentation, and analysis that don't communicate with each other. | **Integrated Workflow**<br>All tools, agents, and processes work seamlessly together within a unified file-based system, with automatic archiving and cross-referencing of all work products. |
 | **Administrative Overhead**<br>Spending valuable time on administrative tasks rather than strategic thinking. | **Focus on Strategy**<br>By automating routine tasks and providing intelligent assistance, NioPD frees you to focus on high-value strategic work, user insight, and product innovation. |
 | **Manual Progress Tracking**<br>Remembering to save important discussion milestones and progress checkpoints manually. | **Knowledge Management**<br>NioPD automatically converts fragmented discussion information into structured project knowledge through intelligent summarization and archiving. The system proactively suggests saving summaries at key milestones, turning conversations into reusable organizational assets. |
@@ -203,6 +203,9 @@ NioPD transforms the way Product Managers work by providing an AI-driven expert 
 
 Install NioPD using our dedicated CLI tool:
 ```bash
+# install it first
+npm install -g @iflow-ai/niopd
+
 # Interactive mode (recommended for first-time users)
 npx @iflow-ai/niopd install
 
@@ -258,8 +261,8 @@ claude  # or iflow
 ### Installation Verification
 
 After installation, you should see:
-- `.iflow/commands/NioPD/` directory with all commands
-- `.iflow/agents/NioPD/` directory with all agents
+- `.iflow/commands/niopd/` directory with all commands
+- `.iflow/agents/niopd/` directory with all agents
 - `niopd-workspace/` directory created after `/niopd:init`
 
 ### Troubleshooting Installation
@@ -355,9 +358,9 @@ The system supports flexible installation through multiple methods:
 
 #### Dynamic Path Mapping
 The system intelligently maps from the unified `core/` source to IDE-specific target directories:
-- `core/agents/NioPD/` → `.claude/agents/NioPD/` or `.iflow/agents/NioPD/`
-- `core/commands/NioPD/` → `.claude/commands/NioPD/` or `.iflow/commands/NioPD/`
-- `core/scripts/NioPD/` → `.claude/scripts/NioPD/` or `.iflow/scripts/NioPD/`
+- `core/agents/niopd/` → `.claude/agents/niopd/` or `.iflow/agents/niopd/`
+- `core/commands/niopd/` → `.claude/commands/niopd/` or `.iflow/commands/niopd/`
+- `core/scripts/niopd/` → `.claude/scripts/niopd/` or `.iflow/scripts/niopd/`
 - `core/templates/` → `.claude/templates/` or `.iflow/templates/`
 
 ### Benefits of Consolidated Architecture
@@ -384,13 +387,13 @@ This is the entry point, which the user types to initiate a workflow.
 
 ### **2. The Command Prompt (.md)**
 This is the brain of the operation. For every command, there is a corresponding markdown file that acts as a detailed prompt for the AI.
-- **Location:** `.claude/commands/NioPD/<command_name>.md`
+- **Location:** `.claude/commands/niopd/<command_name>.md`
 - **Purpose:** It tells the AI how to validate inputs, what questions to ask the user, when to use other components (like agents or scripts), and what to do with the results.
-- **Example:** `.claude/commands/NioPD/new-initiative.md` contains the complete workflow for creating new initiatives.
+- **Example:** `.claude/commands/niopd/new-initiative.md` contains the complete workflow for creating new initiatives.
 
 ### **3. The Agent (.md) (Optional)**
 For complex tasks involving analysis or synthesis, the command prompt will invoke a specialized agent. Agents are also defined by markdown prompts that give them a specific role and process to follow.
-- **Location:** `.claude/agents/NioPD/<agent_name>.md`
+- **Location:** `.claude/agents/niopd/<agent_name>.md`
 - **Purpose:** To handle "heavy lifting" like summarizing a long document or analyzing data, keeping the main command logic clean.
 - **Example:** The `/niopd:hi` command invokes the main `Nio` agent.
 - **Available Agents:** 10 specialized agents including the main `Nio` supervisor, `feedback-synthesizer`, `competitor-analyzer`, `market-researcher`, etc.
@@ -403,7 +406,7 @@ If a command's final output is a structured document (like a PRD or an initiativ
 
 ### **5. The Script (.sh) (Optional)**
 For commands that need to perform actions on the file system, the command prompt will call a shell script. This separates the AI's "thinking" from the system's "doing".
-- **Location:** `.claude/scripts/NioPD/<script_name>.sh`
+- **Location:** `.claude/scripts/niopd/<script_name>.sh`
 - **Purpose:** To handle file I/O and other system-level tasks.
 - **Example:** The `/niopd:new-initiative` command prompt calls the `new-initiative.sh` script to save the final document.
 

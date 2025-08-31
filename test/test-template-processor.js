@@ -58,8 +58,8 @@ class TemplateProcessorTester {
     
     this.log(
       'claude模式SCRIPTS_DIR',
-      claudeVars['{{SCRIPTS_DIR}}'] === '.claude/scripts/NioPD',
-      '.claude/scripts/NioPD',
+      claudeVars['{{SCRIPTS_DIR}}'] === '.claude/scripts/niopd',
+      '.claude/scripts/niopd',
       claudeVars['{{SCRIPTS_DIR}}']
     );
     
@@ -76,8 +76,8 @@ class TemplateProcessorTester {
     
     this.log(
       'iflow模式SCRIPTS_DIR',
-      iflowVars['{{SCRIPTS_DIR}}'] === '.iflow/scripts/NioPD',
-      '.iflow/scripts/NioPD',
+      iflowVars['{{SCRIPTS_DIR}}'] === '.iflow/scripts/niopd',
+      '.iflow/scripts/niopd',
       iflowVars['{{SCRIPTS_DIR}}']
     );
   }
@@ -88,18 +88,18 @@ class TemplateProcessorTester {
     const testCases = [
       {
         name: '脚本路径替换',
-        input: 'Bash(.claude/scripts/NioPD/init.sh:*)',
-        expected: { claude: 'Bash(.claude/scripts/NioPD/init.sh:*)', iflow: 'Bash(.iflow/scripts/NioPD/init.sh:*)' }
+        input: 'Bash(.claude/scripts/niopd/init.sh:*)',
+        expected: { claude: 'Bash(.claude/scripts/niopd/init.sh:*)', iflow: 'Bash(.iflow/scripts/niopd/init.sh:*)' }
       },
       {
         name: '命令路径替换',
-        input: '.claude/commands/NioPD/init.md',
-        expected: { claude: '.claude/commands/NioPD/init.md', iflow: '.iflow/commands/NioPD/init.md' }
+        input: '.claude/commands/niopd/init.md',
+        expected: { claude: '.claude/commands/niopd/init.md', iflow: '.iflow/commands/niopd/init.md' }
       },
       {
         name: '代理路径替换',
-        input: 'Read from .claude/agents/NioPD/competitor-analyzer.md',
-        expected: { claude: 'Read from .claude/agents/NioPD/competitor-analyzer.md', iflow: 'Read from .iflow/agents/NioPD/competitor-analyzer.md' }
+        input: 'Read from .claude/agents/niopd/competitor-analyzer.md',
+        expected: { claude: 'Read from .claude/agents/niopd/competitor-analyzer.md', iflow: 'Read from .iflow/agents/niopd/competitor-analyzer.md' }
       },
       {
         name: '基础目录替换',
@@ -159,7 +159,7 @@ Check {{IDE_DIR}} directory and {{TEMPLATES_DIR}}/template.md`;
       
       this.log(
         '模板变量替换',
-        result.includes('.iflow/scripts/NioPD/test.sh') && 
+        result.includes('.iflow/scripts/niopd/test.sh') && 
         result.includes('.iflow/') && 
         result.includes('.iflow/templates/template.md'),
         '所有变量正确替换为iflow路径',

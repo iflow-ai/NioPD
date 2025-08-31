@@ -146,7 +146,7 @@ class ClaudeModeTester {
     const testTemplate = 'Check {{SCRIPTS_DIR}}/test.sh and {{IDE_DIR}}/directory';
     const processed = processor.processTemplate(testTemplate);
     
-    const expectedClaude = 'Check .claude/scripts/NioPD/test.sh and .claude/directory';
+    const expectedClaude = 'Check .claude/scripts/niopd/test.sh and .claude/directory';
     
     this.log(
       '模板变量claude模式替换',

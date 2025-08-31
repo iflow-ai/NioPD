@@ -69,13 +69,13 @@ test('package.json格式', () => {
 // 测试3: 源文件存在性
 test('源文件存在性', () => {
   const sourceFiles = [
-    '.claude/agents/NioPD',
-    '.claude/commands/NioPD',
-    '.claude/scripts/NioPD',
+    '.claude/agents/niopd',
+    '.claude/commands/niopd',
+    '.claude/scripts/niopd',
     '.claude/templates',
-    '.iflow/agents/NioPD',
-    '.iflow/commands/NioPD',
-    '.iflow/scripts/NioPD',
+    '.iflow/agents/niopd',
+    '.iflow/commands/niopd',
+    '.iflow/scripts/niopd',
     '.iflow/templates'
   ];
   

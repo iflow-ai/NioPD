@@ -134,7 +134,7 @@ graph TD
 - **路线图**：将产品路线图存储在`niopd-workspace/roadmaps/`（例如，`niopd-workspace/roadmaps/product-roadmap.md`）
 - **源数据**：将原始数据文件存储在`niopd-workspace/sources/`（例如，`niopd-workspace/sources/user-feedback.txt`）
 
-所有文件创建操作应由位于`.claude/scripts/NioPD/`中的相应shell脚本处理。每个脚本应该：
+所有文件创建操作应由位于`.claude/scripts/niopd/`中的相应shell脚本处理。每个脚本应该：
 1. 验证输入参数
 2. 根据内容类型构建适当的文件路径
 3. 使用提供的内容创建文件
@@ -167,11 +167,11 @@ NioPD通过提供AI驱动的专家组来改变产品经理的工作方式，解�
 
 | 传统PM方法 | NioPD优势 |
 |---------------------------|------------------|
-| **手动数据综合**<br>花费数小时手动分析用户反馈、访谈记录和调查回复以识别关键洞察。 | **AI驱动的反馈和数据分析**<br>像[feedback-synthesizer](.claude/agents/NioPD/feedback-synthesizer.md)和[data-analyst](.claude/agents/NioPD/data-analyst.md)这样的专业代理自动处理大量非结构化数据，在几分钟内提取关键主题、痛点和可操作洞察。 |
-| **耗时的市场研究**<br>手动研究竞争对手、市场趋势和行业报告以保持信息更新。 | **自动竞争和趋势分析**<br>像[competitor-analyzer](.claude/agents/NioPD/competitor-analyzer.md)和[market-researcher](.claude/agents/NioPD/market-researcher.md)这样的代理自动收集和综合竞争情报和市场趋势，提供最新的战略洞察。 |
+| **手动数据综合**<br>花费数小时手动分析用户反馈、访谈记录和调查回复以识别关键洞察。 | **AI驱动的反馈和数据分析**<br>像[feedback-synthesizer](.claude/agents/niopd/feedback-synthesizer.md)和[data-analyst](.claude/agents/niopd/data-analyst.md)这样的专业代理自动处理大量非结构化数据，在几分钟内提取关键主题、痛点和可操作洞察。 |
+| **耗时的市场研究**<br>手动研究竞争对手、市场趋势和行业报告以保持信息更新。 | **自动竞争和趋势分析**<br>像[competitor-analyzer](.claude/agents/niopd/competitor-analyzer.md)和[market-researcher](.claude/agents/niopd/market-researcher.md)这样的代理自动收集和综合竞争情报和市场趋势，提供最新的战略洞察。 |
 | **从零开始**<br>遵循不一致的模板，从空白页开始编写PRD、路线图和利益相关者报告。 | **自动PRD和报告起草**<br>模板驱动的文档生成与AI协助确保一致、高质量的输出。`/niopd:draft-prd`命令可以自动从综合研究生成完整PRD。 |
-| **静态文档**<br>维护单独的、难以更新的文档，这些文档很快过时。 | **动态路线图和报告**<br>[roadmap-generator](.claude/agents/NioPD/roadmap-generator.md)和其他代理创建随着计划发展自动更新的活文档，确保利益相关者始终拥有最新信息。 |
-| **孤立工作**<br>缺乏经验丰富的导师或陪练伙伴来讨论关键设计决策。 | **专家指导和辅导**<br>[Nio](.claude/agents/NioPD/nio.md)，虚拟产品负责人，通过苏格拉底式提问和战略指导帮助您更深入地思考产品决策，充当24/7可用的经验丰富的导师。 |
+| **静态文档**<br>维护单独的、难以更新的文档，这些文档很快过时。 | **动态路线图和报告**<br>[roadmap-generator](.claude/agents/niopd/roadmap-generator.md)和其他代理创建随着计划发展自动更新的活文档，确保利益相关者始终拥有最新信息。 |
+| **孤立工作**<br>缺乏经验丰富的导师或陪练伙伴来讨论关键设计决策。 | **专家指导和辅导**<br>[Nio](.claude/agents/niopd/nio.md)，虚拟产品负责人，通过苏格拉底式提问和战略指导帮助您更深入地思考产品决策，充当24/7可用的经验丰富的导师。 |
 | **断开的工具**<br>使用单独的研究、文档和分析工具，这些工具彼此不通信。 | **集成工作流程**<br>所有工具、代理和流程在统一的基于文件的系统中无缝协作，具有自动归档和所有工作产品的交叉引用。 |
 | **行政开销**<br>将宝贵时间花在行政任务而非战略思考上。 | **专注于战略**<br>通过自动化日常任务和提供智能协助，NioPD让您专注于高价值的战略工作、用户洞察和产品创新。 |
 | **手动进度跟踪**<br>记住手动保存重要讨论里程碑和进度检查点。 | **知识管理**<br>NioPD通过智能摘要和归档自动将碎片化的讨论信息转化为结构化的项目知识。系统主动建议在关键里程碑保存摘要，将对话转化为可重用的组织资产。 |
@@ -258,8 +258,8 @@ claude  # 或 iflow
 ### 安装验证
 
 安装后，您应该看到：
-- `.iflow/commands/NioPD/`目录包含所有命令
-- `.iflow/agents/NioPD/`目录包含所有代理
+- `.iflow/commands/niopd/`目录包含所有命令
+- `.iflow/agents/niopd/`目录包含所有代理
 - 执行`/niopd:init`后创建`niopd-workspace/`目录
 
 ### 安装故障排除
@@ -355,9 +355,9 @@ NioPD/
 
 #### 动态路径映射
 系统智能地从统一的`core/`源映射到IDE特定的目标目录：
-- `core/agents/NioPD/` → `.claude/agents/NioPD/`或`.iflow/agents/NioPD/`
-- `core/commands/NioPD/` → `.claude/commands/NioPD/`或`.iflow/commands/NioPD/`
-- `core/scripts/NioPD/` → `.claude/scripts/NioPD/`或`.iflow/scripts/NioPD/`
+- `core/agents/niopd/` → `.claude/agents/niopd/`或`.iflow/agents/niopd/`
+- `core/commands/niopd/` → `.claude/commands/niopd/`或`.iflow/commands/niopd/`
+- `core/scripts/niopd/` → `.claude/scripts/niopd/`或`.iflow/scripts/niopd/`
 - `core/templates/` → `.claude/templates/`或`.iflow/templates/`
 
 ### 统一架构的好处
@@ -384,13 +384,13 @@ NioPD中的完整命令或功能由最多五个部分组成，全部位于`.clau
 
 ### **2. 命令提示（.md）**
 这是操作的大脑。对于每个命令，都有一个相应的markdown文件作为AI的详细提示。
-- **位置**：`.claude/commands/NioPD/<command_name>.md`
+- **位置**：`.claude/commands/niopd/<command_name>.md`
 - **目的**：它告诉AI如何验证输入、向用户询问什么问题、何时使用其他组件（如代理或脚本）以及如何处理结果。
-- **示例**：`.claude/commands/NioPD/new-initiative.md`包含创建新计划的完整工作流程。
+- **示例**：`.claude/commands/niopd/new-initiative.md`包含创建新计划的完整工作流程。
 
 ### **3. 代理（.md）（可选）**
 对于涉及分析或综合的复杂任务，命令提示将调用专业代理。代理也由markdown提示定义，赋予它们特定角色和遵循的过程。
-- **位置**：`.claude/agents/NioPD/<agent_name>.md`
+- **位置**：`.claude/agents/niopd/<agent_name>.md`
 - **目的**：处理"繁重工作"，如总结长文档或分析数据，保持主命令逻辑清洁。
 - **示例**：`/niopd:hi`命令调用主要的`Nio`代理。
 - **可用代理**：10个专业代理，包括主要的`Nio`主管、`feedback-synthesizer`、`competitor-analyzer`、`market-researcher`等。
@@ -403,7 +403,7 @@ NioPD中的完整命令或功能由最多五个部分组成，全部位于`.clau
 
 ### **5. 脚本（.sh）（可选）**
 对于需要在文件系统上执行操作的命令，命令提示将调用shell脚本。这将AI的"思考"与系统的"执行"分开。
-- **位置**：`.claude/scripts/NioPD/<script_name>.sh`
+- **位置**：`.claude/scripts/niopd/<script_name>.sh`
 - **目的**：处理文件I/O和其他系统级任务。
 - **示例**：`/niopd:new-initiative`命令提示调用`new-initiative.sh`脚本来保存最终文档。
 

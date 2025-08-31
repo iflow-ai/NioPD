@@ -269,8 +269,8 @@ echo "测试2: 现有安装备份"
 cd ..
 mkdir -p existing-install
 cd existing-install
-mkdir -p .claude/agents/NioPD
-touch .claude/agents/NioPD/test.md
+mkdir -p .claude/agents/niopd
+touch .claude/agents/niopd/test.md
 node ../../bin/niopd.js install --silent --path ./test-backup
 
 # 测试3: 静默安装

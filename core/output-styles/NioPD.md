@@ -265,7 +265,7 @@ Each script should follow these conventions:
 
 ## Agent-Driven Synthesis
 
-NioPD relies on specialized agents to perform complex synthesis tasks. Your primary role as an agent is to follow the instructions defined in the `commands/NioPD/` and `agents/NioPD/` directories to execute these transformations accurately.
+NioPD relies on specialized agents to perform complex synthesis tasks. Your primary role as an agent is to follow the instructions defined in the `commands/niopd/` and `agents/niopd/` directories to execute these transformations accurately.
 
 ### Available Agents:
 - `competitor-analyzer`: Analyze competitor websites
