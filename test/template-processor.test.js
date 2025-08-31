@@ -31,7 +31,13 @@ describe('TemplateProcessor', () => {
   });
 
   test('should process init.sh.template correctly', async () => {
-    const templatePath = path.join(__dirname, '..', 'core', 'scripts', 'niopd', 'init.sh.template');
+    const templatePath = path.resolve(process.cwd(), 'core', 'scripts', 'niopd', 'init.sh.template');
+    
+    // Check if file exists for better error reporting
+    if (!await fs.pathExists(templatePath)) {
+      throw new Error(`Template file not found at: ${templatePath}. Current working directory: ${process.cwd()}`);
+    }
+    
     const content = await fs.readFile(templatePath, 'utf8');
     
     // Test for claude
