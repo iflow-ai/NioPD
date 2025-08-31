@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/summarize-interview.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/summarize-interview.sh:*)
 argument-hint: --file=<path_to_transcript.txt>
 description: Generates a summary of a user interview transcript.
 model: Qwen3-Coder
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 
 ### Step 2: Invoke the Interview Summarizer Agent
 -   You must now act as the `interview-summarizer` agent.
--   Read your instructions from `.claude/agents/interview-summarizer.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/interview-summarizer.md`.
 -   Use the provided transcript file as your input.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final summary report.
@@ -35,7 +35,7 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `interview-summary-<original_filename>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `.claude/scripts/NioPD/summarize-interview.sh`
+-   Script location: `{{SCRIPTS_DIR}}/summarize-interview.sh`
 -   Pass the original filename and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

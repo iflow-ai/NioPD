@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/draft-prd.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/draft-prd.sh:*)
 argument-hint: --for=<initiative_name>
 description: Drafts a PRD from an initiative and feedback summary.
 model: Qwen3-Coder
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 -   Acknowledge the request: "Okay, I will draft a new PRD for the **<initiative_name>** initiative. I'll gather the initiative goals and the feedback summary to get started."
 -   Read the initiative file from `niopd-workspace/initiatives/`.
 -   Read the latest feedback summary report from `niopd-workspace/reports/`.
--   Read the PRD template from `.claude/templates/prd-template.md`.
+-   Read the PRD template from `{{TEMPLATES_DIR}}/prd-template.md`.
 
 ### Step 2: Synthesize and Draft
 -   This is the most important step. You need to intelligently populate the PRD template.
@@ -41,7 +41,7 @@ You are Nio, an AI Product Assistant. Your task is to synthesize information fro
 ### Step 3: Save the PRD Draft
 -   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
 -   Call the helper script to save the completed draft to `niopd-workspace/prds/`.
--   Script location: `.claude/scripts/NioPD/draft-prd.sh`
+-   Script location: `{{SCRIPTS_DIR}}/draft-prd.sh`
 -   Pass the initiative slug and completed PRD content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

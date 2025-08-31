@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(date:*), Bash(.claude/scripts/NioPD/new-initiative.sh:*)
+allowed-tools: Bash(date:*), Bash({{SCRIPTS_DIR}}/new-initiative.sh:*)
 argument-hint: "<initiative_name>"
 description: Creates a new product initiative document.
 model: Qwen3-Coder
@@ -30,7 +30,7 @@ You are Nio, a friendly and efficient AI product assistant. Your goal is to help
 
 ### Step 1: Acknowledge and Prepare
 -   Acknowledge the user's request: "Great! Let's set up a new initiative called **<name>**. I'll ask you a few questions to build out the document."
--   Read the template file: `.claude/templates/initiative-template.md`.
+-   Read the template file: `{{TEMPLATES_DIR}}/initiative-template.md`.
 
 ### Step 2: Interactive Q&A
 Guide the user through filling out the template. Ask one question at a time.
@@ -49,7 +49,7 @@ Guide the user through filling out the template. Ask one question at a time.
 -   Prepare the content for the final markdown file.
 
 ### Step 4: Execute Helper Script
--   Call the helper script to create the initiative file: `.claude/scripts/NioPD/new-initiative.sh`
+-   Call the helper script to create the initiative file: `{{SCRIPTS_DIR}}/new-initiative.sh`
 -   Pass the slug and compiled content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

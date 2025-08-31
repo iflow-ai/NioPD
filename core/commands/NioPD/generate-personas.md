@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/generate-personas.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/generate-personas.sh:*)
 argument-hint: --from=<feedback_summary.md>
 description: Generates user personas from a feedback summary report.
 model: Qwen3-Coder
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user understand t
 
 ### Step 2: Invoke the Persona Generator Agent
 -   You must now act as the `persona-generator` agent.
--   Read your instructions from `.claude/agents/persona-generator.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/persona-generator.md`.
 -   Use the provided feedback summary file as your input.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final user persona document.
@@ -35,7 +35,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user understand t
 ### Step 3: Save the Document
 -   Generate a filename for the document, e.g., `personas-<initiative_name>.md`. You can infer the initiative name from the input filename.
 -   Call the helper script to save the generated document to `niopd-workspace/reports/`.
--   Script location: `.claude/scripts/NioPD/generate-personas.sh`
+-   Script location: `{{SCRIPTS_DIR}}/generate-personas.sh`
 -   Pass the initiative name and generated personas content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

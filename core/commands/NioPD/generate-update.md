@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/generate-update.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/generate-update.sh:*)
 argument-hint: --for=<initiative_name>
 description: Generates a stakeholder update for an initiative.
 model: Qwen3-Coder
@@ -29,14 +29,14 @@ You are Nio, an AI Product Assistant. Your task is to generate a stakeholder upd
 
 ### Step 2: Invoke the Presentation Builder Agent
 -   You must now act as the `presentation-builder` agent.
--   Read your instructions from `.claude/agents/presentation-builder.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/presentation-builder.md`.
 -   Use the content of the initiative and PRD files as your input.
 -   Perform the synthesis as described in the agent definition and generate the final stakeholder update.
 
 ### Step 3: Save the Update
 -   Generate a filename for the update, e.g., `update-<initiative_slug>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `.claude/scripts/NioPD/generate-update.sh`
+-   Script location: `{{SCRIPTS_DIR}}/generate-update.sh`
 -   Pass the initiative slug and generated update content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/track-kpis.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/track-kpis.sh:*)
 argument-hint: --for=<initiative_name>
 description: Generates a KPI status report for an initiative.
 model: Qwen3-Coder
@@ -27,14 +27,14 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 2: Invoke the KPI Tracker Agent
 -   You must now act as the `kpi-tracker` agent.
--   Read your instructions from `.claude/agents/kpi-tracker.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/kpi-tracker.md`.
 -   Use the content of the initiative file as your input.
 -   Perform the analysis as described in the agent definition and generate the final KPI status report.
 
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `kpi-status-<initiative_slug>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `.claude/scripts/NioPD/track-kpis.sh`
+-   Script location: `{{SCRIPTS_DIR}}/track-kpis.sh`
 -   Pass the initiative slug and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

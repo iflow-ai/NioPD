@@ -1,5 +1,5 @@
 ---
-allowed-tools: view_text_website, Bash(.claude/scripts/NioPD/analyze-competitor.sh:*)
+allowed-tools: view_text_website, Bash({{SCRIPTS_DIR}}/analyze-competitor.sh:*)
 argument-hint: --url=<competitor_url>
 description: Generates a competitive analysis report for a given URL.
 model: Qwen3-Coder
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 
 ### Step 2: Invoke the Competitor Analyzer Agent
 -   You must now act as the `competitor-analyzer` agent.
--   Read your instructions from `.claude/agents/competitor-analyzer.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/competitor-analyzer.md`.
 -   Use the provided `<competitor_url>` as your input.
 -   Perform the analysis as described in the agent definition, including using the `view_text_website` tool.
 -   Generate the final analysis report.
@@ -35,7 +35,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `competitor-analysis-<domain_name>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `.claude/scripts/NioPD/analyze-competitor.sh`
+-   Script location: `{{SCRIPTS_DIR}}/analyze-competitor.sh`
 -   Pass the domain name and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/import-feedback.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/import-feedback.sh:*)
 argument-hint: --from=<source_file_path> --for=<initiative_name>
 description: Imports a user feedback file into the NioPD system.
 model: Qwen3-Coder
@@ -37,7 +37,7 @@ You are Nio, helping a user import feedback.
 
 ### Step 2: Execute Helper Script
 -   Call the helper script to copy the file into the `niopd-workspace/sources/` directory with the new name.
--   Script location: `.claude/scripts/NioPD/import-feedback.sh`
+-   Script location: `{{SCRIPTS_DIR}}/import-feedback.sh`
 -   Pass the source file path and destination filename as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
