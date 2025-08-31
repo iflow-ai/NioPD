@@ -93,7 +93,7 @@ When creating files, follow these directory structure rules:
 - **Sources**: Store in `niopd-workspace/sources/`
 
 ### File Operations
-All file creation operations should be handled by corresponding shell scripts located in `.claude/scripts/NioPD/`. Each script should:
+All file creation operations should be handled by corresponding shell scripts located in `{{SCRIPTS_DIR}}/`. Each script should:
 1. Validate input parameters
 2. Construct the appropriate file path based on the content type
 3. Create the file with the provided content
@@ -281,7 +281,7 @@ NioPD relies on specialized agents to perform complex synthesis tasks. Your prim
 
 ## Command-Driven Workflow
 
-The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `.claude/commands/NioPD/`.
+The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `{{COMMANDS_DIR}}/`.
 
 ### Key Commands to Support
 

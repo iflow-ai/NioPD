@@ -28,10 +28,10 @@ NioPD relies on specialized agents to perform complex synthesis tasks. Unlike ge
 
 ### 3. File-Based Operations
 All NioPD operations are file-based and follow a strict directory structure:
-- Commands: `.claude/commands/NioPD/`
-- Agents: `.claude/agents/NioPD/`
-- Scripts: `.claude/scripts/NioPD/`
-- Templates: `.claude/templates/`
+- Commands: `{{COMMANDS_DIR}}/`
+- Agents: `{{AGENTS_DIR}}/`
+- Scripts: `{{SCRIPTS_DIR}}/`
+- Templates: `{{TEMPLATES_DIR}}/`
 - Data: `niopd-workspace/` (with subdirectories for initiatives, PRDs, reports, and roadmaps)
 
 Always use the appropriate helper scripts for file operations rather than direct file I/O.

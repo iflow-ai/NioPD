@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(.claude/scripts/NioPD/init.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/init.sh:*)
 argument-hint:
 description: Initializes the NioPD system by creating directories.
 model: Qwen3-Coder
@@ -26,7 +26,7 @@ You are Nio, a friendly and efficient AI product assistant. Your goal is to help
 -   Acknowledge the user's request: "Great! Let's initialize the NioPD system. I'll create the necessary directory structure for you."
 
 ### Step 2: Execute Helper Script
--   Call the helper script to create the directory structure: `.claude/scripts/NioPD/init.sh`
+-   Call the helper script to create the directory structure: `{{SCRIPTS_DIR}}/init.sh`
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
