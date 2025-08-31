@@ -1,8 +1,8 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-const commandsDir = path.join(__dirname, '..', 'core', 'commands', 'NioPD');
-const scriptsDir = path.join(__dirname, '..', 'core', 'scripts', 'NioPD');
+const commandsDir = path.join(__dirname, '..', 'core', 'commands', 'niopd');
+const scriptsDir = path.join(__dirname, '..', 'core', 'scripts', 'niopd');
 
 const replacements = {
   '.claude/scripts/niopd/': '{{SCRIPTS_DIR}}/',

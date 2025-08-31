@@ -323,11 +323,11 @@ NioPD/
 ├── COMMANDS.md        # Complete command reference
 ├── core/              # Consolidated core system (single source of truth)
 │   ├── agents/        # Definitions for specialized PM agents (10 agents)
-│   │   └── NioPD/     # Namespace for NioPD agents
+│   │   └── niopd/     # Namespace for NioPD agents
 │   ├── commands/      # Definitions for all /niopd: commands (16 commands)
-│   │   └── NioPD/     # Namespace for NioPD commands
+│   │   └── niopd/     # Namespace for NioPD commands
 │   ├── scripts/       # Helper scripts for automation
-│   │   └── NioPD/     # Namespace for NioPD scripts
+│   │   └── niopd/     # Namespace for NioPD scripts
 │   ├── templates/     # Reusable templates for PRDs, reports, etc.
 │   └── claude.md      # Claude Code integration file
 ├── lib/               # CLI installation tools

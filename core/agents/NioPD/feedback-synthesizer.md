@@ -6,7 +6,7 @@ model: inherit
 color: green
 ---
 
-[//]: # (feedback-synthesizer@2025-08-29; by:8421bit(github/8421bit); repo:github/8421bit/NioPD; license:MIT)
+[//]: # (feedback-synthesizer@2025-08-29; by:8421bit(github/iflow-ai); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: feedback-synthesizer
 

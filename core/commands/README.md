@@ -37,34 +37,34 @@ Guidance on how to handle various error conditions.
 
 ## Available Commands
 
-All NioPD commands are located in the [NioPD](NioPD/) subdirectory:
+All NioPD commands are located in the [NioPD](niopd/) subdirectory:
 
 ### Core Workflow Commands
-- [hi.md](NioPD/hi.md) - Initiates a conversation with Nio, your product management supervisor
-- [new-initiative.md](NioPD/new-initiative.md) - Start a new high-level product initiative
-- [import-feedback.md](NioPD/import-feedback.md) - Import a file of user feedback
-- [summarize-feedback.md](NioPD/summarize-feedback.md) - Analyze a feedback file and create a summary report
-- [draft-prd.md](NioPD/draft-prd.md) - Automatically generate a PRD draft from an initiative and feedback
-- [edit-prd.md](NioPD/edit-prd.md) - Get instructions to manually edit a PRD
-- [update-roadmap.md](NioPD/update-roadmap.md) - Generate or update the product roadmap from all initiatives
-- [help.md](NioPD/help.md) - Display help information about the NioPD system
+- [hi.md](niopd/hi.md) - Initiates a conversation with Nio, your product management supervisor
+- [new-initiative.md](niopd/new-initiative.md) - Start a new high-level product initiative
+- [import-feedback.md](NiniopdoPD/import-feedback.md) - Import a file of user feedback
+- [summarize-feedback.md](niopd/summarize-feedback.md) - Analyze a feedback file and create a summary report
+- [draft-prd.md](niopd/draft-prd.md) - Automatically generate a PRD draft from an initiative and feedback
+- [edit-prd.md](niopd/edit-prd.md) - Get instructions to manually edit a PRD
+- [update-roadmap.md](niopd/update-roadmap.md) - Generate or update the product roadmap from all initiatives
+- [help.md](niopd/help.md) - Display help information about the NioPD system
 
 ### Advanced Discovery Commands
-- [analyze-competitor.md](NioPD/analyze-competitor.md) - Analyzes a competitor's website for key features and positioning
-- [summarize-interview.md](NioPD/summarize-interview.md) - Summarizes a user interview transcript
-- [analyze-data.md](NioPD/analyze-data.md) - Answers a natural language question about a structured data file
-- [generate-personas.md](NioPD/generate-personas.md) - Creates user personas from a feedback summary
-- [research-trends.md](NioPD/research-trends.md) - Researches and summarizes market trends on a given topic
+- [analyze-competitor.md](NiniopdoPD/analyze-competitor.md) - Analyzes a competitor's website for key features and positioning
+- [summarize-interview.md](niopd/summarize-interview.md) - Summarizes a user interview transcript
+- [analyze-data.md](niopd/analyze-data.md) - Answers a natural language question about a structured data file
+- [generate-personas.md](niopd/generate-personas.md) - Creates user personas from a feedback summary
+- [research-trends.md](niopd/research-trends.md) - Researches and summarizes market trends on a given topic
 
 ### Advanced Launch Commands
-- [generate-update.md](NioPD/generate-update.md) - Create a concise stakeholder update report
-- [track-kpis.md](NioPD/track-kpis.md) - Get a status report on an initiative's KPIs
+- [generate-update.md](niopd/generate-update.md) - Create a concise stakeholder update report
+- [track-kpis.md](niopd/track-kpis.md) - Get a status report on an initiative's KPIs
 
 ## Creating New Commands
 
 To create a new command:
 
-1. Create a new markdown file in the [NioPD](NioPD/) subdirectory
+1. Create a new markdown file in the [NioPD](niopd/) subdirectory
 2. Follow the structure outlined above
 3. Use the naming convention `[command-name].md`
 4. Define clear usage instructions and arguments

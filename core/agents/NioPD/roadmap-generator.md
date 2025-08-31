@@ -6,7 +6,7 @@ model: inherit
 color: teal
 ---
 
-[//]: # (roadmap-generator@2025-08-29; by:8421bit(github/8421bit); repo:github/8421bit/NioPD; license:MIT)
+[//]: # (roadmap-generator@2025-08-29; by:8421bit(github/iflow-ai); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: roadmap-generator
 
