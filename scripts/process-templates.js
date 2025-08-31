@@ -5,9 +5,9 @@ const commandsDir = path.join(__dirname, '..', 'core', 'commands', 'NioPD');
 const scriptsDir = path.join(__dirname, '..', 'core', 'scripts', 'NioPD');
 
 const replacements = {
-  '.claude/scripts/NioPD/': '{{SCRIPTS_DIR}}/',
-  '.claude/commands/NioPD/': '{{COMMANDS_DIR}}/',
-  '.claude/agents/NioPD/': '{{AGENTS_DIR}}/',
+  '.claude/scripts/niopd/': '{{SCRIPTS_DIR}}/',
+  '.claude/commands/niopd/': '{{COMMANDS_DIR}}/',
+  '.claude/agents/niopd/': '{{AGENTS_DIR}}/',
   '.claude/templates/': '{{TEMPLATES_DIR}}/',
   '.claude/': '{{IDE_DIR}}/',
   'claude/agents/': '{{IDE_TYPE}}/agents/',

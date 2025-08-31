@@ -67,9 +67,9 @@ class EndToEndTester {
     try {
       // 模拟完整安装流程
       const sourceDirs = [
-        { source: 'core/commands/NioPD', target: `${ideType}/commands/NioPD`, pattern: '*.md.template' },
-        { source: 'core/scripts/NioPD', target: `${ideType}/scripts/NioPD`, pattern: '*.sh.template' },
-        { source: 'core/agents/NioPD', target: `${ideType}/agents/NioPD`, pattern: '*.md' },
+        { source: 'core/commands/niopd', target: `${ideType}/commands/niopd`, pattern: '*.md.template' },
+        { source: 'core/scripts/niopd', target: `${ideType}/scripts/niopd`, pattern: '*.sh.template' },
+        { source: 'core/agents/niopd', target: `${ideType}/agents/niopd`, pattern: '*.md' },
         { source: 'core/templates', target: `${ideType}/templates`, pattern: '*.md' }
       ];
       
@@ -87,9 +87,9 @@ class EndToEndTester {
       
       // 验证安装结果
       const expectedDirs = [
-        `${ideType}/commands/NioPD`,
-        `${ideType}/scripts/NioPD`,
-        `${ideType}/agents/NioPD`,
+        `${ideType}/commands/niopd`,
+        `${ideType}/scripts/niopd`,
+        `${ideType}/agents/niopd`,
         `${ideType}/templates`
       ];
       
@@ -183,9 +183,9 @@ class EndToEndTester {
       
       // 验证关键文件
       const keyFiles = [
-        'iflow/commands/NioPD/init.md',
-        'iflow/commands/NioPD/analyze-competitor.md',
-        'iflow/commands/NioPD/draft-prd.md'
+        'iflow/commands/niopd/init.md',
+        'iflow/commands/niopd/analyze-competitor.md',
+        'iflow/commands/niopd/draft-prd.md'
       ];
       
       let allFilesValid = true;

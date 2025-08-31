@@ -27,9 +27,9 @@
 ### TC-002: 路径替换准确性测试
 **测试目的**: 验证各种路径格式的正确替换
 **测试步骤**:
-1. 测试脚本路径替换 (.claude/scripts/NioPD/)
-2. 测试命令路径替换 (.claude/commands/NioPD/)
-3. 测试代理路径替换 (.claude/agents/NioPD/)
+1. 测试脚本路径替换 (.claude/scripts/niopd/)
+2. 测试命令路径替换 (.claude/commands/niopd/)
+3. 测试代理路径替换 (.claude/agents/niopd/)
 4. 测试模板路径替换 (.claude/templates/)
 5. 测试基础目录替换 (.claude/)
 
@@ -60,7 +60,7 @@
 4. 检查所有脚本文件中的路径
 
 **预期结果**:
-- 目录结构为.claude/commands/NioPD/
+- 目录结构为.claude/commands/niopd/
 - 所有文件路径使用.claude前缀
 - 安装成功无错误
 
@@ -73,7 +73,7 @@
 4. 检查所有脚本文件中的路径
 
 **预期结果**:
-- 目录结构为.iflow/commands/NioPD/
+- 目录结构为.iflow/commands/niopd/
 - 所有文件路径使用.iflow前缀
 - 安装成功无错误
 
@@ -119,25 +119,25 @@
 const templateVars = {
   claude: {
     '{{IDE_DIR}}': '.claude',
-    '{{SCRIPTS_DIR}}': '.claude/scripts/NioPD',
-    '{{COMMANDS_DIR}}': '.claude/commands/NioPD',
-    '{{AGENTS_DIR}}': '.claude/agents/NioPD',
+    '{{SCRIPTS_DIR}}': '.claude/scripts/niopd',
+    '{{COMMANDS_DIR}}': '.claude/commands/niopd',
+    '{{AGENTS_DIR}}': '.claude/agents/niopd',
     '{{TEMPLATES_DIR}}': '.claude/templates'
   },
   iflow: {
     '{{IDE_DIR}}': '.iflow',
-    '{{SCRIPTS_DIR}}': '.iflow/scripts/NioPD',
-    '{{COMMANDS_DIR}}': '.iflow/commands/NioPD',
-    '{{AGENTS_DIR}}': '.iflow/agents/NioPD',
+    '{{SCRIPTS_DIR}}': '.iflow/scripts/niopd',
+    '{{COMMANDS_DIR}}': '.iflow/commands/niopd',
+    '{{AGENTS_DIR}}': '.iflow/agents/niopd',
     '{{TEMPLATES_DIR}}': '.iflow/templates'
   }
 };
 
 // 测试内容样本
 const testContent = {
-  command: 'allowed-tools: Bash(.claude/scripts/NioPD/init.sh:*)',
+  command: 'allowed-tools: Bash(.claude/scripts/niopd/init.sh:*)',
   script: 'if [ ! -d ".claude" ]; then',
-  agent: 'Read instructions from .claude/agents/NioPD/competitor-analyzer.md'
+  agent: 'Read instructions from .claude/agents/niopd/competitor-analyzer.md'
 };
 ```
 
@@ -145,16 +145,16 @@ const testContent = {
 ```javascript
 // iflow模式预期输出
 const expectedIflow = {
-  command: 'allowed-tools: Bash(.iflow/scripts/NioPD/init.sh:*)',
+  command: 'allowed-tools: Bash(.iflow/scripts/niopd/init.sh:*)',
   script: 'if [ ! -d ".iflow" ]; then',
-  agent: 'Read instructions from .iflow/agents/NioPD/competitor-analyzer.md'
+  agent: 'Read instructions from .iflow/agents/niopd/competitor-analyzer.md'
 };
 
 // claude模式预期输出
 const expectedClaude = {
-  command: 'allowed-tools: Bash(.claude/scripts/NioPD/init.sh:*)',
+  command: 'allowed-tools: Bash(.claude/scripts/niopd/init.sh:*)',
   script: 'if [ ! -d ".claude" ]; then',
-  agent: 'Read instructions from .claude/agents/NioPD/competitor-analyzer.md'
+  agent: 'Read instructions from .claude/agents/niopd/competitor-analyzer.md'
 };
 ```
 

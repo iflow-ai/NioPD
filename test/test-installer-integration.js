@@ -193,17 +193,17 @@ class InstallerIntegrationTester {
       {
         ide: 'claude',
         expectedPaths: {
-          scripts: '.claude/scripts/NioPD',
-          commands: '.claude/commands/NioPD',
-          agents: '.claude/agents/NioPD'
+          scripts: '.claude/scripts/niopd',
+          commands: '.claude/commands/niopd',
+          agents: '.claude/agents/niopd'
         }
       },
       {
         ide: 'iflow',
         expectedPaths: {
-          scripts: '.iflow/scripts/NioPD',
-          commands: '.iflow/commands/NioPD',
-          agents: '.iflow/agents/NioPD'
+          scripts: '.iflow/scripts/niopd',
+          commands: '.iflow/commands/niopd',
+          agents: '.iflow/agents/niopd'
         }
       }
     ];
