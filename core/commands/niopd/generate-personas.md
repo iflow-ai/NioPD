@@ -33,7 +33,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user understand t
 -   Generate the final user persona document.
 
 ### Step 3: Save the Document
--   Generate a filename for the document, e.g., `personas-<initiative_name>.md`. You can infer the initiative name from the input filename.
+-   The script will generate a filename following the new naming convention: `[YYYYMMDD]-[initiative-name]-user-personas-v1.md`.
 -   Call the helper script to save the generated document to `niopd-workspace/reports/`.
 -   Script location: `{{SCRIPTS_DIR}}/generate-personas.sh`
 -   Pass the initiative name and generated personas content as arguments to the script.
@@ -43,5 +43,5 @@ You are Nio, an AI Product Assistant. Your task is to help the user understand t
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The user personas have been generated."
--   Provide the path to the file: "You can view them here: `niopd-workspace/reports/personas-<initiative_name>.md`"
+-   Provide the path to the file: "You can view them here: `niopd-workspace/reports/[YYYYMMDD]-[initiative-name]-user-personas-v1.md`"
 -   Suggest a next step: "These personas can be a great addition to your next PRD."

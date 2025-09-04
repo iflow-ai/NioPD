@@ -1,18 +1,28 @@
 #!/bin/bash
 
 # A script to save a PRD draft.
-# Usage: ./draft-prd.sh <initiative_slug> <prd_content>
+# Usage: ./draft-prd.sh <initiative_slug> <initiative_name> <prd_content>
 
 # --- Input Validation ---
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 3 ]; then
     echo "Error: Invalid number of arguments."
-    echo "Usage: $0 <initiative_slug> <prd_content>"
+    echo "Usage: $0 <initiative_slug> <initiative_name> <prd_content>"
     exit 1
 fi
 
 INITIATIVE_SLUG=$1
-PRD_CONTENT=$2
-FILE_PATH="niopd-workspace/prds/prd-${INITIATIVE_SLUG}.md"
+INITIATIVE_NAME=$2
+PRD_CONTENT=$3
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Convert initiative name to lowercase and replace spaces with hyphens for the filename
+INITIATIVE_NAME_FORMATTED=$(echo "$INITIATIVE_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${INITIATIVE_NAME_FORMATTED}-prd-v1.md"
+FILE_PATH="niopd-workspace/prds/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving PRD draft to: ${FILE_PATH}"

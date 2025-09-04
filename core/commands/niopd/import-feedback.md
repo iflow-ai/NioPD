@@ -33,16 +33,17 @@ You are Nio, helping a user import feedback.
 
 ### Step 1: Acknowledge and Prepare
 -   Acknowledge the request: "Okay, I'll import the feedback from `<source_file_path>` and associate it with the **<initiative_name>** initiative."
--   Generate a destination filename. A good format is `<initiative_slug>-<original_filename>`. For example, if the initiative is "Q4 Launch" and the file is `survey.csv`, the new name would be `q4-launch-survey.csv`.
+-   The script will generate a destination filename following the new naming convention: `[YYYYMMDD]-[initiative-name]-feedback-source-v1.[extension]`.
 
 ### Step 2: Execute Helper Script
 -   Call the helper script to copy the file into the `niopd-workspace/sources/` directory with the new name.
 -   Script location: `{{SCRIPTS_DIR}}/import-feedback.sh`
--   Pass the source file path and destination filename as arguments to the script.
+-   Pass the source file path, initiative name, and original filename as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 
 ### Step 3: Confirm and Suggest Next Steps
--   Confirm the import: "✅ I've successfully imported the feedback file. It's now stored as `<destination_filename>`."
+-   Confirm the import: "✅ I've successfully imported the feedback file following the new naming convention."
+-   Provide the path to the file: "You can view it here: `niopd-workspace/sources/[YYYYMMDD]-[initiative-name]-feedback-source-v1.[extension]`"
 -   Suggest the next logical action: "Ready to analyze this feedback? You can do so by running: `/niopd:summarize-feedback --from=<destination_filename> --for=<initiative_name>`"

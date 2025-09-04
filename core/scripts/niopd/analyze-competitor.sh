@@ -12,7 +12,16 @@ fi
 
 DOMAIN_NAME=$1
 REPORT_CONTENT=$2
-FILE_PATH="niopd-workspace/reports/competitor-analysis-${DOMAIN_NAME}.md"
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Convert domain name to lowercase and replace spaces with hyphens for the filename
+DOMAIN_NAME_FORMATTED=$(echo "$DOMAIN_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${DOMAIN_NAME_FORMATTED}-competitor-analysis-v1.md"
+FILE_PATH="niopd-workspace/reports/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving competitor analysis report to: ${FILE_PATH}"
