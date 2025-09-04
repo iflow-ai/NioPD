@@ -32,14 +32,14 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 -   Perform the analysis as described in the agent definition and generate the final KPI status report.
 
 ### Step 3: Save the Report
--   Generate a filename for the report, e.g., `kpi-status-<initiative_slug>.md`.
+-   The script will generate a filename following the new naming convention: `[YYYYMMDD]-[initiative-name]-kpi-report-v1.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `{{SCRIPTS_DIR}}/track-kpis.sh`
--   Pass the initiative slug and generated report content as arguments to the script.
+-   Pass the initiative slug, initiative name, and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The KPI status report is ready."
--   Provide the path to the file: "You can view it here: `niopd-workspace/reports/kpi-status-<initiative_slug>.md`"
+-   Provide the path to the file: "You can view it here: `niopd-workspace/reports/[YYYYMMDD]-[initiative-name]-kpi-report-v1.md`"

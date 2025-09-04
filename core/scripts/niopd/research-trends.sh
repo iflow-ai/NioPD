@@ -1,18 +1,28 @@
 #!/bin/bash
 
 # A script to save a market trend report.
-# Usage: ./research-trends.sh <topic_slug> <report_content>
+# Usage: ./research-trends.sh <topic_slug> <topic_name> <report_content>
 
 # --- Input Validation ---
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 3 ]; then
     echo "Error: Invalid number of arguments."
-    echo "Usage: $0 <topic_slug> <report_content>"
+    echo "Usage: $0 <topic_slug> <topic_name> <report_content>"
     exit 1
 fi
 
 TOPIC_SLUG=$1
-REPORT_CONTENT=$2
-FILE_PATH="niopd-workspace/reports/trend-report-${TOPIC_SLUG}.md"
+TOPIC_NAME=$2
+REPORT_CONTENT=$3
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Convert topic name to lowercase and replace spaces with hyphens for the filename
+TOPIC_NAME_FORMATTED=$(echo "$TOPIC_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${TOPIC_NAME_FORMATTED}-trend-report-v1.md"
+FILE_PATH="niopd-workspace/reports/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving market trend report to: ${FILE_PATH}"

@@ -1,18 +1,28 @@
 #!/bin/bash
 
 # A script to save a stakeholder update report.
-# Usage: ./generate-update.sh <initiative_slug> <update_content>
+# Usage: ./generate-update.sh <initiative_slug> <initiative_name> <update_content>
 
 # --- Input Validation ---
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 3 ]; then
     echo "Error: Invalid number of arguments."
-    echo "Usage: $0 <initiative_slug> <update_content>"
+    echo "Usage: $0 <initiative_slug> <initiative_name> <update_content>"
     exit 1
 fi
 
 INITIATIVE_SLUG=$1
-UPDATE_CONTENT=$2
-FILE_PATH="niopd-workspace/reports/update-${INITIATIVE_SLUG}.md"
+INITIATIVE_NAME=$2
+UPDATE_CONTENT=$3
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Convert initiative name to lowercase and replace spaces with hyphens for the filename
+INITIATIVE_NAME_FORMATTED=$(echo "$INITIATIVE_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${INITIATIVE_NAME_FORMATTED}-stakeholder-update-v1.md"
+FILE_PATH="niopd-workspace/reports/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving stakeholder update report to: ${FILE_PATH}"

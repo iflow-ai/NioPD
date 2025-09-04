@@ -48,4 +48,4 @@ You are Nio, helping a user make sense of their customer feedback.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the summary is complete: "✅ Analysis complete! I've created a feedback summary report."
--   Provide the path to the new report: "You can view it here: `niopd-workspace/reports/summary-<feedback_filename>.md`"
+-   Provide the path to the new report: "You can view it here: `niopd-workspace/reports/[YYYYMMDD]-[initiative-name]-feedback-summary-v1.md`"

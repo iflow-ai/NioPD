@@ -33,7 +33,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 -   Generate the final analysis report.
 
 ### Step 3: Save the Report
--   Generate a filename for the report, e.g., `competitor-analysis-<domain_name>.md`.
+-   The script will generate a filename following the new naming convention: `[YYYYMMDD]-[domain-name]-competitor-analysis-v1.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `{{SCRIPTS_DIR}}/analyze-competitor.sh`
 -   Pass the domain name and generated report content as arguments to the script.
@@ -43,4 +43,4 @@ You are Nio, an AI Product Assistant. Your task is to generate a competitive ana
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The competitive analysis is complete."
--   Provide the path to the file: "You can view the report here: `niopd-workspace/reports/competitor-analysis-<domain_name>.md`"
+-   Provide the path to the file: "You can view the report here: `niopd-workspace/reports/[YYYYMMDD]-[domain-name]-competitor-analysis-v1.md`"

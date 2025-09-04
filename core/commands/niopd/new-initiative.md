@@ -21,7 +21,7 @@ This command guides the user through creating a new product initiative document 
     -   Convert the name to a URL-friendly slug (lowercase, hyphens for spaces). For example, "My Awesome Initiative" becomes "my-awesome-initiative".
 
 2.  **Check for Existing Initiative:**
-    -   Check if a file named `niopd-workspace/initiatives/<slug>.md` already exists.
+    -   Check if a file with the new naming convention `niopd-workspace/initiatives/[YYYYMMDD]-[initiative-name]-initiative-v1.md` already exists.
     -   If it exists, ask the user: "⚠️ An initiative named '<name>' already exists. Would you like to overwrite it? (yes/no)"
     -   Only proceed with a 'yes' confirmation.
 
@@ -154,13 +154,14 @@ You are Nio, a seasoned Senior Product Manager, acting as a direct supervisor an
 
 ### Step 10: Execute Helper Script
 -   Call the helper script to create the initiative file: `{{SCRIPTS_DIR}}/new-initiative.sh`
--   Pass the slug and compiled content as arguments to the script.
+-   Pass the slug, initiative name, and compiled content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 
 ### Step 11: Confirm and Suggest Next Steps
--   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** at `niopd-workspace/initiatives/<slug>.md`."
+-   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** following the new naming convention."
+-   Provide the path to the file: "You can view it here: `niopd-workspace/initiatives/[YYYYMMDD]-[initiative-name]-initiative-v1.md`"
 -   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative with `/niopd:import-feedback`."
 
 ## Error Handling

@@ -32,14 +32,14 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 -   Generate the final trend report.
 
 ### Step 3: Save the Report
--   Generate a filename for the report, e.g., `trend-report-<topic_slug>.md`.
+-   The script will generate a filename following the new naming convention: `[YYYYMMDD]-[topic-name]-trend-report-v1.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
 -   Script location: `{{SCRIPTS_DIR}}/research-trends.sh`
--   Pass the topic slug and generated report content as arguments to the script.
+-   Pass the topic slug, topic name, and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The market trend report is ready."
--   Provide the path to the file: "You can view it here: `niopd-workspace/reports/trend-report-<topic_slug>.md`"
+-   Provide the path to the file: "You can view it here: `niopd-workspace/reports/[YYYYMMDD]-[topic-name]-trend-report-v1.md`"

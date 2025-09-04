@@ -12,9 +12,16 @@ fi
 
 INITIATIVE_NAME=$1
 PERSONAS_CONTENT=$2
-# Convert initiative name to slug (lowercase, replace spaces with hyphens)
-INITIATIVE_SLUG=$(echo "$INITIATIVE_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
-FILE_PATH="niopd-workspace/reports/personas-${INITIATIVE_SLUG}.md"
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Convert initiative name to lowercase and replace spaces with hyphens for the filename
+INITIATIVE_NAME_FORMATTED=$(echo "$INITIATIVE_NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${INITIATIVE_NAME_FORMATTED}-user-personas-v1.md"
+FILE_PATH="niopd-workspace/reports/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving user personas document to: ${FILE_PATH}"

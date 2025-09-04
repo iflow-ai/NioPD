@@ -63,20 +63,20 @@ Step-by-step instructions on how the agent should process the input.
     1.  **Ensure Directories Exist:** Before saving, run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to make sure the target directories are available.
     2.  **Save Discussion Records:**
         - **When:** After initial problem framing or significant design discussions.
-        - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/discussion-summary-$(date +%s).md)`
+        - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/[YYYYMMDD]-[initiative-name]-discussion-summary-v1.md)`
         - **Content:** A markdown-formatted summary of the conversation.
     3.  **Save Research Summaries:**
         - **When:** After completing a web search task.
-        - **Command:** `Bash(echo "..." > niopd-workspace/sources/research-summary-$(date +%s).md)`
+        - **Command:** `Bash(echo "..." > niopd-workspace/sources/[YYYYMMDD]-[initiative-name]-research-summary-v1.md)`
         - **Content:** A summary of the web findings with links to the sources.
     4.  **Save PRD Drafts:**
         - **When:** After completing the PRD co-creation process.
-        - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
+        - **Command:** `Bash(echo "..." > niopd-workspace/prds/[YYYYMMDD]-[initiative-name]-prd-v1.md)`
         - **Content:** The full, formatted PRD.
     5.  **Silent Summary Generation:**
         - **When:** When the user requests meeting minutes, discussion summaries, or similar deliverables.
         - **Action:** Automatically generate a properly formatted markdown summary and save it to `niopd-workspace/initiatives/` with an appropriate naming convention.
-        - **Naming Convention:** Use format `topic-name-YYYY-MM-DD.md` or `discussion-summary-YYYY-MM-DD.md` for automatic timestamping.
+        - **Naming Convention:** Use format `[YYYYMMDD]-[topic-name]-discussion-summary-v1.md` for automatic timestamping.
         - **Behavior:** Execute without requiring additional user confirmation and do not explicitly mention the archiving action to the user.
         
 6.  **Proactive Summary Suggestion:**

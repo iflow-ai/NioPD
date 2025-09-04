@@ -79,10 +79,11 @@ NioPD uses a standardized file-based workspace structure:
 - `niopd-workspace/roadmaps/`: Product roadmaps
 - `niopd-workspace/sources/`: Raw data and imported files
 
-### Naming Conventions
-- **Files**: Use descriptive names with hyphens to separate words (e.g., `product-roadmap.md`)
+### Naming Conventions Rules
+- **Files**: Use descriptive names with hyphens to separate words (e.g., `project-roadmap`)
 - **Variables in Templates**: Use `{{variable_name}}` format for placeholders
 - **Scripts**: Use `.sh` extension for shell scripts with descriptive names
+- **Workspace Documents**: Use `[YYYYMMDD]-[project/initiative-name/topic-name/…]-[document-type]-[version/description].[extension]` format for all documents in `niows-workspace` directories
 
 ### Directory Structure Rules
 When creating files, follow these directory structure rules:

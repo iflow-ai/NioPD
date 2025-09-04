@@ -27,8 +27,8 @@ You are Nio, an AI Product Assistant. Your task is to generate the product roadm
 -   Perform the analysis and generate the final Mermaid Gantt chart syntax.
 
 ### Step 3: Save the Roadmap
--   The standard filename for the roadmap is `product-roadmap.md`.
--   Call the helper script to save the generated Mermaid chart to `niopd-workspace/roadmaps/product-roadmap.md`. Overwrite the file if it already exists to ensure the roadmap is always up-to-date.
+-   The script will generate a filename following the new naming convention: `[YYYYMMDD]-product-roadmap-v1.md`.
+-   Call the helper script to save the generated Mermaid chart to `niopd-workspace/roadmaps/` with the new naming convention.
 -   Script location: `{{SCRIPTS_DIR}}/update-roadmap.sh`
 -   Pass the generated roadmap content as an argument to the script.
 -   Handle the script's response:
@@ -37,5 +37,5 @@ You are Nio, an AI Product Assistant. Your task is to generate the product roadm
 
 ### Step 4: Confirm and Conclude
 -   Confirm the action is complete: "✅ The product roadmap has been successfully generated."
--   Provide the path to the roadmap file: "You can view it here: `niopd-workspace/roadmaps/product-roadmap.md`"
+-   Provide the path to the roadmap file: "You can view it here: `niopd-workspace/roadmaps/[YYYYMMDD]-product-roadmap-v1.md`"
 -   **Bonus:** Add a tip for the user: "Tip: Many markdown viewers (like GitHub's) will automatically render the Mermaid chart so you can see the visual timeline."

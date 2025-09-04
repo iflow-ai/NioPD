@@ -11,7 +11,16 @@ if [ "$#" -ne 1 ]; then
 fi
 
 ROADMAP_CONTENT=$1
-FILE_PATH="niopd-workspace/roadmaps/product-roadmap.md"
+
+# Get current date in YYYYMMDD format
+DATE=$(date +%Y%m%d)
+
+# Use a generic name for the product roadmap
+ROADMAP_NAME="product"
+
+# Create filename with new naming convention
+FILENAME="${DATE}-${ROADMAP_NAME}-roadmap-v1.md"
+FILE_PATH="niopd-workspace/roadmaps/${FILENAME}"
 
 # --- File Creation ---
 echo "Saving product roadmap to: ${FILE_PATH}"

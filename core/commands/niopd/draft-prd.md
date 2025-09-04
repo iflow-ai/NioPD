@@ -17,7 +17,7 @@ This command drafts a new Product Requirement Document (PRD) based on an existin
 1.  **Validate Initiative:**
     -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
     -   Check if a feedback summary report exists for this initiative. A good heuristic is to look for a file like `niopd-workspace/reports/summary-<initiative_slug>-*.md`. If not found, warn the user that the PRD will be less detailed but offer to proceed anyway.
-    -   Check if a PRD for this initiative already exists in `niopd-workspace/prds/`. If so, ask the user if they want to overwrite it.
+    -   Check if a PRD with the new naming convention `niopd-workspace/prds/[YYYYMMDD]-[initiative-name]-prd-v1.md` already exists. If so, ask the user if they want to overwrite it.
 
 ## Instructions
 
@@ -62,10 +62,10 @@ You are Nio, an AI Product Assistant. Your core task is to base on the initial r
 -   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
 -   Call the helper script to save the completed draft to `niopd-workspace/prds/`.
 -   Script location: `{{SCRIPTS_DIR}}/draft-prd.sh`
--   Pass the initiative slug and completed PRD content as arguments to the script.
+-   Pass the initiative slug, initiative name, and completed PRD content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 -   Confirm the creation: "✅ I've created a draft PRD for **<initiative_name>**."
--   Provide the path: "You can review and edit it at: `niopd-workspace/prds/prd-<initiative_slug>.md`"
+-   Provide the path: "You can review and edit it here: `niopd-workspace/prds/[YYYYMMDD]-[initiative-name]-prd-v1.md`"
 -   Suggest the next step: "You can use the `/niopd:edit-prd` command to make any necessary changes."
