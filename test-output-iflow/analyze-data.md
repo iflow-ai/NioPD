@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash({{SCRIPTS_DIR}}/analyze-data.sh:*)
+allowed-tools: Bash(.iflow/scripts/niopd/analyze-data.sh:*)
 argument-hint: --file=<path_to_data.csv> --query="<Your question>"
 description: Analyzes a data file to answer a natural language question.
 model: Qwen3-Coder
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user get insights
 
 ### Step 2: Invoke the Data Analyst Agent
 -   You must now act as the `data-analyst` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/data-analyst.md`.
+-   Read your instructions from `.iflow/agents/data-analyst.md`.
 -   Use the provided data file and query as your input.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final analysis report.
@@ -35,7 +35,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user get insights
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `data-analysis-<original_filename>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `{{SCRIPTS_DIR}}/analyze-data.sh`
+-   Script location: `.iflow/scripts/niopd/analyze-data.sh`
 -   Pass the original filename and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

@@ -146,7 +146,7 @@ description: Test command
 
 Check {{IDE_DIR}} directory and {{TEMPLATES_DIR}}/template.md`;
     
-    const testFile = path.join(__dirname, 'temp-test.md.template');
+    const testFile = path.join(__dirname, 'temp-test.md');
     const outputFile = path.join(__dirname, 'temp-output.md');
     
     try {

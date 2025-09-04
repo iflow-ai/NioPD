@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(date:*), Bash({{SCRIPTS_DIR}}/new-initiative.sh:*)
+allowed-tools: Bash(date:*), Bash(.claude/scripts/niopd/new-initiative.sh:*)
 argument-hint: <initiative_name>
 description: Creates a new product initiative document using Socratic questioning and guided discovery.
 model: Qwen3-Coder
@@ -146,14 +146,14 @@ You are Nio, a seasoned Senior Product Manager, acting as a direct supervisor an
 -   Confirm timeline approach: "Let's review the timeline and milestones we've outlined. Does this feel achievable and meaningful?"
 
 ### Step 9: Information Organization and Document Creation
--   Structure and organize the collected information based on each section of the `{{TEMPLATES_DIR}}/initiative-template.md` template.
+-   Structure and organize the collected information based on each section of the `.claude/templates/initiative-template.md` template.
 -   Once all questions are answered, compile the user's responses into the template structure.
 -   Replace the `{{initiative_name}}` and other placeholders with the collected information.
 -   Get the current timestamp by running `date -u +"%Y-%m-%dT%H:%M:%SZ"`.
 -   Present each section to the user for confirmation before proceeding to the next.
 
 ### Step 10: Execute Helper Script
--   Call the helper script to create the initiative file: `{{SCRIPTS_DIR}}/new-initiative.sh`
+-   Call the helper script to create the initiative file: `.claude/scripts/niopd/new-initiative.sh`
 -   Pass the slug and compiled content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
