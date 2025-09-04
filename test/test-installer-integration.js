@@ -66,7 +66,7 @@ class InstallerIntegrationTester {
     const targetDir = path.join(this.testDir, 'iflow', 'commands', 'NioPD');
     
     try {
-      const result = await processor.processTemplateDirectory(sourceDir, targetDir, '*.md.template');
+      const result = await processor.processTemplateDirectory(sourceDir, targetDir, '*.md');
       
       // 验证处理结果
       const processedFiles = await fs.readdir(targetDir);
@@ -116,7 +116,7 @@ class InstallerIntegrationTester {
       const targetDir = path.join(this.testDir, ide, 'commands', 'NioPD');
       
       try {
-        await processor.processTemplateDirectory(sourceDir, targetDir, '*.md.template');
+        const result = await processor.processTemplateDirectory(sourceDir, targetDir, '*.md');
         
         // 验证目录存在
         const exists = await fs.pathExists(targetDir);
