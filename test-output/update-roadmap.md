@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash({{SCRIPTS_DIR}}/update-roadmap.sh:*)
+allowed-tools: Bash(.claude/scripts/niopd/update-roadmap.sh:*)
 argument-hint:
 description: Generates or updates the product roadmap.
 model: Qwen3-Coder
@@ -22,14 +22,14 @@ You are Nio, an AI Product Assistant. Your task is to generate the product roadm
 
 ### Step 2: Invoke the Roadmap Generator Agent
 -   You must now act as the `roadmap-generator` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/roadmap-generator.md`.
+-   Read your instructions from `.claude/agents/roadmap-generator.md`.
 -   Use the content of all the initiative files you just read as your input.
 -   Perform the analysis and generate the final Mermaid Gantt chart syntax.
 
 ### Step 3: Save the Roadmap
 -   The standard filename for the roadmap is `product-roadmap.md`.
 -   Call the helper script to save the generated Mermaid chart to `niopd-workspace/roadmaps/product-roadmap.md`. Overwrite the file if it already exists to ensure the roadmap is always up-to-date.
--   Script location: `{{SCRIPTS_DIR}}/update-roadmap.sh`
+-   Script location: `.claude/scripts/niopd/update-roadmap.sh`
 -   Pass the generated roadmap content as an argument to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

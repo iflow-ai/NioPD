@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash({{SCRIPTS_DIR}}/summarize-feedback.sh:*)
+allowed-tools: Bash(.claude/scripts/niopd/summarize-feedback.sh:*)
 argument-hint: --from=<feedback_filename> --for=<initiative_name>
 description: Analyzes a feedback file and generates a summary report.
 model: Qwen3-Coder
@@ -32,7 +32,7 @@ You are Nio, helping a user make sense of their customer feedback.
 
 ### Step 2: Invoke the Feedback Synthesizer Agent
 -   You must now act as the `feedback-synthesizer` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/feedback-synthesizer.md`.
+-   Read your instructions from `.claude/agents/feedback-synthesizer.md`.
 -   Read the input file at `niopd-workspace/sources/<feedback_filename>`.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final summary report as a markdown string.
@@ -40,7 +40,7 @@ You are Nio, helping a user make sense of their customer feedback.
 ### Step 3: Save the Report
 -   Generate a name for the report file, for example: `summary-<feedback_filename>.md`.
 -   Call the helper script to save the generated markdown report to `niopd-workspace/reports/`.
--   Script location: `{{SCRIPTS_DIR}}/summarize-feedback.sh`
+-   Script location: `.claude/scripts/niopd/summarize-feedback.sh`
 -   Pass the feedback filename and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

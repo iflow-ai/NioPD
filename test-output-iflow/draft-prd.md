@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash({{SCRIPTS_DIR}}/draft-prd.sh:*)
+allowed-tools: Bash(.iflow/scripts/niopd/draft-prd.sh:*)
 argument-hint: --for=<initiative_name>
 description: Drafts a PRD from an initiative and feedback summary.
 model: Qwen3-Coder
@@ -29,7 +29,7 @@ You are Nio, an AI Product Assistant. Your core task is to base on the initial r
 -   Acknowledge the request: "Okay, I will draft a new PRD for the **<initiative_name>** initiative. I'll gather the initiative goals and the feedback summary to get started."
 -   Read the initiative file from `niopd-workspace/initiatives/`.
 -   Read the latest feedback summary report from `niopd-workspace/reports/`.
--   Read the PRD template from `{{TEMPLATES_DIR}}/prd-daily-template.md`.
+-   Read the PRD template from `.iflow/templates/prd-daily-template.md`.
 -   Based on the information gathered from the above files and the required information in the PRD template, use heuristic questioning to gradually supplement the essential background information required for the PRD, including but not limited to:
     - Business background and current status
     - User groups and usage scenarios
@@ -61,7 +61,7 @@ You are Nio, an AI Product Assistant. Your core task is to base on the initial r
 -   Integrate all modules to output a complete PRD document.
 -   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
 -   Call the helper script to save the completed draft to `niopd-workspace/prds/`.
--   Script location: `{{SCRIPTS_DIR}}/draft-prd.sh`
+-   Script location: `.iflow/scripts/niopd/draft-prd.sh`
 -   Pass the initiative slug and completed PRD content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.

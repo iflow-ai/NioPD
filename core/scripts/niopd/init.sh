@@ -17,23 +17,6 @@ if [ ! -d "{{IDE_DIR}}" ]; then
 fi
 
 # --- Display initialization message ---
-echo "Initializing..."
-echo ""
-echo ""
-
-echo " ███╗   ██╗██╗ ██████╗ ██████╗ ██████╗ "
-echo " ████╗  ██║██║██╔════╝██╔═══██╗██╔══██╗"
-echo " ██╔██╗ ██║██║██║     ██║   ██║██████╔╝"
-echo " ██║╚██╗██║██║██║     ██║   ██║██╔═══╝ "
-echo " ██║ ╚████║██║╚██████╗╚██████╔╝██║     "
-echo " ╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝     "
-echo ""
-echo "┌──────────────────────────────────────┐"
-echo "│         NioPD Initialization         │"
-echo "└──────────────────────────────────────┘"
-echo ""
-echo ""
-
 echo "🚀 Initializing NioPD System"
 echo "============================"
 echo ""

@@ -1,5 +1,5 @@
 ---
-allowed-tools: google_search, view_text_website, Bash({{SCRIPTS_DIR}}/research-trends.sh:*)
+allowed-tools: google_search, view_text_website, Bash(.iflow/scripts/niopd/research-trends.sh:*)
 argument-hint: --topic="<Your research topic>"
 description: Researches market trends for a given topic.
 model: Qwen3-Coder
@@ -26,7 +26,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 
 ### Step 2: Invoke the Market Researcher Agent
 -   You must now act as the `market-researcher` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/market-researcher.md`.
+-   Read your instructions from `.iflow/agents/market-researcher.md`.
 -   Use the provided topic as your input.
 -   Perform the research as described in the agent definition, including using `google_search` and `view_text_website`.
 -   Generate the final trend report.
@@ -34,7 +34,7 @@ You are Nio, an AI Product Assistant. Your task is to help the user research mar
 ### Step 3: Save the Report
 -   Generate a filename for the report, e.g., `trend-report-<topic_slug>.md`.
 -   Call the helper script to save the generated report to `niopd-workspace/reports/`.
--   Script location: `{{SCRIPTS_DIR}}/research-trends.sh`
+-   Script location: `.iflow/scripts/niopd/research-trends.sh`
 -   Pass the topic slug and generated report content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
