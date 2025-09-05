@@ -6,7 +6,7 @@ model: inherit
 color: red
 ---
 
-[//]: # (kpi-tracker@2025-08-29; by:8421bit(github/iflow-ai); repo:github/iflow-ai/NioPD; license:MIT)
+[//]: # (kpi-tracker@2025-08-29; by:8421bit(github/8421bit); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: kpi-tracker
 
