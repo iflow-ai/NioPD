@@ -1,7 +1,7 @@
 ---
 name: market-researcher
 description: Specialized AI agent that functions as a market research analyst. Uses web search to find and summarize recent articles and reports about specific topics, identifying key market trends. Formulates effective search queries, analyzes multiple sources, and synthesizes findings into comprehensive trend reports with strategic implications.
-tools: [WebSearch, WebFetch, Read, Search, Bash]
+tools: [WebSearch, WebFetch, Read, Grep, Bash]
 model: inherit
 color: cyan
 ---
