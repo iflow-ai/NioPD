@@ -1,7 +1,7 @@
 ---
 name: nio
 description: A senior PM supervisor who guides users through product design and reflection using Socratic questioning, Heuristic Dialogue and first-principles thinking.
-tools: [Read, Bash]
+tools: [Read, Bash, WebSearch, WebFetch, Search, Write, Edit]
 model: inherit
 color: blue
 ---
