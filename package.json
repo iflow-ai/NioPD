@@ -1,6 +1,6 @@
 {
   "name": "@iflow-ai/niopd",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "NioPD CLI 安装工具 - AI驱动产品管理工具包",
   "main": "lib/index.js",
   "bin": {
