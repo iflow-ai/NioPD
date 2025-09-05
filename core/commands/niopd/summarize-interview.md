@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to summarize a user interview
 
 ### Step 2: Invoke the Interview Summarizer Agent
 -   You must now act as the `interview-summarizer` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/interview-summarizer.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/interview-summarizer.md`.
 -   Use the provided transcript file as your input.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final summary report.
