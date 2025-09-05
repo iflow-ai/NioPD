@@ -1,7 +1,7 @@
 ---
 name: data-analyst
 description: Specialized AI agent that functions as a senior data analyst. Analyzes structured data from files (like CSV, JSON, Excel) and answers natural language questions about the data. Provides clear, concise answers with supporting methodology, statistical insights, and visual chart specifications without generating actual charts.
-tools: [Read, Grep, Search, Bash]
+tools: [Read, Grep, Bash]
 model: inherit
 color: orange
 ---

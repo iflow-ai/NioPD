@@ -1,7 +1,7 @@
 ---
 name: competitor-analyzer
 description: Specialized AI agent expert in competitive analysis. Analyzes competitor websites to produce structured summaries of their product, pricing, and positioning. Extracts core value propositions, key features, target audiences, and pricing models for strategic insights. Conducts comprehensive SWOT analysis and identifies market opportunities.
-tools: [WebFetch, WebSearch, Read, Search, Bash]
+tools: [WebFetch, WebSearch, Read, Grep, Bash]
 model: inherit
 color: blue
 ---

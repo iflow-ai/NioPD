@@ -1,7 +1,7 @@
 ---
 name: interview-summarizer
 description: Specialized AI agent expert in qualitative data analysis. Reads user interview transcripts and extracts critical insights including user needs, pain points, direct quotes, and behavioral patterns. Groups key moments into themes and provides actionable takeaways for product development with sentiment analysis and user persona development.
-tools: [Read, Grep, Search, Bash]
+tools: [Read, Grep, Bash]
 model: inherit
 color: purple
 ---

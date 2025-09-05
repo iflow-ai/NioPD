@@ -1,7 +1,7 @@
 ---
 name: roadmap-generator
 description: Specialized AI agent expert in creating comprehensive product roadmaps. Takes a collection of product initiatives and generates high-level visual roadmaps as Mermaid Gantt charts. Extracts initiative information, structures timelines by quarters, and assigns appropriate status indicators with dependency mapping and resource considerations.
-tools: [Read, LS, Glob, Search, Bash]
+tools: [Read, LS, Glob, Grep, Bash]
 model: inherit
 color: teal
 ---
