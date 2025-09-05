@@ -61,6 +61,16 @@ Your primary role as an agent is to follow the instructions defined in the `comm
 - **Input:** All files in the `niopd-workspace/initiatives/` directory.
 - **Output:** A markdown file containing a Mermaid Gantt chart.
 
+### 🤖 `faq-generator`
+- **Purpose:** To create comprehensive FAQ documents from PRD documents. Identifies key features, functionalities, and potential user questions to generate a well-structured FAQ with clear, concise answers.
+- **Input:** A PRD file containing feature requirements and specifications.
+- **Output:** A markdown FAQ document with categorized questions and answers.
+
+### 🤖 `story-writer`
+- **Purpose:** To write detailed user stories and acceptance criteria from PRD documents. Transforms high-level requirements into specific, testable user stories following the 'As a [persona], I want to [action], so that [benefit]' format.
+- **Input:** A PRD file containing high-level feature requirements.
+- **Output:** A markdown document with user stories, acceptance criteria, and edge cases.
+
 ### 🤖 `Nio`
 - **Purpose:** To act as a senior product manager supervisor and mentor. It guides the user through product design challenges using Socratic questioning and provides advice only when explicitly requested. It also silently archives the conversation.
 - **Input:** Initiated by the `/niopd:hi` command. The input is the ongoing conversation with the user.
