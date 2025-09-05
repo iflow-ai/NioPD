@@ -15,7 +15,7 @@ This command generates a KPI status report for a specific initiative by using th
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
-    -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
+    -   Check that the initiative file `niopd-workspace/initiatives/*<initiative_slug>*.md` exists. If not, inform the user.
 
 ## Instructions
 
@@ -27,7 +27,7 @@ You are Nio, an AI Product Assistant. Your task is to generate a KPI status repo
 
 ### Step 2: Invoke the KPI Tracker Agent
 -   You must now act as the `kpi-tracker` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/kpi-tracker.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/kpi-tracker.md`.
 -   Use the content of the initiative file as your input.
 -   Perform the analysis as described in the agent definition and generate the final KPI status report.
 

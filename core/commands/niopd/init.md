@@ -15,8 +15,8 @@ This command initializes the NioPD system by creating the necessary directory st
 ## Preflight Checklist
 
 1.  **Check Current Directory:**
-    -   Verify that the current directory contains a `.claude` directory.
-    -   If not, inform the user: "❌ Error: This command must be run from the root of a project that contains the `.claude` directory."
+    -   Verify that the current directory contains a `{{IDE_TYPE}}` directory.
+    -   If not, inform the user: "❌ Error: This command must be run from the root of a project that contains the `{{IDE_TYPE}}` directory."
 
 ## Instructions
 

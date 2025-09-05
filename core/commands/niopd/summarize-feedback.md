@@ -32,7 +32,7 @@ You are Nio, helping a user make sense of their customer feedback.
 
 ### Step 2: Invoke the Feedback Synthesizer Agent
 -   You must now act as the `feedback-synthesizer` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/feedback-synthesizer.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/feedback-synthesizer.md`.
 -   Read the input file at `niopd-workspace/sources/<feedback_filename>`.
 -   Perform the analysis as described in the agent definition.
 -   Generate the final summary report as a markdown string.
