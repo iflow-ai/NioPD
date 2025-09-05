@@ -79,21 +79,33 @@ NioPD uses a standardized file-based workspace structure:
 - `niopd-workspace/roadmaps/`: Product roadmaps
 - `niopd-workspace/sources/`: Raw data and imported files
 
-### Naming Conventions Rules
-- **Files**: Use descriptive names with hyphens to separate words (e.g., `project-roadmap`)
-- **Variables in Templates**: Use `{{variable_name}}` format for placeholders
-- **Scripts**: Use `.sh` extension for shell scripts with descriptive names
-- **Workspace Documents**: Use `[YYYYMMDD]-[project/initiative-name/topic-name/…]-[document-type]-[version/description].[extension]` format for all documents in `niows-workspace` directories
+Store files in their respective directories according to content type.
 
-### Directory Structure Rules
-When creating files, follow these directory structure rules:
-- **Initiatives**: Store in `niopd-workspace/initiatives/`
-- **PRDs**: Store in `niopd-workspace/prds/`
-- **Reports**: Store in `niopd-workspace/reports/`
-- **Roadmaps**: Store in `niopd-workspace/roadmaps/`
-- **Sources**: Store in `niopd-workspace/sources/`
+### File Naming and Version Control
+All NioPD files should follow the standardized naming pattern: `[YYYYMMDD]-<identifier>-<document-type>-v[version].md`
 
-### File Operations
+#### Directory-Specific Naming Patterns
+- **initiatives/**: `[YYYYMMDD]-<initiative_slug>-initiative-v[version].md`
+- **prds/**: `[YYYYMMDD]-<initiative_slug>-prd-v[version].md`
+- **reports/**:
+  - Feedback summary: `[YYYYMMDD]-<initiative_slug>-feedback-summary-v[version].md`
+  - Interview summary: `[YYYYMMDD]-<original_filename>-interview-summary-v[version].md`
+  - KPI report: `[YYYYMMDD]-<initiative_slug>-kpi-report-v[version].md`
+  - Competitor analysis: `[YYYYMMDD]-<domain_name>-competitor-analysis-v[version].md`
+  - Trend report: `[YYYYMMDD]-<topic_slug>-trend-report-v[version].md`
+  - Data analysis: `[YYYYMMDD]-<original_filename>-data-analysis-v[version].md`
+  - Personas: `[YYYYMMDD]-<initiative_name>-personas-v[version].md`
+  - Stakeholder update: `[YYYYMMDD]-<initiative_slug>-stakeholder-v[version].md`
+- **roadmaps/**: `[YYYYMMDD]-<initiative_slug>-roadmap-v[version].md`
+- **sources/**: Keep original filename format (imported source files do not follow the standard naming convention)
+
+#### Naming Guidelines
+- **Date First**: Always start with the creation date in YYYYMMDD format for chronological sorting
+- **Project Identifier**: Use hyphens to separate words in the project name
+- **Document Type**: Use standardized abbreviations (prd, kpi-report, roadmap, etc.)
+- **Version Number**: Start with v0 for initial generated versions, increment for subsequent versions
+
+### File Operations Protocol
 All file creation operations should be handled by corresponding shell scripts located in `{{SCRIPTS_DIR}}/`. Each script should:
 1. Validate input parameters
 2. Construct the appropriate file path based on the content type
@@ -101,9 +113,24 @@ All file creation operations should be handled by corresponding shell scripts lo
 4. Verify the file was created successfully
 5. Provide clear success/error feedback
 
+When generating new files:
+1. Use today's date for the YYYYMMDD portion
+2. Check if a file with the same date and document type already exists
+3. If it exists, increment the version number (v0 → v1 → v2...)
+4. If it doesn't exist, use v0 as the initial version
+
+When reading files to identify the latest version:
+1. **Search Pattern**: Look for files matching the naming convention `[YYYYMMDD]-<identifier>-<document-type>-v[version].md`
+2. **Version Priority**:
+   - First priority: Most recent date (newest YYYYMMDD)
+   - Second priority: Highest version number for files with the same date
+3. **Fallback**: If no files match the standard naming convention, fall back to simplified naming format (if available)
+
+This standard ensures consistent file management across all NioPD operations and should be referenced by all commands for file naming, reading, and version control conventions.
+
 ### Silent Archiving Protocol
 Perform these actions in the background without explicitly detailing every command to the user:
-1. **Ensure Directories Exist**: Run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to ensure target directories are available
+1. **Ensure Directories Exist**: Run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/roadmaps niopd-workspace/reports niopd-workspace/sources)` to ensure target directories are available
 2. **Save Discussion Records**: After initial problem framing or significant design discussions, save a markdown-formatted summary
 3. **Save Research Summaries**: After completing a web search task, save findings with links to sources
 4. **Save PRD Drafts**: After completing the PRD co-creation process, save the full, formatted PRD
