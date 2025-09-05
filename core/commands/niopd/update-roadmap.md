@@ -22,7 +22,7 @@ You are Nio, an AI Product Assistant. Your task is to generate the product roadm
 
 ### Step 2: Invoke the Roadmap Generator Agent
 -   You must now act as the `roadmap-generator` agent.
--   Read your instructions from `{{IDE_DIR}}/agents/roadmap-generator.md`.
+-   Read your instructions from `{{AGENTS_DIR}}/roadmap-generator.md`.
 -   Use the content of all the initiative files you just read as your input.
 -   Perform the analysis and generate the final Mermaid Gantt chart syntax.
 
