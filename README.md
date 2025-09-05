@@ -184,53 +184,46 @@ The NioPD organization consists of three core roles who share a workspace, a too
 
 All Roles & Agents share a workspace, a toolset, and common collaboration protocols.
 
-### NioPD Workspace Defination
-- **Purpose:** Data Directories (`niopd-workspace/`) Stores the artifacts generated during the product management workflow, as well as user-provided project background information and raw data.
-- **Implementation:**
-  - `niopd-workspace/initiatives/`: Contains high-level strategic product initiatives, brainstorming information, and manually added project background information.
-  - `niopd-workspace/prds/`: Stores Product Requirement Documents.
-  - `niopd-workspace/reports/`: Contains generated reports and analysis, such as feedback analysis.
-  - `niopd-workspace/roadmaps/`: Stores roadmap documents.
-  - `niopd-workspace/sources/`: Stores raw data and other data resource files manually imported by the user for analysis.
-- **Best Practices:**
-  - Directory structure should be intuitive and well-documented
-  - Files should be organized by type and purpose
-  - Consistent naming conventions should be used
+The NioPD workspace (`niopd-workspace/`) is a shared file-based environment where all roles and agents collaborate, storing artifacts generated during the product management workflow.
 
-### **File Storage Directory Rules**
+### Directory Structure
+- `niopd-workspace/initiatives/`: High-level strategic product initiatives
+- `niopd-workspace/prds/`: Product Requirement Documents
+- `niopd-workspace/reports/`: Analysis and summary reports
+- `niopd-workspace/roadmaps/`: Product roadmaps
+- `niopd-workspace/sources/`: Raw data and imported files
 
-When creating new commands or new sub agents that generate files, follow these directory structure rules:
+### File Naming and Version Control
+All NioPD files follow a standardized naming pattern: `[YYYYMMDD]-<identifier>-<document-type>-v[version].md`
 
-- **Initiatives:** Store initiative files in `niopd-workspace/initiatives/` (e.g., `niopd-workspace/initiatives/my-feature.md`)
-- **PRDs:** Store Product Requirements Documents in `niopd-workspace/prds/` (e.g., `niopd-workspace/prds/prd-my-feature.md`)
-- **Reports:** Store analysis and summary reports in `niopd-workspace/reports/` (e.g., `niopd-workspace/reports/competitor-analysis-my-feature.md`)
-- **Roadmaps:** Store product roadmaps in `niopd-workspace/roadmaps/` (e.g., `niopd-workspace/roadmaps/product-roadmap.md`)
-- **Sources:** Store raw data files in `niopd-workspace/sources/` (e.g., `niopd-workspace/sources/user-feedback.txt`)
+#### Directory-Specific Naming Patterns
+- **initiatives/**: `[YYYYMMDD]-<initiative_slug>-initiative-v[version].md`
+- **prds/**: `[YYYYMMDD]-<initiative_slug>-prd-v[version].md`
+- **reports/**:
+  - Feedback summary: `[YYYYMMDD]-<initiative_slug>-feedback-summary-v[version].md`
+  - Interview summary: `[YYYYMMDD]-<original_filename>-interview-summary-v[version].md`
+  - KPI report: `[YYYYMMDD]-<initiative_slug>-kpi-report-v[version].md`
+  - Competitor analysis: `[YYYYMMDD]-<domain_name>-competitor-analysis-v[version].md`
+  - Trend report: `[YYYYMMDD]-<topic_slug>-trend-report-v[version].md`
+  - Data analysis: `[YYYYMMDD]-<original_filename>-data-analysis-v[version].md`
+  - Personas: `[YYYYMMDD]-<initiative_name>-personas-v[version].md`
+  - Stakeholder update: `[YYYYMMDD]-<initiative_slug>-stakeholder-v[version].md`
+- **roadmaps/**: `[YYYYMMDD]-<initiative_slug>-roadmap-v[version].md`
+- **sources/**: Keep original filename format
 
-All file creation operations should be handled by corresponding shell scripts located in `core/scripts/niopd/`. Each script should:
-1. Validate input parameters
-2. Construct the appropriate file path based on the content type
-3. Create the file with the provided content
-4. Verify the file was created successfully
-5. Provide clear success/error feedback
+#### Version Management
+- Use today's date for the YYYYMMDD portion
+- Check if a file with the same date and document type already exists
+- If it exists, increment the version number (v0 → v1 → v2...)
+- If it doesn't exist, use v0 as the initial version
 
-###  **File Naming And Archiving Protocol**
+### Silent Archiving
+NioPD automatically archives key information in the background:
+- **Discussion Records:** After significant design discussions
+- **Research Summaries:** After completing web search tasks
+- **PRD Drafts:** After PRD co-creation process
 
-You must perform these actions in the background without explicitly detailing every command to the user. Simply state that you are "making a note of the conversation" or "archiving the research."
-
-1.  **Ensure Directories Exist:** Before saving, run `Bash(mkdir -p niopd-workspace/prds niopd-workspace/initiatives niopd-workspace/sources)` to make sure the target directories are available.
-2.  **Save Discussion Records:**
-    - **When:** After initial problem framing or significant design discussions.
-    - **Command:** `Bash(echo "..." > niopd-workspace/initiatives/discussion-summary-$(date +%s).md)`
-    - **Content:** A markdown-formatted summary of the conversation.
-3.  **Save Research Summaries:**
-    - **When:** After completing a web search task.
-    - **Command:** `Bash(echo "..." > niopd-workspace/sources/research-summary-$(date +%s).md)`
-    - **Content:** A summary of the web findings with links to the sources.
-4.  **Save PRD Drafts:**
-    - **When:** After completing the PRD co-creation process.
-    - **Command:** `Bash(echo "..." > niopd-workspace/prds/prd-draft-$(date +%s).md)`
-    - **Content:** The full, formatted PRD.
+This ensures all important work is preserved without interrupting your workflow.
 
 ---
 
@@ -419,10 +412,8 @@ For commands that need to perform actions on the file system, the command prompt
 ### Core Workflow ✅ *Fully Implemented*
 - `/niopd:hi`: Start an interactive session with Nio, your product supervisor.
 - `/niopd:new-initiative "<name>"`: Start a new high-level product initiative.
-- `/niopd:import-feedback --from=<path> --for=<initiative>`: Import a file of user feedback.
 - `/niopd:summarize-feedback --from=<file> --for=<initiative>`: Use an AI agent to analyze a feedback file.
 - `/niopd:draft-prd --for=<initiative>`: Automatically generate a PRD draft.
-- `/niopd:edit-prd <prd_name>`: Get instructions to manually edit a PRD.
 - `/niopd:update-roadmap`: Generate or update the product roadmap.
 - `/niopd:help`: Display help information about the NioPD system and its commands.
 
