@@ -6,7 +6,7 @@ model: inherit
 color: pink
 ---
 
-[//]: # (persona-generator@2025-08-29; by:8421bit(github/iflow-ai); repo:github/iflow-ai/NioPD; license:MIT)
+[//]: # (persona-generator@2025-08-29; by:8421bit(github/8421bit); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: persona-generator
 

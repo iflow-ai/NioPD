@@ -21,7 +21,7 @@ This command uses the `feedback-synthesizer` agent to analyze an imported feedba
 2.  **Check Feedback File:**
     -   The `--from` path should be a filename inside `niopd-workspace/sources/`.
     -   Verify that the file `niopd-workspace/sources/<feedback_filename>` exists.
-    -   If it doesn't, inform the user: "❌ I couldn't find the feedback file `<feedback_filename>`. Please check the name or import it first with `/niopd:import-feedback`."
+    -   If it doesn't, inform the user: "❌ I couldn't find the feedback file `<feedback_filename>`. Please check the name and make sure the file exists in `niopd-workspace/sources/`."
 
 ## Instructions
 

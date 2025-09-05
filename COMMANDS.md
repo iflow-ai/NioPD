@@ -40,11 +40,6 @@ These are the fundamental commands for moving from an idea to a plan.
 - **Usage**: `/niopd:new-initiative "<initiative_name>"`
 - **Output**: A new initiative file in `niopd-workspace/initiatives/`.
 
-### `/niopd:import-feedback`
-- **Purpose**: Import a file of user feedback.
-- **Usage**: `/niopd:import-feedback --from=<path> --for=<initiative>`
-- **Output**: A copy of the feedback file in `niopd-workspace/sources/`.
-
 ### `/niopd:summarize-feedback`
 - **Purpose**: Analyze a feedback file and create a summary report.
 - **Usage**: `/niopd:summarize-feedback --from=<file> --for=<initiative>`
@@ -54,11 +49,6 @@ These are the fundamental commands for moving from an idea to a plan.
 - **Purpose**: Automatically generate a PRD draft from an initiative and feedback.
 - **Usage**: `/niopd:draft-prd --for=<initiative>`
 - **Output**: A new PRD file in `niopd-workspace/prds/`.
-
-### `/niopd:edit-prd`
-- **Purpose**: Get instructions to manually edit a PRD.
-- **Usage**: `/niopd:edit-prd <prd_name>`
-- **Output**: A message with the file path and instructions.
 
 ### `/niopd:update-roadmap`
 - **Purpose**: Generate or update the product roadmap from all initiatives.
@@ -114,7 +104,7 @@ Commands to assist with the details of planning and defining features.
 - **Usage**: `/niopd:assess-feasibility --for=<prd_name>`
 - **Output**: An assessment report.
 
-### `/niopd:write-stories` *(Coming Soon)*
+### `/niopd:write-stories`
 - **Purpose**: Writes detailed user stories and acceptance criteria for a PRD.
 - **Usage**: `/niopd:write-stories --for=<prd_name>`
 - **Output**: An updated PRD or a separate user story document.
@@ -147,7 +137,7 @@ Commands to help with the go-to-market and launch process.
 - **Usage**: `/niopd:draft-release-notes --for=<prd_name>`
 - **Output**: A draft of release notes.
 
-### `/niopd:generate-faq` *(Coming Soon)*
+### `/niopd:generate-faq`
 - **Purpose**: Creates a list of FAQs for a new feature.
 - **Usage**: `/niopd:generate-faq --for=<prd_name>`
 - **Output**: A FAQ document.

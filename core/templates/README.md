@@ -147,6 +147,24 @@ Brief overview of the document's purpose and contents.
 - Error handling guidelines
 - Consistent formatting for integration with the NioPD system
 
+#### 13. User Story Template ([user-story-template.md](user-story-template.md))
+**Purpose:** Standard template for creating user stories and acceptance criteria
+**Used by:** `story-writer` agent
+**Key Features:**
+- Standardized structure for user stories
+- Acceptance criteria with Given/When/Then format
+- Edge case and alternative flow documentation
+- Persona-based organization
+
+#### 14. FAQ Template ([faq-template.md](faq-template.md))
+**Purpose:** Standard template for creating FAQ documents
+**Used by:** `faq-generator` agent
+**Key Features:**
+- Categorized question organization
+- Clear, concise answer format
+- Additional resources section
+- Table of contents for easy navigation
+
 ## Template Usage Guidelines
 
 ### Variable Format

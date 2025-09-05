@@ -19,7 +19,6 @@ All NioPD scripts are located in the [NioPD](niopd/) subdirectory:
 |-------------|----------|-------|---------|
 | [init.sh](niopd/init.sh) | `{{SCRIPTS_DIR}}/init.sh` | `./init.sh` | Initializes the NioPD system by creating the necessary directory structure in `niopd-workspace/` |
 | [new-initiative.sh](niopd/new-initiative.sh) | `{{SCRIPTS_DIR}}/new-initiative.sh` | `./new-initiative.sh <file-slug> "<file-content>"` | Creates new initiative files in the `niopd-workspace/initiatives/` directory |
-| [import-feedback.sh](niopd/import-feedback.sh) | `{{SCRIPTS_DIR}}/import-feedback.sh` | `./import-feedback.sh <source_file_path> <destination_filename>` | Copies files to the `niopd-workspace/sources/` directory |
 | [analyze-competitor.sh](niopd/analyze-competitor.sh) | `{{SCRIPTS_DIR}}/analyze-competitor.sh` | `./analyze-competitor.sh <domain_name> "<report_content>"` | Saves competitor analysis reports to the `niopd-workspace/reports/` directory |
 | [analyze-data.sh](niopd/analyze-data.sh) | `{{SCRIPTS_DIR}}/analyze-data.sh` | `./analyze-data.sh <original_filename> "<report_content>"` | Saves data analysis reports to the `niopd-workspace/reports/` directory |
 | [draft-prd.sh](niopd/draft-prd.sh) | `{{SCRIPTS_DIR}}/draft-prd.sh` | `./draft-prd.sh <initiative_slug> "<prd_content>"` | Saves PRD drafts to the `niopd-workspace/prds/` directory |
@@ -32,6 +31,8 @@ All NioPD scripts are located in the [NioPD](niopd/) subdirectory:
 | [update-roadmap.sh](niopd/update-roadmap.sh) | `{{SCRIPTS_DIR}}/update-roadmap.sh` | `./update-roadmap.sh "<roadmap_content>"` | Saves product roadmaps to the `niopd-workspace/roadmaps/` directory |
 | [save-file.sh](niopd/save-file.sh) | `{{SCRIPTS_DIR}}/save-file.sh` | `./save-file.sh <file_path> "<file_content>"` | Generic script to save any content to a specified file path |
 | [help.sh](niopd/help.sh) | `{{SCRIPTS_DIR}}/help.sh` | `./help.sh` | Displays help information about the NioPD system and its commands |
+| [write-stories.sh](niopd/write-stories.sh) | `{{SCRIPTS_DIR}}/write-stories.sh` | `./write-stories.sh <initiative_slug> "<stories_content>"` | Saves user stories and acceptance criteria to the `niopd-workspace/reports/` directory |
+| [generate-faq.sh](niopd/generate-faq.sh) | `{{SCRIPTS_DIR}}/generate-faq.sh` | `./generate-faq.sh <initiative_slug> "<faq_content>"` | Saves FAQ documents to the `niopd-workspace/reports/` directory |
 
 ## Creating New Scripts
 

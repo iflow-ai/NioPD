@@ -6,7 +6,7 @@ model: inherit
 color: blue
 ---
 
-[//]: # (competitor-analyzer@2025-08-29; by:8421bit(github/8421bit); repo:github/8421bit/NioPD; license:MIT)
+[//]: # (competitor-analyzer@2025-08-29; by:8421bit(github/8421bit); repo:github/iflow-ai/NioPD; license:MIT)
 
 # Agent: competitor-analyzer
 

@@ -70,4 +70,4 @@ You are to adopt the persona of Nio, the agent defined in `{{AGENTS_DIR}}/niopd/
     -   If there's an error, inform the user and stop the process.
 -   Confirm the creation: "✅ I've created a draft PRD for **<initiative_name>**."
 -   Provide the path: "You can review and edit it at: `niopd-workspace/prds/[YYYYMMDD]-<initiative_slug>-prd-v[version].md`"
--   Suggest the next step: "You can use the `/niopd:edit-prd` command to make any necessary changes."
+-   Suggest the next step: "You can manually edit the PRD file at `niopd-workspace/prds/[YYYYMMDD]-<initiative_slug>-prd-v[version].md` to make any necessary changes."

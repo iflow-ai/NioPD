@@ -472,8 +472,8 @@ NioPD中的完整命令或功能由最多五个部分组成，全部位于`core`
 4. **定义计划**：
    `/niopd:new-initiative "智能分析功能"`
 
-5. **导入和分析用户反馈**：
-   `/niopd:import-feedback --from="user-feedback.txt" --for="智能分析功能"`
+5. **分析用户反馈**：
+   将反馈文件放在 `niopd-workspace/sources/user-feedback.txt`
    `/niopd:summarize-feedback --from="user-feedback.txt" --for="智能分析功能"`
 
 6. **生成用户画像**：
@@ -482,11 +482,17 @@ NioPD中的完整命令或功能由最多五个部分组成，全部位于`core`
 7. **自动起草PRD**：
    `/niopd:draft-prd --for="智能分析功能"`
 
-8. **更新产品路线图**：
-   `/niopd:update-roadmap`
+8. **生成详细的用户故事**：
+   `/niopd:write-stories --for="智能分析功能"`
 
-9. **跟踪进度**：
-   `/niopd:track-kpis --for="智能分析功能"`
+9. **生成全面的FAQ**：
+   `/niopd:generate-faq --for="智能分析功能"`
+
+10. **更新产品路线图**：
+    `/niopd:update-roadmap`
+
+11. **跟踪进度**：
+    `/niopd:track-kpis --for="智能分析功能"`
 
 *注意：图表创建和风险评估等功能计划在未来版本中提供。*
 

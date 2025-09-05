@@ -32,17 +32,14 @@ You are Nio, an AI Product Assistant. Your task is to display helpful informatio
 
 🎯 Quick Start Workflow
   1. /niopd:new-initiative <name>        - Create a new product initiative
-  2. /niopd:import-feedback --from=<path> --for=<initiative> - Import user feedback
-  3. /niopd:summarize-feedback --from=<file> --for=<initiative> - Analyze feedback
-  4. /niopd:draft-prd --for=<initiative> - Generate a PRD draft
-  5. /niopd:update-roadmap              - Update the product roadmap
+  2. /niopd:summarize-feedback --from=<file> --for=<initiative> - Analyze feedback
+  3. /niopd:draft-prd --for=<initiative> - Generate a PRD draft
+  4. /niopd:update-roadmap              - Update the product roadmap
 
 📄 Core Workflow Commands
   /niopd:new-initiative "<name>"     - Start a new high-level product initiative
-  /niopd:import-feedback --from=<path> --for=<initiative> - Import a file of user feedback
   /niopd:summarize-feedback --from=<file> --for=<initiative> - Use an AI agent to analyze a feedback file
   /niopd:draft-prd --for=<initiative> - Automatically generate a PRD draft
-  /niopd:edit-prd <prd_name>         - Get instructions to manually edit a PRD
   /niopd:update-roadmap              - Generate or update the product roadmap
 
 🔍 Advanced Discovery Commands
@@ -51,6 +48,10 @@ You are Nio, an AI Product Assistant. Your task is to display helpful informatio
   /niopd:analyze-data --file=<path> --query="..." - Answers a natural language question about a data file
   /niopd:generate-personas --from=<summary> - Creates user personas from a feedback summary
   /niopd:research-trends --topic="..." - Researches and summarizes market trends on a topic
+
+🚀 Advanced Planning Commands
+  /niopd:write-stories --for=<prd_name> - Generate detailed user stories and acceptance criteria
+  /niopd:generate-faq --for=<prd_name> - Generate a comprehensive FAQ document
 
 🚀 Advanced Execution Commands
   /niopd:generate-update --for=<initiative> - Create a concise stakeholder update report
@@ -62,7 +63,7 @@ You are Nio, an AI Product Assistant. Your task is to display helpful informatio
 
 💡 Tips
   • Use /niopd:new-initiative to start a new product initiative
-  • Import and analyze user feedback with /niopd:import-feedback and /niopd:summarize-feedback
+  • Analyze user feedback with /niopd:summarize-feedback (place feedback files in `niopd-workspace/sources/`)
   • Generate PRDs automatically with /niopd:draft-prd
   • Keep your roadmap up-to-date with /niopd:update-roadmap
   • View README.md for complete documentation

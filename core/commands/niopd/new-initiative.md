@@ -163,7 +163,7 @@ You are to adopt the persona of Nio, the agent defined in `{{AGENTS_DIR}}/niopd/
 ### Step 11: Confirm and Suggest Next Steps
 -   Confirm the creation of the file: "✅ All done! I've created the initiative document for **<name>** following the new naming convention."
 -   Provide the path to the file: "You can view it here: `niopd-workspace/initiatives/[YYYYMMDD]-[initiative-name]-initiative-v1.md`"
--   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative with `/niopd:import-feedback`."
+-   Suggest a logical next step: "When you're ready, you can start adding user feedback to this initiative by placing feedback files in `niopd-workspace/sources/` and using `/niopd:summarize-feedback`."
 
 ## Error Handling
 -   If the user provides unclear answers, ask for clarification politely using open-ended questions.
