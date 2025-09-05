@@ -15,9 +15,9 @@ This command drafts a new Product Requirement Document (PRD) based on an existin
 ## Preflight Checklist
 
 1.  **Validate Initiative:**
-    -   Check that the initiative file `niopd-workspace/initiatives/<initiative_slug>.md` exists. If not, inform the user.
-    -   Check if a feedback summary report exists for this initiative. A good heuristic is to look for a file like `niopd-workspace/reports/summary-<initiative_slug>-*.md`. If not found, warn the user that the PRD will be less detailed but offer to proceed anyway.
-    -   Check if a PRD with the new naming convention `niopd-workspace/prds/[YYYYMMDD]-[initiative-name]-prd-v1.md` already exists. If so, ask the user if they want to overwrite it.
+    -   Check that the initiative file following the naming convention `[YYYYMMDD]-<initiative_slug>-initiative-v[version].md` exists in `niopd-workspace/initiatives/`. If multiple versions exist, identify and use the latest version based on date and version number. If not, inform the user.
+    -   Check if a feedback summary report exists for this initiative. A good heuristic is to look for a file like `niopd-workspace/reports/[YYYYMMDD]-<initiative_slug>-feedback-summary-v[version].md`. If multiple versions exist, identify and use the latest version based on date and version number. If not found, warn the user that the PRD will be less detailed but offer to proceed anyway.
+    -   Check if a PRD for this initiative already exists in `niopd-workspace/prds/`. If so, ask the user if they want to overwrite it.
 
 ## Instructions
 
@@ -27,8 +27,8 @@ You are Nio, an AI Product Assistant. Your core task is to base on the initial r
 
 ### Step 1: Background Information Collection and Data Gathering
 -   Acknowledge the request: "Okay, I will draft a new PRD for the **<initiative_name>** initiative. I'll gather the initiative goals and the feedback summary to get started."
--   Read the initiative file from `niopd-workspace/initiatives/`.
--   Read the latest feedback summary report from `niopd-workspace/reports/`.
+-   Read the LATEST version of the initiative file from `niopd-workspace/initiatives/[YYYYMMDD]-<initiative_slug]-initiative-v[version].md`, ensuring you select the file with the most recent date and highest version number if multiple versions exist.
+-   Read the LATEST version of the feedback summary report from `niopd-workspace/reports/[YYYYMMDD]-<initiative_slug]-feedback-summary-v[version].md`, ensuring you select the file with the most recent date and highest version number if multiple versions exist.
 -   Read the PRD template from `{{TEMPLATES_DIR}}/prd-daily-template.md`.
 -   Based on the information gathered from the above files and the required information in the PRD template, use heuristic questioning to gradually supplement the essential background information required for the PRD, including but not limited to:
     - Business background and current status
@@ -59,13 +59,13 @@ You are Nio, an AI Product Assistant. Your core task is to base on the initial r
 -   Based on the information confirmed in the first three steps, generate content according to the PRD template structure, module by module.
 -   Each module must be confirmed by the user before proceeding to the next part.
 -   Integrate all modules to output a complete PRD document.
--   Generate a filename for the PRD, e.g., `prd-<initiative_slug>.md`.
+-   Generate a filename for the PRD following the NioPD naming convention: `[YYYYMMDD]-<initiative_slug>-prd-v[version].md`. If a file with today's date already exists, increment the version number accordingly.
 -   Call the helper script to save the completed draft to `niopd-workspace/prds/`.
 -   Script location: `{{SCRIPTS_DIR}}/draft-prd.sh`
--   Pass the initiative slug, initiative name, and completed PRD content as arguments to the script.
+-   Pass the initiative slug and completed PRD content as arguments to the script.
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
 -   Confirm the creation: "✅ I've created a draft PRD for **<initiative_name>**."
--   Provide the path: "You can review and edit it here: `niopd-workspace/prds/[YYYYMMDD]-[initiative-name]-prd-v1.md`"
+-   Provide the path: "You can review and edit it at: `niopd-workspace/prds/[YYYYMMDD]-<initiative_slug>-prd-v[version].md`"
 -   Suggest the next step: "You can use the `/niopd:edit-prd` command to make any necessary changes."
