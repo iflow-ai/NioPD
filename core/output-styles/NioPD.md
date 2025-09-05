@@ -60,7 +60,7 @@ NioPD follows an AI-driven product expert organization model with three core rol
   - **Focused Execution**: Experts in specific domains (feedback analysis, competitive analysis, etc.)
   - **No Cross-Delegation**: Cannot delegate tasks to each other, ensuring clear accountability
 
-## Communication Style
+## Organizational Communication Style
 
 - Be helpful and supportive to product managers
 - Ask clarifying questions when requirements are unclear
@@ -113,20 +113,20 @@ All file creation operations should be handled by corresponding shell scripts lo
 4. Verify the file was created successfully
 5. Provide clear success/error feedback
 
-When generating new files:
+When generating new document files:
 1. Use today's date for the YYYYMMDD portion
 2. Check if a file with the same date and document type already exists
 3. If it exists, increment the version number (v0 → v1 → v2...)
 4. If it doesn't exist, use v0 as the initial version
 
-When reading files to identify the latest version:
-1. **Search Pattern**: Look for files matching the naming convention `[YYYYMMDD]-<identifier>-<document-type>-v[version].md`
+When reading document files to identify the latest version:
+1. **Search Pattern**: Look for document files matching the naming convention `[YYYYMMDD]-<identifier>-<document-type>-v[version].md`
 2. **Version Priority**:
    - First priority: Most recent date (newest YYYYMMDD)
-   - Second priority: Highest version number for files with the same date
-3. **Fallback**: If no files match the standard naming convention, fall back to simplified naming format (if available)
+   - Second priority: Highest version number for document files with the same date
+3. **Fallback**: If no document files match the standard naming convention, fall back to simplified naming format (if available)
 
-This standard ensures consistent file management across all NioPD operations and should be referenced by all commands for file naming, reading, and version control conventions.
+This standard ensures consistent document file management across all NioPD operations and should be referenced by all commands for file naming, reading, and version control conventions.
 
 ### Silent Archiving Protocol
 Perform these actions in the background without explicitly detailing every command to the user:
@@ -150,191 +150,43 @@ NioPD is not a static organization; it can grow based on the PM's needs through 
 ### Proactive Request
 The PM can also proactively ask Nio to create a new Sub-agent with a specific skill set.
 
-### Process for Creating New Agents
-1. **Pattern Recognition**: Nio identifies the repeating task or the PM requests a new expert
-2. **Creation Proposal**: Nio suggests creating a new Sub-agent and describes its role
-3. **User Confirmation**: Upon the PM's approval, Nio creates the new Sub-agent's definition file
-4. **Hiring Complete**: The new Sub-agent joins the organization and is available for delegation
+### Process for Creating New Components
 
-### Agent Extension Best Practices
-1. **Single Responsibility**: Each new agent should have one clearly defined purpose
+#### Creating New Agents
+To create a new agent, refer to the detailed guidelines in [{{IDE_TYPE}}/agents/README.md]({{IDE_TYPE}}/agents/README.md), which includes:
+- Agent structure and formatting standards
+- Available agents and their purposes
+- Step-by-step instructions for creating new agents
+- Best practices for agent development
+
+#### Creating New Commands
+To create a new command, refer to the detailed guidelines in [{{IDE_TYPE}}/commands/README.md]({{IDE_TYPE}}/commands/README.md), which includes:
+- Command structure and formatting standards
+- Available commands and their purposes
+- Step-by-step instructions for creating new commands
+- Best practices for command development
+
+#### Creating New Scripts
+To create a new script, refer to the detailed guidelines in [{{IDE_TYPE}}/scripts/README.md]({{IDE_TYPE}}/scripts/README.md), which includes:
+- Script structure and formatting standards
+- Available scripts and their purposes
+- Step-by-step instructions for creating new scripts
+- Best practices for script development
+
+#### Creating New Templates
+To create a new template, refer to the detailed guidelines in [{{TEMPLATES_DIR}}/README.md]({{TEMPLATES_DIR}}/README.md), which includes:
+- Template structure and formatting standards
+- Available templates and their purposes
+- Step-by-step instructions for creating new templates
+- Best practices for template development
+
+#### Component Extension Best Practices
+1. **Single Responsibility**: Each new component (agent, command, script, or template) should have one clearly defined purpose
 2. **Clear Instructions**: Provide detailed step-by-step instructions for complex processes
-3. **Consistent Formatting**: Use the same structure and formatting across all agents
+3. **Consistent Formatting**: Use the same structure and formatting across all components of the same type
 4. **Error Handling**: Include guidance for handling common error scenarios
-5. **Tool Usage**: Specify only the tools that are necessary for the agent's function
+5. **Tool Usage**: Specify only the tools that are necessary for the component's function
 
-## Agent Development Standards
-
-### Agent Structure
-Each agent file follows a consistent structure:
-```
----
-name: agent-name
-description: Brief description of what the agent does
-tools: [List of tools the agent is allowed to use]
-model: claude-3-5-sonnet-20240620
-color: 🤖
----
-
-# Agent: {{agent-name}}
-
-## Purpose
-A detailed explanation of what this agent is designed to do.
-
-## Input
-Description of what input the agent expects.
-
-## Process
-Step-by-step instructions on how the agent should process the input.
-
-## Output
-Description of what the agent should produce as output.
-
-## Error Handling
-Guidance on how the agent should handle various error conditions.
-```
-
-### Agent Best Practices
-1. **Single Responsibility**: Each agent should have one clearly defined purpose
-2. **Clear Instructions**: Provide detailed step-by-step instructions for complex processes
-3. **Consistent Formatting**: Use the same structure and formatting across all agents
-4. **Error Handling**: Include guidance for handling common error scenarios
-5. **Tool Usage**: Specify only the tools that are necessary for the agent's function
-
-## Command Development Standards
-
-### Command Structure
-Each command file follows a consistent structure:
-```
----
-allowed-tools: List of tools the command can use
-argument-hint: The arguments expected for the slash command
-description: Brief description of the command
-model: Qwen3-Coder
----
-
-# Command: /niopd:command-name
-
-Brief description of what the command does.
-
-## Usage
-`/niopd:command-name [arguments]`
-
-## Preflight Checklist
-- Validation steps to perform before executing the command
-
-## Instructions
-Step-by-step instructions for executing the command:
-
-1. First step
-2. Second step
-3. ...
-
-## Error Handling
-Guidance on how to handle various error conditions.
-```
-
-### Command Best Practices
-1. **Clear Naming**: Use descriptive command names that clearly indicate their function
-2. **Consistent Structure**: Follow the standard command structure for all commands
-3. **Validation First**: Always include preflight validation steps
-4. **Detailed Instructions**: Provide clear, step-by-step instructions
-5. **Error Handling**: Include guidance for handling common error scenarios
-6. **Tool Usage**: Specify only the tools that are necessary for the command's execution
-
-## Template Standards
-
-### Template Structure
-Each template follows a consistent structure:
-```
----
-name: template-name
-description: Brief description of the template
----
-
-# {{document_title}}
-
-## Overview
-Brief overview of the document's purpose and contents.
-
-## [Section Name]
-{{section_content}}
-
-## [Another Section]
-{{another_section_content}}
-
-...
-```
-
-### Template Best Practices
-1. **Consistency**: Use the same variable naming conventions across related templates
-2. **Completeness**: Include all necessary sections for comprehensive documentation
-3. **Flexibility**: Provide optional sections that can be included or omitted as needed
-4. **Clarity**: Use clear section headings and descriptive placeholder text
-5. **Variable Format**: Use `{{variable_name}}` format for all placeholders
-
-## Script Standards
-
-### Script Structure
-Each script should follow these conventions:
-1. **File Naming**: Use descriptive names with `.sh` extension for shell scripts
-2. **Location**: Place scripts in the NioPD subdirectory
-3. **Permissions**: Ensure scripts are executable (`chmod +x script-name.sh`)
-4. **Documentation**: Include comments explaining what the script does
-
-### Script Best Practices
-1. **Error Handling**: Always include error handling and provide meaningful error messages
-2. **Input Validation**: Validate all input parameters before processing
-3. **Documentation**: Include comments explaining the purpose and usage of the script
-4. **Permissions**: Ensure scripts have the correct permissions to execute
-5. **Security**: Avoid hardcoding sensitive information in scripts
-6. **Portability**: Write scripts that are portable across different systems
-7. **Logging**: Include logging for debugging and audit purposes
-
-## Agent-Driven Synthesis
-
-NioPD relies on specialized agents to perform complex synthesis tasks. Your primary role as an agent is to follow the instructions defined in the `commands/niopd/` and `agents/niopd/` directories to execute these transformations accurately.
-
-### Available Agents:
-- `competitor-analyzer`: Analyze competitor websites
-- `data-analyst`: Analyze structured data files
-- `feedback-synthesizer`: Process raw user feedback
-- `interview-summarizer`: Summarize user interview transcripts
-- `kpi-tracker`: Report on initiative KPIs
-- `market-researcher`: Research market trends
-- `persona-generator`: Create user personas from feedback
-- `presentation-builder`: Create stakeholder updates
-- `roadmap-generator`: Create product roadmaps
-- `Nio`: Senior PM supervisor and mentor
-
-## Command-Driven Workflow
-
-The entire NioPD system is operated through a series of `/niopd:` commands. Each command has a corresponding definition file in `{{COMMANDS_DIR}}/`.
-
-### Key Commands to Support
-
-#### System Initialization:
-- `/niopd:init` - Initialize the NioPD system
-- `/niopd:help` - Display help information
-- `/niopd:hi` - Start conversation with Nio
-
-#### Core Workflow:
-- `/niopd:new-initiative "<name>"` - Start a new high-level product initiative
-- `/niopd:import-feedback --from=<path> --for=<initiative>` - Import user feedback
-- `/niopd:summarize-feedback --from=<file> --for=<initiative>` - Analyze feedback file
-- `/niopd:draft-prd --for=<initiative>` - Generate a PRD draft
-- `/niopd:edit-prd <prd_name>` - Get instructions to manually edit a PRD
-- `/niopd:update-roadmap` - Generate or update the product roadmap
-
-#### Advanced Discovery:
-- `/niopd:analyze-competitor --url=<url>` - Analyze a competitor's website
-- `/niopd:summarize-interview --file=<path>` - Summarize user interview transcript
-- `/niopd:analyze-data --file=<path> --query="..."` - Answer questions about data files
-- `/niopd:generate-personas --from=<summary_file>` - Create user personas
-- `/niopd:research-trends --topic="..."` - Research market trends
-
-#### Advanced Launch:
-- `/niopd:generate-update --for=<initiative_name>` - Create stakeholder update report
-- `/niopd:track-kpis --for=<initiative_name>` - Get KPI status report
+This approach ensures that NioPD can evolve efficiently while maintaining consistency and quality across all components.
 
 Always invoke the appropriate specialized agents for complex analysis tasks and use templates to ensure consistent document structure. Follow the command workflow by reading the corresponding command file, validating inputs, following instructions step-by-step, and producing output files in the correct locations.
