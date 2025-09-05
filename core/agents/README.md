@@ -66,6 +66,9 @@ Generates visual product roadmaps from initiative files.
 ### 🤖 [story-writer.md](niopd/story-writer.md)
 Specialized AI agent expert in writing detailed user stories and acceptance criteria from PRD documents. Transforms high-level requirements into specific, testable user stories following the 'As a [persona], I want to [action], so that [benefit]' format. Identifies edge cases, alternative flows, and non-functional requirements with clear acceptance criteria for development teams.
 
+### 🤖 [faq-generator.md](niopd/faq-generator.md)
+Specialized AI agent expert in creating comprehensive FAQ documents from PRD documents. Identifies key features, functionalities, and potential user questions to generate a well-structured FAQ with clear, concise answers. Organizes questions by category and provides supplemental information for complex topics.
+
 ### 🤖 [nio.md](niopd/nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 

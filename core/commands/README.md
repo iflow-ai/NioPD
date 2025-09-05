@@ -60,6 +60,7 @@ All NioPD commands are located in the [NioPD](niopd/) subdirectory:
 - [generate-update.md](niopd/generate-update.md) - Create a concise stakeholder update report
 - [track-kpis.md](niopd/track-kpis.md) - Get a status report on an initiative's KPIs
 - [write-stories.md](niopd/write-stories.md) - Writes detailed user stories and acceptance criteria for a PRD
+- [generate-faq.md](niopd/generate-faq.md) - Generates a FAQ document for a PRD
 
 ## Creating New Commands
 

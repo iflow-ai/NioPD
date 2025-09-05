@@ -32,6 +32,8 @@ All NioPD scripts are located in the [NioPD](niopd/) subdirectory:
 | [update-roadmap.sh](niopd/update-roadmap.sh) | `{{SCRIPTS_DIR}}/update-roadmap.sh` | `./update-roadmap.sh "<roadmap_content>"` | Saves product roadmaps to the `niopd-workspace/roadmaps/` directory |
 | [save-file.sh](niopd/save-file.sh) | `{{SCRIPTS_DIR}}/save-file.sh` | `./save-file.sh <file_path> "<file_content>"` | Generic script to save any content to a specified file path |
 | [help.sh](niopd/help.sh) | `{{SCRIPTS_DIR}}/help.sh` | `./help.sh` | Displays help information about the NioPD system and its commands |
+| [write-stories.sh](niopd/write-stories.sh) | `{{SCRIPTS_DIR}}/write-stories.sh` | `./write-stories.sh <initiative_slug> "<stories_content>"` | Saves user stories and acceptance criteria to the `niopd-workspace/reports/` directory |
+| [generate-faq.sh](niopd/generate-faq.sh) | `{{SCRIPTS_DIR}}/generate-faq.sh` | `./generate-faq.sh <initiative_slug> "<faq_content>"` | Saves FAQ documents to the `niopd-workspace/reports/` directory |
 
 ## Creating New Scripts
 
