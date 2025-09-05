@@ -463,8 +463,8 @@ Here's how you might use NioPD to research and plan a new feature using the curr
 4.  **Define the initiative:**
     `/niopd:new-initiative "Intelligent Analysis Feature"`
 
-5.  **Import and analyze user feedback:**
-    `/niopd:import-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
+5.  **Analyze user feedback:**
+    Place your feedback file in `niopd-workspace/sources/user-feedback.txt`
     `/niopd:summarize-feedback --from="user-feedback.txt" --for="Intelligent Analysis Feature"`
 
 6.  **Generate user personas:**
@@ -473,10 +473,16 @@ Here's how you might use NioPD to research and plan a new feature using the curr
 7.  **Draft the PRD automatically:**
     `/niopd:draft-prd --for="Intelligent Analysis Feature"`
 
-8.  **Update the product roadmap:**
+8.  **Generate detailed user stories:**
+    `/niopd:write-stories --for="Intelligent Analysis Feature"`
+
+9.  **Generate a comprehensive FAQ:**
+    `/niopd:generate-faq --for="Intelligent Analysis Feature"`
+
+10. **Update the product roadmap:**
     `/niopd:update-roadmap`
 
-9.  **Track progress:**
+11. **Track progress:**
     `/niopd:track-kpis --for="Intelligent Analysis Feature"`
 
 *Note: Features like diagram creation and risk assessment are planned for future releases.*

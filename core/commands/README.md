@@ -42,10 +42,8 @@ All NioPD commands are located in the [NioPD](niopd/) subdirectory:
 ### Core Workflow Commands
 - [hi.md](niopd/hi.md) - Initiates a conversation with Nio, your product management supervisor
 - [new-initiative.md](niopd/new-initiative.md) - Start a new high-level product initiative
-- [import-feedback.md](NiniopdoPD/import-feedback.md) - Import a file of user feedback
 - [summarize-feedback.md](niopd/summarize-feedback.md) - Analyze a feedback file and create a summary report
 - [draft-prd.md](niopd/draft-prd.md) - Automatically generate a PRD draft from an initiative and feedback
-- [edit-prd.md](niopd/edit-prd.md) - Get instructions to manually edit a PRD
 - [update-roadmap.md](niopd/update-roadmap.md) - Generate or update the product roadmap from all initiatives
 - [help.md](niopd/help.md) - Display help information about the NioPD system
 
