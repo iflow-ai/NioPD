@@ -116,6 +116,32 @@ Commands to assist with the details of planning and defining features.
 
 ---
 
+## Organizational Update Commands
+
+Commands to help with organizational self-evolution and optimization.
+
+### `/niopd:org-update-check`
+- **Purpose**: Check organizational update opportunities including new commands, personal habits, and new agents.
+- **Usage**: `/niopd:org-update-check`
+- **Output**: A report of organizational update opportunities based on current workspace analysis.
+
+### `/niopd:org-update-new-command`
+- **Purpose**: Create a new user-defined command based on recent task context.
+- **Usage**: `/niopd:org-update-new-command [task description]`
+- **Output**: A new command structure and implementation guidance.
+
+### `/niopd:org-update-new-agent`
+- **Purpose**: Create a new agent based on task requirements.
+- **Usage**: `/niopd:org-update-new-agent [agent description]`
+- **Output**: A new agent structure and implementation guidance.
+
+### `/niopd:org-update-new-memory`
+- **Purpose**: Identify, record and manage personal work habits.
+- **Usage**: `/niopd:org-update-new-memory [habit description]`
+- **Output**: Personal work habits documentation in the IDE configuration file.
+
+---
+
 ## Advanced Launch Commands
 
 Commands to help with the go-to-market and launch process.
