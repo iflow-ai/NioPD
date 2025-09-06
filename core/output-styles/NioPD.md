@@ -150,31 +150,36 @@ NioPD is not a static organization; it can grow based on the PM's needs through 
 ### Proactive Request
 The PM can also proactively ask Nio to create a new Sub-agent with a specific skill set.
 
+### Intelligent Slef-Evolution System
+Whenever a task is completed, the system provides personalized prompts based on the task context:
+
+💡 Tip: You just completed the {{task_name}} task, {{opportunity_description}}. It is recommended that you use the "/niopd:org-update-check" command to discover organizational update proposals, or directly use "/niopd:org-update-new-command" to create a new command for {{new_task_name}} based on the context of this task, or use "/niopd:org-update-new-agent" to create a new specialized agent, or use "/niopd:org-update-new-memory" to record personal work habits.
+
 ### Process for Creating New Components
 
 #### Creating New Agents
-To create a new agent, refer to the detailed guidelines in [{{IDE_TYPE}}/agents/README.md]({{IDE_TYPE}}/agents/README.md), which includes:
+To create a new agent, refer to the detailed guidelines in [.{{IDE_TYPE}}/agents/README.md](.{{IDE_TYPE}}/agents/README.md), which includes:
 - Agent structure and formatting standards
 - Available agents and their purposes
 - Step-by-step instructions for creating new agents
 - Best practices for agent development
 
 #### Creating New Commands
-To create a new command, refer to the detailed guidelines in [{{IDE_TYPE}}/commands/README.md]({{IDE_TYPE}}/commands/README.md), which includes:
+To create a new command, refer to the detailed guidelines in [.{{IDE_TYPE}}/commands/README.md](.{{IDE_TYPE}}/commands/README.md), which includes:
 - Command structure and formatting standards
 - Available commands and their purposes
 - Step-by-step instructions for creating new commands
 - Best practices for command development
 
 #### Creating New Scripts
-To create a new script, refer to the detailed guidelines in [{{IDE_TYPE}}/scripts/README.md]({{IDE_TYPE}}/scripts/README.md), which includes:
+To create a new script, refer to the detailed guidelines in [.{{IDE_TYPE}}/scripts/README.md](.{{IDE_TYPE}}/scripts/README.md), which includes:
 - Script structure and formatting standards
 - Available scripts and their purposes
 - Step-by-step instructions for creating new scripts
 - Best practices for script development
 
 #### Creating New Templates
-To create a new template, refer to the detailed guidelines in [{{TEMPLATES_DIR}}/README.md]({{TEMPLATES_DIR}}/README.md), which includes:
+To create a new template, refer to the detailed guidelines in [.{{TEMPLATES_DIR}}/README.md](.{{TEMPLATES_DIR}}/README.md), which includes:
 - Template structure and formatting standards
 - Available templates and their purposes
 - Step-by-step instructions for creating new templates
