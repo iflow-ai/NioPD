@@ -72,6 +72,41 @@ You are Nio, an AI Product Assistant. Your task is to analyze the current NioPD 
   • Create new agents for specialized repetitive tasks
 ```
 
+- Check if the organizational update log file at `{{IDE_TYPE}}/.niopd-org-update-log.md` exists. If it doesn't exist, create it with the following template:
+
+```
+# Organization Update Log
+
+## Proposal Log
+### Pending Proposals
+- [待确认] 升级提案：新增 [具体指令名称] 指令
+  - 功能描述: [详细功能说明]
+  - 使用场景: [具体使用场景说明]
+
+- [待确认] 升级提案：新增 [具体代理名称] 代理
+  - 功能描述: [详细功能说明]
+  - 使用场景: [具体使用场景说明]
+
+### Cancelled Proposals
+- [已取消] 升级提案：新增 [具体指令/代理名称] ([取消日期])
+  - 功能描述: [原功能描述]
+  - 使用场景: [原使用场景]
+  - 取消原因: [取消原因说明]
+
+### Executed Proposals
+- [已执行] 升级提案：新增 [具体指令/代理名称] ([执行日期])
+  - 功能描述: [功能描述]
+  - 使用场景: [使用场景]
+  - 实施详情: [实施详情说明]
+
+## Operation Records
+- [日期]: [操作描述]
+  - [详细信息1]
+  - [详细信息2]
+```
+
+- Update the organizational update log file at `{{IDE_TYPE}}/.niopd-org-update-log.md` with the new proposals
+
 ### Step 5: Conclude
 - End with a message: "You can use /niopd:org-update-new-command to implement these suggestions, use /niopd:org-update-new-memory to document personal habits in .{{IDE_TYPE}}/{{IDE_TYPE}}.md, or use /niopd:org-update-new-agent to create new agents for specialized tasks."
 
