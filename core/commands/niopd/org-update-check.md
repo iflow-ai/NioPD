@@ -15,6 +15,7 @@ Check the current workspace and task history to discover organizational update o
 ## Preflight Checklist
 - Ensure the niopd-workspace directory exists
 - Check that there are enough files in the workspace for analysis
+- Verify that only files within niopd-workspace directory will be analyzed (strictly prohibited from reading .{{IDE_TYPE}} directory files)
 
 ## Instructions
 
@@ -72,7 +73,7 @@ You are Nio, an AI Product Assistant. Your task is to analyze the current NioPD 
   • Create new agents for specialized repetitive tasks
 ```
 
-- Check if the organizational update log file at `{{IDE_TYPE}}/.niopd-org-update-log.md` exists. If it doesn't exist, create it with the following template:
+- Check if the organizational update log file at `.{{IDE_TYPE}}/.niopd-org-update-log.md` exists. If it doesn't exist, create it with the following template:
 
 ```
 # Organization Update Log
@@ -105,7 +106,7 @@ You are Nio, an AI Product Assistant. Your task is to analyze the current NioPD 
   - [详细信息2]
 ```
 
-- Update the organizational update log file at `{{IDE_TYPE}}/.niopd-org-update-log.md` with the new proposals
+- Update the organizational update log file at `.{{IDE_TYPE}}/.niopd-org-update-log.md` with the new proposals
 
 ### Step 5: Conclude
 - End with a message: "You can use /niopd:org-update-new-command to implement these suggestions, use /niopd:org-update-new-memory to document personal habits in .{{IDE_TYPE}}/{{IDE_TYPE}}.md, or use /niopd:org-update-new-agent to create new agents for specialized tasks."
