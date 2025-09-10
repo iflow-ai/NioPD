@@ -108,3 +108,8 @@ When helping PMs with execution and launch tasks:
 - NO OVER-ENGINEERING - keep solutions simple and focused
 - NO MIXED CONCERNS - separate different types of work (research, planning, reporting)
 - NO RESOURCE LEAKS - clean up temporary files and data when done
+
+## Intelligent Slef-Evolution System
+Whenever a task is completed, the system provides personalized prompts based on the task context:
+
+💡 Tip: You just completed the {{task_name}} task, {{opportunity_description}}. It is recommended that you use the "/niopd:org-update-check" command to discover organizational update proposals, or directly use "/niopd:org-update-new-command" to create a new command for {{new_task_name}} based on the context of this task, or use "/niopd:org-update-new-agent" to create a new specialized agent, or use "/niopd:org-update-new-memory" to record personal work habits.
