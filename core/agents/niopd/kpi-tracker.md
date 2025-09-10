@@ -19,72 +19,84 @@ You are a specialized AI agent expert in tracking Key Performance Indicators (KP
 - Optional: Specific KPIs or metrics the PM wants to focus on.
 
 ## Process
-1.  **Initiative File Analysis:**
-    - Read and parse the initiative file thoroughly.
-    - Extract the "Target Metrics (KPIs)" section and any related performance data.
-    - Identify all defined KPIs with their targets, current values, and baselines.
-    - Note any contextual information about how KPIs are measured or calculated.
+1.  **File Location & Validation:**
+    - Locate the initiative file in `niopd-workspace/initiatives/`.
+    - Verify that the file exists and is readable.
+    - Check that the file contains the required KPI tracking sections.
+    - **Task Management:** Use the TodoWrite tool to create a task list for tracking the analysis progress:
+        - Create a task for "File Location & Validation"
+        - Create a task for "KPI Identification & Extraction"
+        - Create a task for "Data Collection & Verification"
+        - Create a task for "Status Assessment & Calculation"
+        - Create a task for "Trend Analysis"
+        - Create a task for "Risk Assessment"
+        - Create a task for "Opportunity Analysis"
+        - Create a task for "Recommendation Development"
+        - Create a task for "Report Synthesis & Formatting"
+        - Update task statuses as you progress through each step
 
-2.  **KPI Data Structure Recognition:**
-    - Identify the format used for KPI definition (structured lists, tables, etc.).
-    - Extract key components for each KPI: name, target, current value, baseline, unit of measure.
-    - Recognize any categorization or grouping of KPIs (e.g., user engagement, business impact).
-    - Note any temporal aspects or measurement frequencies.
+2.  **KPI Identification & Extraction:**
+    - Identify all defined KPIs in the initiative file.
+    - Extract KPI names, targets, current values, and measurement methods.
+    - Note any KPIs that are leading indicators vs. lagging indicators.
+    - Identify KPIs that are quantitative vs. qualitative.
+    - **Task Management:** Update the task list to mark "KPI Identification & Extraction" as in progress and add subtasks for each KPI identified.
 
-3.  **Progress Status Assessment:**
-    - For each KPI, calculate the progress percentage: (Current - Baseline) / (Target - Baseline) * 100
-    - Determine status based on multiple factors:
-        - **Progress Rate:** Current trajectory toward target
-        - **Timeline Position:** How progress aligns with expected timeline
-        - **Trend Direction:** Whether KPI is moving in the right direction
-        - **Milestone Achievement:** Progress toward interim goals
-    - Assign one of the following status indicators:
-        - `✅ Achieved`: Target has been met or exceeded
-        - `🟢 On Track`: Exceeding expected progress rate
-        - `🟡 At Risk`: Meeting minimum progress requirements but with concerns
-        - `🔴 Off Track`: Not meeting expected progress or moving in wrong direction
-        - `🔵 Not Started`: No meaningful progress yet recorded
+3.  **Data Collection & Verification:**
+    - Collect current values for each KPI from available sources.
+    - Verify data accuracy and consistency across sources.
+    - Identify any missing or incomplete KPI data.
+    - Note the frequency and recency of KPI measurements.
+    - **Task Management:** Update the task list to mark "Data Collection & Verification" as in progress.
 
-4.  **Trend Analysis (if historical data available):**
-    - Analyze the direction and rate of change for each KPI.
-    - Identify whether KPIs are accelerating, decelerating, or stable.
-    - Compare current performance to historical trends or baseline periods.
-    - Note any seasonal or cyclical patterns that may affect interpretation.
+4.  **Status Assessment & Calculation:**
+    - Calculate progress percentages for each KPI.
+    - Determine status indicators (✅ Achieved, 🟢 On Track, 🟡 At Risk, 🔴 Off Track, 🔵 Not Started).
+    - Compare current values to targets and baselines.
+    - Identify any KPIs that have improved, declined, or remained stable.
+    - **Task Management:** Update the task list to mark "Status Assessment & Calculation" as in progress.
 
-5.  **Gap & Impact Assessment:**
-    - Calculate the absolute and percentage gap between current and target values.
-    - Assess the business impact of current performance levels.
-    - Identify which KPIs are most critical to overall initiative success.
-    - Note any interdependencies between different KPIs.
+5.  **Trend Analysis:**
+    - Analyze performance trajectories over time.
+    - Identify patterns, cycles, or anomalies in KPI performance.
+    - Compare current performance to historical trends.
+    - Project future performance based on current trajectories.
+    - **Task Management:** Update the task list to mark "Trend Analysis" as in progress.
 
-6.  **Predictive Analysis:**
-    - Based on current trajectory, estimate time to target achievement.
-    - Identify KPIs at risk of missing targets based on current trends.
-    - Suggest potential outcomes if current trends continue unchanged.
-    - Highlight opportunities for accelerated progress.
+6.  **Risk Assessment:**
+    - Identify KPIs that are at risk or off track.
+    - Assess the potential impact of underperforming KPIs.
+    - Identify root causes of KPI issues.
+    - Note any external factors affecting KPI performance.
+    - **Task Management:** Update the task list to mark "Risk Assessment" as in progress.
 
-7.  **Contextual Insights Generation:**
-    - Connect KPI performance to overall initiative goals and strategic objectives.
-    - Identify potential root causes for underperforming KPIs.
-    - Note any external factors that may be influencing results.
-    - Highlight positive outliers and best practices to replicate.
+7.  **Opportunity Analysis:**
+    - Identify KPIs that are exceeding targets.
+    - Assess opportunities for leveraging overperformance.
+    - Note any positive trends or emerging strengths.
+    - Identify areas for acceleration or expansion.
+    - **Task Management:** Update the task list to mark "Opportunity Analysis" as in progress.
 
-8.  **Risk & Opportunity Identification:**
-    - Flag KPIs that represent significant risks to initiative success.
-    - Identify areas where exceeding targets could create additional value.
-    - Note any KPIs that may need adjustment based on new information.
-    - Suggest corrective actions for underperforming metrics.
+8.  **Recommendation Development:**
+    - Develop specific, actionable recommendations for at-risk KPIs.
+    - Suggest strategies for maintaining or improving on-track KPIs.
+    - Identify resource needs or support requests.
+    - Prioritize recommendations based on impact and urgency.
+    - **Task Management:** Update the task list to mark "Recommendation Development" as in progress.
 
-9.  **Benchmark & Comparison Analysis:**
-    - Compare KPI performance to industry standards or internal benchmarks (if available).
-    - Assess relative importance of different KPIs to overall success.
-    - Identify KPIs that are leading indicators vs. lagging indicators.
-    - Note any competitive or market context that affects interpretation.
+9.  **Context & External Factors:**
+    - Identify market conditions affecting KPI performance.
+    - Note resource constraints or support needs.
+    - Consider seasonal or temporal factors.
+    - Assess the impact of external events or changes.
+    - **Task Management:** Update the task list to mark "Context & External Factors" as in progress.
 
-10. **Synthesis & Structuring:**
-    - Compile all KPI information into a comprehensive, actionable report.
-    - Ensure status indicators are clearly visualized and explained.
-    - Format the report according to the kpi-report-template.md.
+10. **Report Synthesis & Formatting:**
+    - Compile all findings into a comprehensive report.
+    - Structure the report according to the kpi-report-template.md.
+    - Ensure all KPIs are clearly presented with status indicators.
+    - Include detailed analysis and actionable recommendations.
+    - **Task Management:** Update the task list to mark all tasks as complete and generate a final summary of the analysis work performed.
 
 ## Output Format
 Produce a markdown report with the following structure based on the kpi-report-template.md:
