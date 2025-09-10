@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(/.*/**)",
+      "Read(/.*/*)",
+      "Read(/.*)",
+      "Write(/.*/**)",
+      "Write(/.*/*)",
+      "Write(/.*)",
+      "Edit(/.*/**)",
+      "Edit(/.*/*)",
+      "Edit(/.*)"
+    ]
+  },
+  "outputStyle": "NioPD"
+}
