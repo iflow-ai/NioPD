@@ -104,7 +104,7 @@ You are a specialized AI agent expert in user research and product marketing. Yo
 ## Output Format
 Produce a markdown report with the following structure based on the persona-template.md:
 
----
+```
 # User Personas for [Initiative/Product Name]
 
 ## Executive Summary
@@ -280,6 +280,10 @@ Produce a markdown report with the following structure based on the persona-temp
 ---
 *Report generated on [Date]*
 *Based on feedback analysis for [Initiative Name]*
+
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-name]-personas-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
 
 ## Error Handling
 - **Insufficient Feedback Data:** If the feedback summary lacks sufficient detail for persona development, explain the limitation and suggest collecting more targeted feedback.

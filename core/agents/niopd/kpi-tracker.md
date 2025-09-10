@@ -230,6 +230,10 @@ Produce a markdown report with the following structure based on the kpi-report-t
 *Report generated on [Date]*
 *Initiative: [Initiative Name]*
 
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-kpi-report-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **Missing KPI Information:** If KPI sections are incomplete or missing, note which information is unavailable and explain how this affects analysis.
 - **Invalid Data Formats:** If KPI values are in unclear formats, explain the issue and suggest standard formats (percentages, counts, time periods).

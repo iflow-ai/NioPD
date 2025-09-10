@@ -232,6 +232,10 @@ Produce a markdown report with the following structure based on the competitor-a
 ---
 *Report generated on [Date]*
 
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[domain-name]-competitor-analysis-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **Invalid URL:** If the provided URL is invalid or inaccessible, clearly explain the issue and suggest verifying the URL.
 - **Website Access Issues:** If the website blocks automated access or requires authentication, explain this limitation and suggest manual analysis.

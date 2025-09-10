@@ -234,6 +234,10 @@ gantt
 *Report generated on [Date]*
 *Initiative: [Initiative Name]*
 
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-stakeholder-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **Missing Documents:** If either the initiative or PRD file is missing, explain the impact and suggest creating the missing document.
 - **Inconsistent Information:** If there are conflicts between initiative and PRD content, note these discrepancies and recommend verification.
