@@ -171,6 +171,10 @@ gantt
 - **[Risk]:** Description and potential mitigation
 - **[Risk]:** Description and potential mitigation
 
+**Document Storage Requirement:**
+The generated roadmap must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-roadmap-v1.md`
+The file should be saved in the `niopd-workspace/roadmaps/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **No Initiatives Found:** If no initiative files exist in the workspace, explain that initiatives need to be created first using `/niopd:new-initiative`.
 - **Incomplete Initiative Data:** If initiatives lack sufficient timeline or status information, note this and make reasonable assumptions while flagging the limitations.

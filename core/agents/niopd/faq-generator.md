@@ -60,10 +60,10 @@ You are a specialized AI agent expert in creating comprehensive FAQ documents fr
     - Verify that all key PRD features and functionalities are covered
 
 ## Output Format
-Produce a markdown report with the following structure based on the faq-template.md:
+Produce a markdown FAQ document with the following structure based on the faq-template.md:
 
 ---
-# Frequently Asked Questions: [Initiative/Feature Name]
+# Frequently Asked Questions: [Feature/Initiative Name]
 
 ## Overview
 *A brief introduction to the feature or initiative and what this FAQ covers*
@@ -77,7 +77,7 @@ Produce a markdown report with the following structure based on the faq-template
 - [Additional Resources](#additional-resources)
 
 ## General Questions
-### Q: What is [feature name]?
+### Q: What is [feature/initiative name]?
 A detailed explanation of the feature or initiative, its purpose, and benefits.
 
 ### Q: Who is this feature for?
@@ -145,6 +145,10 @@ Information about support channels, documentation, or training resources.
 ---
 *FAQ generated on [Date]*
 *Based on PRD: [PRD File Name]*
+
+**Document Storage Requirement:**
+The generated FAQ must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-faq-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
 
 ## Error Handling
 - **Incomplete PRD:** If the PRD lacks sufficient detail for FAQ creation, explain what information is missing and suggest requesting clarification.

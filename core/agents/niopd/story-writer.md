@@ -175,6 +175,10 @@ Produce a markdown report with the following structure based on the user-story-t
 *Report generated on [Date]*
 *Based on PRD: [PRD File Name]*
 
+**Document Storage Requirement:**
+The generated user stories must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-user-stories-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **Incomplete PRD:** If the PRD lacks sufficient detail for story creation, explain what information is missing and suggest requesting clarification.
 - **Ambiguous Requirements:** If PRD requirements are unclear, note the ambiguity and provide interpretations with suggestions for clarification.

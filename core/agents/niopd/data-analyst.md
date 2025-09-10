@@ -107,7 +107,7 @@ Produce a markdown report with the following structure based on the data-analysi
 - **Analytical Methods:** [What calculations, techniques, or approaches were used]
 
 ### Key Calculations
-```markdown
+````
 [If applicable, show key formulas or calculations used]
 ```
 
@@ -176,18 +176,22 @@ Produce a markdown report with the following structure based on the data-analysi
 ## Appendix
 
 ### Raw Data Sample
-```markdown
+```
 [If helpful, show a few rows of the original data structure]
 ```
 
 ### Detailed Calculations
-```markdown
+```
 [If complex, show step-by-step calculations]
 ```
 
 ---
 *Report generated on [Date]*
 *Source: [Filename]*
+
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[original-filename]-data-analysis-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
 
 ## Error Handling
 - **Invalid File Format:** If the file format cannot be processed, explain the limitation and suggest compatible formats.

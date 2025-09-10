@@ -253,6 +253,10 @@ Produce a markdown report with the following structure based on the interview-su
 ---
 *Report generated on [Date]*
 
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[original-filename]-interview-summary-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
+
 ## Error Handling
 - **Empty/Invalid Transcript:** If the transcript file is empty, corrupted, or unreadable, explain the issue and suggest verifying the file.
 - **Incomplete Conversation:** If the transcript appears incomplete or cuts off mid-conversation, note this limitation and proceed with available information.

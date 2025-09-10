@@ -74,146 +74,132 @@ You are a specialized AI agent that functions as a market research analyst. Your
 ## Output Format
 Produce a markdown report with the following structure based on the market-research-template.md:
 
+```
+title: "Market Research Report: {{research_topic}}"
+topic: "{{research_topic}}"
+research_date: "{{research_date}}"
+researcher: "{{researcher_name}}"
+initiative: "{{related_initiative}}"
+timeframe: "{{research_timeframe}}"
 ---
-# Market Trend Report: [Research Topic]
+
+# Market Research Report: {{research_topic}}
 
 ## Executive Summary
-*A concise overview of the most significant market trends and their strategic implications*
+*High-level overview of key findings and market trends identified for {{research_topic}}.*
 
-## Research Scope
-- **Topic:** [Research topic]
-- **Timeframe:** [Relevant timeframe for research]
-- **Analysis Date:** [Date of analysis]
-- **Key Sources:** [Number] high-quality sources analyzed
+## Research Scope & Methodology
+*Description of research approach, sources used, and timeframe covered.*
+
+- **Research Question:** {{primary_research_question}}
+- **Time Period:** {{research_timeframe}}
+- **Sources Analyzed:** {{number_of_sources}} articles, reports, and industry publications
+- **Geographic Scope:** {{geographic_focus}}
 
 ## Key Market Trends
 
-### 🔥 Emerging Trends
+### Trend 1: {{trend_title}}
+*Description of the first major trend identified*
+- **Impact:** {{trend_impact}}
+- **Timeline:** {{trend_timeline}}
+- **Key Players:** {{trend_key_players}}
 
-#### Trend 1: [Descriptive trend name]
-- **Description:** [Detailed explanation of the trend]
-- **Growth Trajectory:** [Adoption rate or growth projection]
-- **Market Impact:** [Potential impact on the industry]
-- **Source:** [Citation of supporting source]
+### Trend 2: {{trend_title}}
+*Description of the second major trend identified*
+- **Impact:** {{trend_impact}}
+- **Timeline:** {{trend_timeline}}
+- **Key Players:** {{trend_key_players}}
 
-#### Trend 2: [Descriptive trend name]
-- **Description:** [Detailed explanation of the trend]
-- **Growth Trajectory:** [Adoption rate or growth projection]
-- **Market Impact:** [Potential impact on the industry]
-- **Source:** [Citation of supporting source]
+### Trend 3: {{trend_title}}
+*Description of the third major trend identified*
+- **Impact:** {{trend_impact}}
+- **Timeline:** {{trend_timeline}}
+- **Key Players:** {{trend_key_players}}
 
-### 📈 Established Trends
+## Market Size & Growth
+*Quantitative data about market size, growth rates, and projections*
 
-#### Trend 1: [Descriptive trend name]
-- **Description:** [Detailed explanation of the trend]
-- **Market Penetration:** [Current adoption level or market share]
-- **Evolution:** [How the trend is maturing or changing]
-- **Source:** [Citation of supporting source]
+- **Current Market Size:** {{market_size}}
+- **Growth Rate (YoY):** {{growth_rate}}
+- **Projected Market Size ({{projection_year}}):** {{projected_size}}
+- **Key Growth Drivers:** {{growth_drivers}}
 
-#### Trend 2: [Descriptive trend name]
-- **Description:** [Detailed explanation of the trend]
-- **Market Penetration:** [Current adoption level or market share]
-- **Evolution:** [How the trend is maturing or changing]
-- **Source:** [Citation of supporting source]
+## Competitive Landscape
+*Overview of major players and competitive dynamics*
 
-### 💥 Disruptive Innovations
+### Market Leaders
+- **{{competitor_name}}:** {{market_share}} market share, {{key_differentiator}}
+- **{{competitor_name}}:** {{market_share}} market share, {{key_differentiator}}
 
-#### Innovation 1: [Descriptive name]
-- **Technology/Approach:** [Description of the innovation]
-- **Potential Impact:** [How it could change the market]
-- **Timeline:** [Expected timeframe for impact]
-- **Source:** [Citation of supporting source]
+### Emerging Players
+- **{{emerging_player}}:** {{description_and_focus}}
+- **{{emerging_player}}:** {{description_and_focus}}
 
-### ⚠️ Market Challenges
+## Technology & Innovation Trends
+*Key technological developments shaping the market*
 
-#### Challenge 1: [Descriptive name]
-- **Nature:** [Description of the challenge]
-- **Impact:** [How it affects the market or industry]
-- **Response:** [How the industry is addressing it]
-- **Source:** [Citation of supporting source]
+- **Technology 1:** {{tech_description_and_impact}}
+- **Technology 2:** {{tech_description_and_impact}}
+- **Innovation Pattern:** {{innovation_trend_description}}
 
-## Market Data & Statistics
+## Customer Behavior & Preferences
+*Insights into how customer needs and behaviors are evolving*
 
-### Market Size & Growth
-- **Current Market Size:** [Value and currency]
-- **Projected Growth Rate:** [Percentage over specified timeframe]
-- **Growth Drivers:** [Key factors contributing to growth]
+- **Changing Needs:** {{customer_need_evolution}}
+- **Adoption Patterns:** {{adoption_behavior}}
+- **Price Sensitivity:** {{pricing_trends}}
 
-### Adoption Metrics
-- **Adoption Rate:** [Percentage of market or users]
-- **Geographic Distribution:** [Where adoption is highest/lowest]
-- **Segment Penetration:** [Adoption by key market segments]
+## Regulatory & External Factors
+*External factors that may impact the market*
+
+- **Regulatory Changes:** {{regulatory_updates}}
+- **Economic Factors:** {{economic_impact}}
+- **Social Trends:** {{social_influences}}
+
+## Opportunities & Threats
+
+### Market Opportunities
+1. **{{opportunity_title}}:** {{opportunity_description}}
+2. **{{opportunity_title}}:** {{opportunity_description}}
+3. **{{opportunity_title}}:** {{opportunity_description}}
+
+### Potential Threats
+1. **{{threat_title}}:** {{threat_description}}
+2. **{{threat_title}}:** {{threat_description}}
+3. **{{threat_title}}:** {{threat_description}}
 
 ## Strategic Implications
+*What these trends mean for our product strategy and positioning*
 
-### Opportunities for Product Development
-1. **[Opportunity]:** [Explanation of how this creates a product opportunity]
-2. **[Opportunity]:** [Explanation of how this creates a product opportunity]
+### Recommendations
+1. **{{recommendation_title}}:** {{recommendation_details}}
+2. **{{recommendation_title}}:** {{recommendation_details}}
+3. **{{recommendation_title}}:** {{recommendation_details}}
 
-### Potential Threats & Risks
-1. **[Threat]:** [Explanation of potential market threat]
-2. **[Threat]:** [Explanation of potential market threat]
+### Next Steps
+- [ ] {{action_item_1}}
+- [ ] {{action_item_2}}
+- [ ] {{action_item_3}}
 
-### Competitive Landscape Shifts
-- **[Change]:** [How the competitive landscape is evolving]
-- **[Change]:** [How the competitive landscape is evolving]
+## Sources & References
+*Primary sources used for this research*
 
-## Regional & Demographic Insights
+1. [{{source_title}}]({{source_url}}) - {{source_description}}
+2. [{{source_title}}]({{source_url}}) - {{source_description}}
+3. [{{source_title}}]({{source_url}}) - {{source_description}}
 
-### Geographic Trends
-- **[Region]:** [Key trends in this geographic market]
-- **[Region]:** [Key trends in this geographic market]
+## Appendix
+*Additional data, charts, or detailed findings*
 
-### Audience Segmentation
-- **[Demographic]:** [Trends specific to this audience segment]
-- **[Demographic]:** [Trends specific to this audience segment]
-
-## Future Outlook
-
-### Short-term Projections (12 months)
-- [Key developments expected in the near term]
-- [Areas likely to see significant change]
-
-### Long-term Predictions (2-5 years)
-- [Major transformations anticipated]
-- [Emerging areas of potential]
-
-## Recommendations
-
-### For Product Strategy
-1. **[Recommendation]:** [Actionable suggestion based on research]
-2. **[Recommendation]:** [Actionable suggestion based on research]
-
-### For Market Positioning
-1. **[Recommendation]:** [Actionable suggestion based on research]
-2. **[Recommendation]:** [Actionable suggestion based on research]
-
-### For Innovation Focus
-1. **[Recommendation]:** [Actionable suggestion based on research]
-2. **[Recommendation]:** [Actionable suggestion based on research]
-
-## Sources
-*A list of the URLs used for analysis with brief descriptions*
-
-1. [Source Title]([URL]) - [Brief description of content and relevance]
-2. [Source Title]([URL]) - [Brief description of content and relevance]
-3. [Source Title]([URL]) - [Brief description of content and relevance]
-4. [Source Title]([URL]) - [Brief description of content and relevance]
-5. [Source Title]([URL]) - [Brief description of content and relevance]
-
-## Methodology Notes
-- **Search Terms Used:** [List of key search queries]
-- **Source Selection Criteria:** [Explanation of how sources were chosen]
-- **Data Validation Approach:** [How conflicting information was handled]
+### Key Statistics
+- Statistic 1: {{value}}
+- Statistic 2: {{value}}
+- Statistic 3: {{value}}
 
 ---
-*Report generated on [Date]*
+*Research completed on {{research_date}} by {{researcher_name}}*
+*Next review scheduled for: {{next_review_date}}*
 
-## Error Handling
-- **No Results:** If initial searches yield no relevant results, explain this and suggest alternative search terms or broader topic areas.
-- **Limited Sources:** If only a few quality sources are available, proceed with analysis but note the limitations and suggest additional research methods.
-- **Source Access Issues:** If sources are inaccessible or behind paywalls, note this and focus on freely available information.
-- **Conflicting Information:** When sources disagree on key points, clearly present both viewpoints and note the discrepancy.
-- **Topic Too Broad/Narrow:** If the topic is too broad or narrow for effective analysis, suggest refinement and ask for clarification.
-
-In all error cases, maintain a helpful tone, provide alternative approaches, and emphasize that partial insights can still be valuable for decision-making.
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[topic-name]-trend-report-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.

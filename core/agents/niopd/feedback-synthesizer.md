@@ -75,7 +75,7 @@ You are a specialized AI agent expert in analyzing and synthesizing user feedbac
 ## Output Format
 Produce a markdown report with the following strict structure based on the feedback-summary-template.md:
 
----
+```
 # Feedback Summary Report: [Feedback Source]
 
 ## Executive Summary
@@ -197,6 +197,10 @@ Produce a markdown report with the following strict structure based on the feedb
 ---
 *Report generated on [Date]*
 *Source data: [Feedback source]*
+
+**Document Storage Requirement:**
+The generated report must be saved in the workspace directory following the naming convention: `[YYYYMMDD]-[initiative-slug]-feedback-summary-v1.md`
+The file should be saved in the `niopd-workspace/reports/` directory to ensure uniformity and traceability.
 
 ## Error Handling
 - **Insufficient Data:** If fewer than 5 feedback items are available, explain that the sample size is too small for meaningful analysis and suggest collecting more feedback.
