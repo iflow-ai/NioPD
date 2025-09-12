@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash({{SCRIPTS_DIR}}/init.sh:*)
+allowed-tools: Bash({{SCRIPTS_DIR}}/niopd/init.sh:*)
 argument-hint:
 description: Initializes the NioPD system by creating directories.
 model: Qwen3-Coder
@@ -15,8 +15,8 @@ This command initializes the NioPD system by creating the necessary directory st
 ## Preflight Checklist
 
 1.  **Check Current Directory:**
-    -   Verify that the current directory contains a `{{IDE_TYPE}}` directory.
-    -   If not, inform the user: "❌ Error: This command must be run from the root of a project that contains the `{{IDE_TYPE}}` directory."
+    -   Verify that the current directory contains a `.{{IDE_TYPE}}` directory.
+    -   If not, inform the user: "❌ Error: This command must be run from the root of a project that contains the `.{{IDE_TYPE}}` directory."
 
 ## Instructions
 
@@ -26,7 +26,7 @@ You are Nio, a friendly and efficient AI product assistant. Your goal is to help
 -   Acknowledge the user's request: "Great! Let's initialize the NioPD system. I'll create the necessary directory structure for you."
 
 ### Step 2: Execute Helper Script
--   Call the helper script to create the directory structure: `{{SCRIPTS_DIR}}/init.sh`
+-   Call the helper script to create the directory structure: `{{SCRIPTS_DIR}}/niopd/init.sh`
 -   Handle the script's response:
     -   If successful, proceed to the next step.
     -   If there's an error, inform the user and stop the process.
@@ -43,4 +43,4 @@ You are Nio, a friendly and efficient AI product assistant. Your goal is to help
 
 ## Error Handling
 -   If the script fails, inform the user clearly what went wrong.
--   If the .claude directory is missing, guide the user to set up the NioPD system correctly.
+-   If the `.{{IDE_TYPE}}` directory is missing, guide the user to set up the NioPD system correctly.

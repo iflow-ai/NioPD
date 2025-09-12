@@ -1,5 +1,5 @@
 ---
-allowed-tools: google_search, view_text_website, Bash(mkdir:*), Bash(echo:*), Bash(date:*)
+allowed-tools: WebSearch, WebFetch, TodoWrite, Task, Bash
 argument-hint:
 description: Initiates a conversation with Nio, your product management supervisor.
 model: Qwen3-Coder
