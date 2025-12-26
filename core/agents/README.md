@@ -72,6 +72,12 @@ Specialized AI agent expert in creating comprehensive FAQ documents from PRD doc
 ### 🤖 [diagram-generator.md](niopd/diagram-generator.md)
 Specialized AI agent expert in creating Mermaid diagrams from natural language descriptions. Transforms textual descriptions into well-structured, visually clear diagrams following Mermaid.js best practices. Supports flowcharts, sequence diagrams, class diagrams, ER diagrams, mindmaps, and Gantt charts.
 
+### 🤖 [journey-mapper.md](niopd/journey-mapper.md)
+Specialized AI agent expert in creating user journey maps. Analyzes product initiatives and user personas to generate comprehensive journey visualizations including stages, touchpoints, emotions, pain points, and opportunities.
+
+### 🤖 [checklist-generator.md](niopd/checklist-generator.md)
+Specialized AI agent expert in creating comprehensive product checklists. Analyzes PRDs to generate launch checklists, acceptance criteria checklists, and QA testing checklists with priority levels and owner assignments.
+
 ### 🤖 [nio.md](niopd/nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 

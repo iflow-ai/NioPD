@@ -81,6 +81,11 @@ Commands to help with research, discovery, and understanding the market and user
 - **Usage**: `/niopd:generate-personas --from=<summary_file>`
 - **Output**: A document containing 2-3 user personas.
 
+### `/niopd:user-journey`
+- **Purpose**: Generates a user journey map for an initiative or feature.
+- **Usage**: `/niopd:user-journey --for=<initiative_name> [--persona=<persona_name>]`
+- **Output**: A user journey map with stages, touchpoints, emotions, and opportunities in `niopd-workspace/reports/`.
+
 ### `/niopd:research-trends`
 - **Purpose**: Researches and summarizes market trends on a given topic using web search.
 - **Usage**: `/niopd:research-trends --topic="..."`
@@ -168,6 +173,12 @@ Commands to help with the go-to-market and launch process.
 - **Purpose**: Creates a list of FAQs for a new feature.
 - **Usage**: `/niopd:generate-faq --for=<prd_name>`
 - **Output**: A FAQ document.
+
+### `/niopd:generate-checklist`
+- **Purpose**: Generates a product checklist for launch, acceptance testing, or QA.
+- **Usage**: `/niopd:generate-checklist --for=<prd_name> [--type=<launch|acceptance|qa>]`
+- **Supported Types**: launch (default), acceptance, qa
+- **Output**: A checklist document in `niopd-workspace/reports/`.
 
 ### `/niopd:simplify-update` *(Coming Soon)*
 - **Purpose**: Tailors a stakeholder update for a specific audience.
