@@ -69,6 +69,9 @@ Specialized AI agent expert in writing detailed user stories and acceptance crit
 ### 🤖 [faq-generator.md](niopd/faq-generator.md)
 Specialized AI agent expert in creating comprehensive FAQ documents from PRD documents. Identifies key features, functionalities, and potential user questions to generate a well-structured FAQ with clear, concise answers. Organizes questions by category and provides supplemental information for complex topics.
 
+### 🤖 [diagram-generator.md](niopd/diagram-generator.md)
+Specialized AI agent expert in creating Mermaid diagrams from natural language descriptions. Transforms textual descriptions into well-structured, visually clear diagrams following Mermaid.js best practices. Supports flowcharts, sequence diagrams, class diagrams, ER diagrams, mindmaps, and Gantt charts.
+
 ### 🤖 [nio.md](niopd/nio.md)
 Acts as a senior product manager supervisor to guide the user through product design.
 

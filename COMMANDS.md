@@ -92,12 +92,13 @@ Commands to help with research, discovery, and understanding the market and user
 
 Commands to assist with the details of planning and defining features.
 
-*Note: The following advanced planning commands are planned for future implementation and are not yet available.*
+### `/niopd:draw-diagram`
+- **Purpose**: Creates a Mermaid diagram from a text description.
+- **Usage**: `/niopd:draw-diagram --type=<type> --desc="..." [--for=<initiative>]`
+- **Supported Types**: flowchart, sequence, class, er, mindmap, gantt
+- **Output**: A diagram document in `niopd-workspace/reports/`.
 
-### `/niopd:draw-diagram` *(Coming Soon)*
-- **Purpose**: Creates a PlantUML or Mermaid diagram from a text description.
-- **Usage**: `/niopd:draw-diagram --type=<type> --desc="..."`
-- **Output**: A markdown file containing the diagram code.
+*Note: The following advanced planning commands are planned for future implementation and are not yet available.*
 
 ### `/niopd:assess-feasibility` *(Coming Soon)*
 - **Purpose**: Flags technically complex or risky requirements in a PRD.
